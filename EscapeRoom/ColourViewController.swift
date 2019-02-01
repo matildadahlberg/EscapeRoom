@@ -1,4 +1,5 @@
 import UIKit
+import AudioToolbox
 
 class ColourViewController: UIViewController {
     
@@ -37,6 +38,7 @@ class ColourViewController: UIViewController {
                 self.progressCircle.frame.size.width += 10
                 self.progressCircle.frame.size.height += 10
             }
+            AudioServicesPlayAlertSound(1519)
             print("Toouches: \(touches)")
         }
     }
@@ -58,7 +60,7 @@ class ColourViewController: UIViewController {
         circle.backgroundColor = UIColor.white
         self.view.addSubview(circle)
         
-        progressCircle = UIButton(frame: CGRect(x: self.view.frame.width/2, y: 230, width: 0, height: 0))
+        progressCircle = UIButton(frame: CGRect(x: self.view.frame.width/2, y: self.view.frame.height/2, width: 0, height: 0))
         progressCircle.layer.cornerRadius = progressCircle.frame.size.height/2
         progressCircle.backgroundColor = UIColor.red
         self.view.addSubview(progressCircle)
