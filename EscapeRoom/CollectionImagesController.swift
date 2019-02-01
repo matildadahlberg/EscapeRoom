@@ -30,7 +30,7 @@ class CollectionImagesController: UIViewController {
     @objc func startTimer(){
         touches += 1
         if touches == 0{
-            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(TapViewController.updateTimer)), userInfo: nil, repeats: true)
+//            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(TapViewController.updateTimer)), userInfo: nil, repeats: true)
         }else{
             //CHANGE COLOR OF EVERY SQUARE
             UIView.animate(withDuration: 0) {
