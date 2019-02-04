@@ -2,19 +2,38 @@ import UIKit
 
 class CollectionImagesController: UIViewController {
     
+    @IBOutlet weak var pinataImage: UIImageView!
+    
+    
     var timer = Timer()
     var seconds = 10
     var touches = -1
     
+    var tapped = 0
+    
     var timerLabel = UILabel()
-    var circle = UIButton()
-    var progressCircle = UIButton()
+    
+    var pinataLabel = UILabel()
+   
     var startButton = UIButton()
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        
+        
+        pinataImage.isUserInteractionEnabled = true
+        let tap = UITapGestureRecognizer(target: self, action: #selector(imageTapped))
+        
+        
+        tap.numberOfTapsRequired = 1
+        
+        view.addGestureRecognizer(tap)
+        
+        
+        
     }
     
     @objc func updateTimer() {
@@ -30,13 +49,19 @@ class CollectionImagesController: UIViewController {
     @objc func startTimer(){
         touches += 1
         if touches == 0{
-//            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(TapViewController.updateTimer)), userInfo: nil, repeats: true)
-        }else{
+            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(CollectionImagesController.updateTimer)), userInfo: nil, repeats: true)
+            startButton.isHidden = true
+            pinataLabel.text = "Tap the pinata to destroy it!"
+        }
+        
+        
+        else{
             //CHANGE COLOR OF EVERY SQUARE
-            UIView.animate(withDuration: 0) {
-                self.progressCircle.frame.size.width += 10
-                self.progressCircle.frame.size.height += 10
-            }
+//            UIView.animate(withDuration: 0) {
+//                self.progressCircle.frame.size.width += 10
+//                self.progressCircle.frame.size.height += 10
+//            }
+            
             print("Toouches: \(touches)")
         }
     }
@@ -52,17 +77,14 @@ class CollectionImagesController: UIViewController {
         timerLabel.font = UIFont(name: "Helvetica", size: 40)
         self.view.addSubview(timerLabel)
         
-        //SETUP SQUARES
-        circle = UIButton(frame: CGRect(x: self.view.frame.width/2 - 150, y: 230, width: 300, height: 300))
-        circle.layer.cornerRadius = circle.frame.size.height/2
-        circle.backgroundColor = UIColor.white
-        self.view.addSubview(circle)
+        //pinata label
+        pinataLabel = UILabel(frame: CGRect(x: self.view.frame.width/2 - 150, y: 600, width: 300, height: 60))
+        pinataLabel.textAlignment = .center
+        pinataLabel.text = "10"
+        pinataLabel.font = UIFont(name: "Helvetica", size: 20)
+        self.view.addSubview(pinataLabel)
         
-        progressCircle = UIButton(frame: CGRect(x: self.view.frame.width/2, y: 230, width: 0, height: 0))
-        progressCircle.layer.cornerRadius = progressCircle.frame.size.height/2
-        progressCircle.backgroundColor = UIColor.red
-        self.view.addSubview(progressCircle)
-        
+
         
         //START TIMER BUTTEN
         startButton = UIButton(frame: CGRect(x: self.view.frame.width/2 - 50, y: 600, width: 100, height: 100))
@@ -74,6 +96,18 @@ class CollectionImagesController: UIViewController {
         self.view.addSubview(startButton)
         
         
+    }
+    
+    @objc private func imageTapped(_ recognizer: UITapGestureRecognizer) {
+        print("image tapped")
+        
+       tapped += 1
+        
+        if tapped == 20{
+            pinataImage.image = UIImage(named: "destroyedPinata")
+        }
+        
+      
     }
     
     
