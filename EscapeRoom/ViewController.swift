@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("Message from MatildaB")
+        
+        print("New message from Matilda")
         // Do any additional setup after loading the view, typically from a nib.
     }
 
