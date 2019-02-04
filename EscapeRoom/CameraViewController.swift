@@ -11,9 +11,9 @@ import AVFoundation
 import Vision
 
 class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
-
+    
     let availableDevices = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInWideAngleCamera], mediaType: AVMediaType.video, position: .back).devices
-
+    
     
     let label: UILabel = {
         let label = UILabel()
@@ -26,13 +26,13 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         view.addSubview(label)
         
         setupCaptureSession()
         
-       
-       
+        setupLabel()
+        
     }
     
     func setupCaptureSession() {
@@ -55,12 +55,37 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         
         let previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
         previewLayer.frame = view.frame
-        view.layer.addSublayer(pdefghjghreviewLayer)
+        view.layer.addSublayer(previewLayer)
         
         captureSession.startRunning()
+        
+        captureOutput.setSampleBufferDelegate(self, queue: DispatchQueue(label: "videoQueue"))
+        
+    }
+    
+    func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
+        guard let model = try? VNCoreMLModel(for: Resnet50().model) else { return }
+        let request = VNCoreMLRequest(model: model) { (finishedRequest, error) in
+            guard let results = finishedRequest.results as? [VNClassificationObservation] else { return }
+            guard let Observation = results.first else { return }
+            
+            DispatchQueue.main.async(execute: {
+                self.label.text = "\(Observation.identifier)"
+            })
+        }
+        guard let pixelBuffer: CVPixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
+        
+        // executes request
+        try? VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:]).perform([request])
+    }
+    
+    func setupLabel() {
+        label.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        label.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -50).isActive = true
     }
     
     
-  
-
+    
+    
+    
 }
