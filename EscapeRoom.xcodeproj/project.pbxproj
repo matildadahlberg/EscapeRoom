@@ -17,7 +17,7 @@
 		EB56E347220457730010B442 /* ColourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB56E346220457730010B442 /* ColourViewController.swift */; };
 		EB56E349220457920010B442 /* CollectionImagesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB56E348220457920010B442 /* CollectionImagesController.swift */; };
 		EBFFC51D2208412300879045 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFFC51C2208412300879045 /* CameraViewController.swift */; };
-		EBFFC51F22087C3900879045 /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = EBFFC51E22087C3900879045 /* Resnet50.mlmodel */; };
+		EBFFC5212208899000879045 /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = EBFFC5202208899000879045 /* Resnet50.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +54,7 @@
 		EB56E346220457730010B442 /* ColourViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColourViewController.swift; sourceTree = "<group>"; };
 		EB56E348220457920010B442 /* CollectionImagesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionImagesController.swift; sourceTree = "<group>"; };
 		EBFFC51C2208412300879045 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
-		EBFFC51E22087C3900879045 /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Resnet50.mlmodel; path = ../../Downloads/Resnet50.mlmodel; sourceTree = "<group>"; };
+		EBFFC5202208899000879045 /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Resnet50.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,7 +89,6 @@
 				EB56E32C220456750010B442 /* EscapeRoomTests */,
 				EB56E337220456750010B442 /* EscapeRoomUITests */,
 				EB56E316220456740010B442 /* Products */,
-				EBFFC51E22087C3900879045 /* Resnet50.mlmodel */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,6 +107,7 @@
 			children = (
 				EB56E318220456740010B442 /* AppDelegate.swift */,
 				EB56E31A220456740010B442 /* ViewController.swift */,
+				EBFFC5202208899000879045 /* Resnet50.mlmodel */,
 				EB56E31C220456740010B442 /* Main.storyboard */,
 				EB56E31F220456750010B442 /* Assets.xcassets */,
 				EB56E321220456750010B442 /* LaunchScreen.storyboard */,
@@ -272,7 +272,7 @@
 				EBFFC51D2208412300879045 /* CameraViewController.swift in Sources */,
 				EB56E31B220456740010B442 /* ViewController.swift in Sources */,
 				EB56E349220457920010B442 /* CollectionImagesController.swift in Sources */,
-				EBFFC51F22087C3900879045 /* Resnet50.mlmodel in Sources */,
+				EBFFC5212208899000879045 /* Resnet50.mlmodel in Sources */,
 				EB56E319220456740010B442 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
