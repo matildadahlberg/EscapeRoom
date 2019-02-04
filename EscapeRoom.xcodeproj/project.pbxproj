@@ -16,6 +16,7 @@
 		EB56E339220456750010B442 /* EscapeRoomUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB56E338220456750010B442 /* EscapeRoomUITests.swift */; };
 		EB56E347220457730010B442 /* ColourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB56E346220457730010B442 /* ColourViewController.swift */; };
 		EB56E349220457920010B442 /* CollectionImagesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB56E348220457920010B442 /* CollectionImagesController.swift */; };
+		EBFFC51D2208412300879045 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFFC51C2208412300879045 /* CameraViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		EB56E33A220456750010B442 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB56E346220457730010B442 /* ColourViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColourViewController.swift; sourceTree = "<group>"; };
 		EB56E348220457920010B442 /* CollectionImagesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionImagesController.swift; sourceTree = "<group>"; };
+		EBFFC51C2208412300879045 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				EB56E324220456750010B442 /* Info.plist */,
 				EB56E346220457730010B442 /* ColourViewController.swift */,
 				EB56E348220457920010B442 /* CollectionImagesController.swift */,
+				EBFFC51C2208412300879045 /* CameraViewController.swift */,
 			);
 			path = EscapeRoom;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB56E347220457730010B442 /* ColourViewController.swift in Sources */,
+				EBFFC51D2208412300879045 /* CameraViewController.swift in Sources */,
 				EB56E31B220456740010B442 /* ViewController.swift in Sources */,
 				EB56E349220457920010B442 /* CollectionImagesController.swift in Sources */,
 				EB56E319220456740010B442 /* AppDelegate.swift in Sources */,
