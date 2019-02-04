@@ -21,6 +21,16 @@ class ColourViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.startUpdatingHeading()
     }
     
+//    func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
+//        if newHeading.magneticHeading < 30 && count == 0 {
+//            self.view.backgroundColor = UIColor.green
+//            createAlert()
+//            locationManager.stopUpdatingHeading()
+//        }else{
+//            self.view.backgroundColor = UIColor.lightGray
+//        }
+//    }
+    
     func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
         if newHeading.magneticHeading < 30 && count == 0 {
             self.view.backgroundColor = UIColor.green
@@ -29,6 +39,7 @@ class ColourViewController: UIViewController, CLLocationManagerDelegate {
             self.view.backgroundColor = UIColor.lightGray
         }
     }
+
     
     override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         if motion == .motionShake && count > 0 && startButton.isHidden == true{
