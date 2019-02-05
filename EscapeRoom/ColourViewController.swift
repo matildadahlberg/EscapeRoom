@@ -8,35 +8,28 @@ class ColourViewController: UIViewController, CLLocationManagerDelegate {
     var gameLabel = UILabel()
     var countLabel = UILabel()
     var startButton = UIButton()
-    var gameText = "Skaka mobilen!"
     var count = 2
-    var rounds = 3
+    var compassCount = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupView()
         
+        setupView()
         locationManager = CLLocationManager()
         locationManager.delegate = self
-        locationManager.startUpdatingHeading()
     }
     
-//    func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
-//        if newHeading.magneticHeading < 30 && count == 0 {
-//            self.view.backgroundColor = UIColor.green
-//            createAlert()
-//            locationManager.stopUpdatingHeading()
-//        }else{
-//            self.view.backgroundColor = UIColor.lightGray
-//        }
-//    }
-    
     func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
-        if newHeading.magneticHeading < 30 && count == 0 {
+        
+        if newHeading.magneticHeading > 330 || newHeading.magneticHeading < 30 {
             self.view.backgroundColor = UIColor.green
+            countLabel.text = "N°"
+            compassCount += 1
+            locationManager.stopUpdatingHeading()
             createAlert()
-        }else{
+        } else {
             self.view.backgroundColor = UIColor.lightGray
+            countLabel.text = ""
         }
     }
 
@@ -44,19 +37,20 @@ class ColourViewController: UIViewController, CLLocationManagerDelegate {
     override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         if motion == .motionShake && count > 0 && startButton.isHidden == true{
             count -= 1
-            countLabel.text = "\(count) kvar"
+            countLabel.text = "\(count) left"
             AudioServicesPlayAlertSound(1519)
         }
         
         if motion == .motionShake && count == 0 {
             countLabel.text = ""
             countLabel.font = UIFont(name: "Helvetica", size: 50)
-            gameLabel.text = "Ställ dig mot norr"
+            gameLabel.text = "Stand North"
+            locationManager.startUpdatingHeading()
         }
     }
    
     func createAlert(){
-        let alert = UIAlertController(title: "Grattis du vann!", message: nil, preferredStyle: .alert)
+        let alert = UIAlertController(title: "You are now standing North!", message: nil, preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .default, handler: nil)
         alert.addAction(action)
         self.present(alert, animated: true, completion: nil)
@@ -71,13 +65,13 @@ class ColourViewController: UIViewController, CLLocationManagerDelegate {
         
         gameLabel = UILabel(frame: CGRect(x: self.view.frame.width/2 - 150 , y: 100, width: 300, height: 100))
         gameLabel.textAlignment = .center
-        gameLabel.text = "\(gameText)"
+        gameLabel.text = "Shake the phone"
         gameLabel.font = UIFont(name: "Helvetica", size: 30)
         self.view.addSubview(gameLabel)
         
         countLabel = UILabel(frame: CGRect(x: self.view.frame.width/2 - 150, y: 300, width: 300, height: 150))
         countLabel.textAlignment = .center
-        countLabel.text = "\(count) kvar"
+        countLabel.text = "\(count) left"
         countLabel.font = UIFont(name: "Helvetica", size: 100)
         self.view.addSubview(countLabel)
         
