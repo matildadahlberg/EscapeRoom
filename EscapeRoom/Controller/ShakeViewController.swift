@@ -2,7 +2,9 @@ import UIKit
 import AudioToolbox
 import CoreLocation
 
-class ColourViewController: UIViewController, CLLocationManagerDelegate {
+class ShakeViewController: UIViewController, CLLocationManagerDelegate {
+    @IBOutlet weak var unlockButton: UIButton!
+    @IBOutlet weak var exitButton: UIButton!
     
     var locationManager : CLLocationManager!
     var gameLabel = UILabel()
@@ -13,7 +15,8 @@ class ColourViewController: UIViewController, CLLocationManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        unlockButton.layer.cornerRadius = 15
+        exitButton.layer.cornerRadius = 15
         setupView()
         locationManager = CLLocationManager()
         locationManager.delegate = self
