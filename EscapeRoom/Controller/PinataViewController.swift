@@ -1,8 +1,10 @@
 import UIKit
 
-class CollectionImagesController: UIViewController {
+class PinataViewController: UIViewController {
     
     @IBOutlet weak var pinataImage: UIImageView!
+    @IBOutlet weak var unlockButton: UIButton!
+    @IBOutlet weak var exitButton: UIButton!
     
     
     var timer = Timer()
@@ -22,6 +24,8 @@ class CollectionImagesController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        unlockButton.layer.cornerRadius = 15
+        exitButton.layer.cornerRadius = 15
         
         
         pinataImage.isUserInteractionEnabled = true
@@ -49,7 +53,7 @@ class CollectionImagesController: UIViewController {
     @objc func startTimer(){
         touches += 1
         if touches == 0{
-            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(CollectionImagesController.updateTimer)), userInfo: nil, repeats: true)
+            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(PinataViewController.updateTimer)), userInfo: nil, repeats: true)
             startButton.isHidden = true
             pinataLabel.text = "Tap the pinata to destroy it!"
         }

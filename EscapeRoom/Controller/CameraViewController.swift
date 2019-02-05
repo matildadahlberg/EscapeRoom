@@ -12,6 +12,8 @@ import Vision
 
 
 class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
+    @IBOutlet weak var unlockButton: UIButton!
+    @IBOutlet weak var exitButton: UIButton!
     
     let availableDevices = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInWideAngleCamera], mediaType: AVMediaType.video, position: .back).devices
     
@@ -37,6 +39,8 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        unlockButton.layer.cornerRadius = 15
+        exitButton.layer.cornerRadius = 15
         
         view.addSubview(label)
         view.addSubview(correctLabel)

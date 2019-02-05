@@ -9,17 +9,16 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var startButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Message from MatildaB")
-        
-        print("New message from Matilda")
-        // Do any additional setup after loading the view, typically from a nib.
-    }
+       
+      startButton.layer.cornerRadius = 15
 
-    func niklasFunc() {
-        
     }
+    
 }
 

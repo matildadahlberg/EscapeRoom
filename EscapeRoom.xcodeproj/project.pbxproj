@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B2D43392209AD2E0078120A /* CompassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2D43382209AD2E0078120A /* CompassViewController.swift */; };
 		EB56E319220456740010B442 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB56E318220456740010B442 /* AppDelegate.swift */; };
 		EB56E31B220456740010B442 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB56E31A220456740010B442 /* ViewController.swift */; };
 		EB56E31E220456740010B442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB56E31C220456740010B442 /* Main.storyboard */; };
@@ -14,8 +15,8 @@
 		EB56E323220456750010B442 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB56E321220456750010B442 /* LaunchScreen.storyboard */; };
 		EB56E32E220456750010B442 /* EscapeRoomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB56E32D220456750010B442 /* EscapeRoomTests.swift */; };
 		EB56E339220456750010B442 /* EscapeRoomUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB56E338220456750010B442 /* EscapeRoomUITests.swift */; };
-		EB56E347220457730010B442 /* ColourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB56E346220457730010B442 /* ColourViewController.swift */; };
-		EB56E349220457920010B442 /* CollectionImagesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB56E348220457920010B442 /* CollectionImagesController.swift */; };
+		EB56E347220457730010B442 /* ShakeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB56E346220457730010B442 /* ShakeViewController.swift */; };
+		EB56E349220457920010B442 /* PinataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB56E348220457920010B442 /* PinataViewController.swift */; };
 		EBFFC51D2208412300879045 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFFC51C2208412300879045 /* CameraViewController.swift */; };
 		EBFFC5212208899000879045 /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = EBFFC5202208899000879045 /* Resnet50.mlmodel */; };
 /* End PBXBuildFile section */
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7B2D43382209AD2E0078120A /* CompassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompassViewController.swift; sourceTree = "<group>"; };
 		EB56E315220456740010B442 /* EscapeRoom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EscapeRoom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB56E318220456740010B442 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB56E31A220456740010B442 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,8 +53,8 @@
 		EB56E334220456750010B442 /* EscapeRoomUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EscapeRoomUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB56E338220456750010B442 /* EscapeRoomUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscapeRoomUITests.swift; sourceTree = "<group>"; };
 		EB56E33A220456750010B442 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EB56E346220457730010B442 /* ColourViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColourViewController.swift; sourceTree = "<group>"; };
-		EB56E348220457920010B442 /* CollectionImagesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionImagesController.swift; sourceTree = "<group>"; };
+		EB56E346220457730010B442 /* ShakeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeViewController.swift; sourceTree = "<group>"; };
+		EB56E348220457920010B442 /* PinataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinataViewController.swift; sourceTree = "<group>"; };
 		EBFFC51C2208412300879045 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		EBFFC5202208899000879045 /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Resnet50.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,6 +84,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7B2D43352209AC990078120A /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				EBFFC5202208899000879045 /* Resnet50.mlmodel */,
+				EB56E31F220456750010B442 /* Assets.xcassets */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		7B2D43362209ACC00078120A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EB56E321220456750010B442 /* LaunchScreen.storyboard */,
+				EB56E31C220456740010B442 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7B2D43372209ACC90078120A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EB56E318220456740010B442 /* AppDelegate.swift */,
+				EB56E31A220456740010B442 /* ViewController.swift */,
+				EB56E346220457730010B442 /* ShakeViewController.swift */,
+				7B2D43382209AD2E0078120A /* CompassViewController.swift */,
+				EB56E348220457920010B442 /* PinataViewController.swift */,
+				EBFFC51C2208412300879045 /* CameraViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		EB56E30C220456740010B442 = {
 			isa = PBXGroup;
 			children = (
@@ -105,16 +138,10 @@
 		EB56E317220456740010B442 /* EscapeRoom */ = {
 			isa = PBXGroup;
 			children = (
-				EB56E318220456740010B442 /* AppDelegate.swift */,
-				EB56E31A220456740010B442 /* ViewController.swift */,
-				EBFFC5202208899000879045 /* Resnet50.mlmodel */,
-				EB56E31C220456740010B442 /* Main.storyboard */,
-				EB56E31F220456750010B442 /* Assets.xcassets */,
-				EB56E321220456750010B442 /* LaunchScreen.storyboard */,
+				7B2D43372209ACC90078120A /* Controller */,
+				7B2D43362209ACC00078120A /* View */,
+				7B2D43352209AC990078120A /* Sources */,
 				EB56E324220456750010B442 /* Info.plist */,
-				EB56E346220457730010B442 /* ColourViewController.swift */,
-				EB56E348220457920010B442 /* CollectionImagesController.swift */,
-				EBFFC51C2208412300879045 /* CameraViewController.swift */,
 			);
 			path = EscapeRoom;
 			sourceTree = "<group>";
@@ -268,10 +295,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB56E347220457730010B442 /* ColourViewController.swift in Sources */,
+				EB56E347220457730010B442 /* ShakeViewController.swift in Sources */,
 				EBFFC51D2208412300879045 /* CameraViewController.swift in Sources */,
 				EB56E31B220456740010B442 /* ViewController.swift in Sources */,
-				EB56E349220457920010B442 /* CollectionImagesController.swift in Sources */,
+				7B2D43392209AD2E0078120A /* CompassViewController.swift in Sources */,
+				EB56E349220457920010B442 /* PinataViewController.swift in Sources */,
 				EBFFC5212208899000879045 /* Resnet50.mlmodel in Sources */,
 				EB56E319220456740010B442 /* AppDelegate.swift in Sources */,
 			);
@@ -449,13 +477,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = TNTN2A8G53;
 				INFOPLIST_FILE = EscapeRoom/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dahlbergmatilda.EscapeRoom;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dahlbergmatild.EscapeRoom;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -467,13 +495,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = TNTN2A8G53;
 				INFOPLIST_FILE = EscapeRoom/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dahlbergmatilda.EscapeRoom;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dahlbergmatild.EscapeRoom;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
