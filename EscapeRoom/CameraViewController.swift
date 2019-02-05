@@ -10,28 +10,46 @@ import UIKit
 import AVFoundation
 import Vision
 
+
 class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
     
     let availableDevices = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInWideAngleCamera], mediaType: AVMediaType.video, position: .back).devices
     
+    var correctCounter = 0
     
     let label: UILabel = {
         let label = UILabel()
-        label.textColor = .black
+        label.textColor = .white
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Label"
-        label.font = label.font.withSize(30)
+        label.font = label.font.withSize(20)
         return label
+    }()
+    
+    let correctLabel: UILabel = {
+        let correctLabel = UILabel()
+        correctLabel.textColor = .white
+        correctLabel.translatesAutoresizingMaskIntoConstraints = false
+        correctLabel.text = "Label"
+        correctLabel.font = correctLabel.font.withSize(15)
+        return correctLabel
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.addSubview(label)
+        view.addSubview(correctLabel)
         
         setupCaptureSession()
         
         setupLabel()
+        setupCorrectLabel()
+        
+        self.view.backgroundColor = UIColor.black
+        
+        self.correctLabel.text = "Find a computer"
+        
         
     }
     
@@ -71,6 +89,32 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
             
             DispatchQueue.main.async(execute: {
                 self.label.text = "\(Observation.identifier)"
+                
+                
+            
+                if self.label.text == "computer" || self.label.text == "desktop computer" && self.correctCounter == 0 && self.correctLabel.text == "Find a computer" {
+                    AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+                    self.correctCounter += 1
+                    self.correctLabel.text = "Find a cup"
+                   
+                }
+                if self.label.text == "cup" || self.label.text == "espresso" && self.correctCounter == 1 && self.correctLabel.text == "Find a cup"{
+                    AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+                    self.correctCounter += 1
+                    self.correctLabel.text = "Find a clock"
+                    
+                }
+                if self.label.text == "analog clock" || self.label.text == "wall clock" && self.correctCounter == 2{
+                    AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+                    self.correctLabel.textColor = .green
+                    self.correctLabel.text = "Congrats, you succeeded!"
+                    
+                }
+
+                    
+//                else{
+//                    self.correctLabel.text = "Find the object"
+//                }
             })
         }
         guard let pixelBuffer: CVPixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
@@ -84,8 +128,15 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         label.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -50).isActive = true
     }
     
-    
-    
-    
+    func setupCorrectLabel() {
+        correctLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        correctLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 50).isActive = true
+    }
     
 }
+
+
+
+
+
+
