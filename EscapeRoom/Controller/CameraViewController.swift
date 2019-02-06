@@ -19,6 +19,8 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     
     var correctCounter = 0
     
+    var previewLayer = AVCaptureVideoPreviewLayer()
+    
     let label: UILabel = {
         let label = UILabel()
         label.textColor = .black
@@ -73,12 +75,15 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         let captureOutput = AVCaptureVideoDataOutput()
         captureSession.addOutput(captureOutput)
         
-        let previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
+        previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
         previewLayer.frame.size = CGSize(width: 600, height: 600)
         previewLayer.position = CGPoint(x: self.view.frame.width/2, y: self.view.frame.height/2)
 //        previewLayer.frame.size = innerView.frame.size
         //previewLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
         view.layer.addSublayer(previewLayer)
+//        previewLayer.isHidden = true
+       
+       
         
         captureSession.startRunning()
         
@@ -94,9 +99,7 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
             
             DispatchQueue.main.async(execute: {
                 self.label.text = "\(Observation.identifier)"
-                
-                
-            
+ 
                 if self.label.text == "computer" || self.label.text == "desktop computer" || self.label.text == "laptop" || self.label.text == "computer keyboard" && self.correctCounter == 0 && self.correctLabel.text == "Find a computer" {
                     AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
                     self.correctCounter += 1
@@ -110,15 +113,14 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
                     
                 }
                 if self.label.text == "analog clock" || self.label.text == "wall clock" || self.label.text == "stop watch" && self.correctCounter == 2{
-                    AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
-                    self.correctLabel.text = "Congrats, you succeeded!"
-                    
+                    AudioServicesPlayAlertSound(1519)
+                    self.correctLabel.isHidden = true
+                    self.previewLayer.isHidden = true
+                    self.unlockButton.isHidden = false
+                    self.label.isHidden = true
                 }
+              
 
-                    
-//                else{
-//                    self.correctLabel.text = "Find the object"
-//                }
             })
         }
         guard let pixelBuffer: CVPixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return }

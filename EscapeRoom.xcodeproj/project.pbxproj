@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7B2D43392209AD2E0078120A /* CompassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2D43382209AD2E0078120A /* CompassViewController.swift */; };
+		EB344188220AE1A900EB1993 /* TurnIphoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB344187220AE1A900EB1993 /* TurnIphoneViewController.swift */; };
+		EB34418A220AE1C700EB1993 /* PlaySoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB344189220AE1C700EB1993 /* PlaySoundViewController.swift */; };
 		EB56E319220456740010B442 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB56E318220456740010B442 /* AppDelegate.swift */; };
 		EB56E31B220456740010B442 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB56E31A220456740010B442 /* ViewController.swift */; };
 		EB56E31E220456740010B442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB56E31C220456740010B442 /* Main.storyboard */; };
@@ -40,6 +42,8 @@
 
 /* Begin PBXFileReference section */
 		7B2D43382209AD2E0078120A /* CompassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompassViewController.swift; sourceTree = "<group>"; };
+		EB344187220AE1A900EB1993 /* TurnIphoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurnIphoneViewController.swift; sourceTree = "<group>"; };
+		EB344189220AE1C700EB1993 /* PlaySoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySoundViewController.swift; sourceTree = "<group>"; };
 		EB56E315220456740010B442 /* EscapeRoom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EscapeRoom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB56E318220456740010B442 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB56E31A220456740010B442 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +115,8 @@
 				7B2D43382209AD2E0078120A /* CompassViewController.swift */,
 				EB56E348220457920010B442 /* PinataViewController.swift */,
 				EBFFC51C2208412300879045 /* CameraViewController.swift */,
+				EB344187220AE1A900EB1993 /* TurnIphoneViewController.swift */,
+				EB344189220AE1C700EB1993 /* PlaySoundViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -299,8 +305,10 @@
 				EBFFC51D2208412300879045 /* CameraViewController.swift in Sources */,
 				EB56E31B220456740010B442 /* ViewController.swift in Sources */,
 				7B2D43392209AD2E0078120A /* CompassViewController.swift in Sources */,
+				EB344188220AE1A900EB1993 /* TurnIphoneViewController.swift in Sources */,
 				EB56E349220457920010B442 /* PinataViewController.swift in Sources */,
 				EBFFC5212208899000879045 /* Resnet50.mlmodel in Sources */,
+				EB34418A220AE1C700EB1993 /* PlaySoundViewController.swift in Sources */,
 				EB56E319220456740010B442 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
