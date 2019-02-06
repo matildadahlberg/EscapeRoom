@@ -21,7 +21,7 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     
     let label: UILabel = {
         let label = UILabel()
-        label.textColor = .white
+        label.textColor = .black
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Label"
         label.font = label.font.withSize(20)
@@ -30,10 +30,10 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     
     let correctLabel: UILabel = {
         let correctLabel = UILabel()
-        correctLabel.textColor = .white
+        correctLabel.textColor = .black
         correctLabel.translatesAutoresizingMaskIntoConstraints = false
         correctLabel.text = "Label"
-        correctLabel.font = correctLabel.font.withSize(15)
+        correctLabel.font = correctLabel.font.withSize(20)
         return correctLabel
     }()
     
@@ -49,9 +49,7 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         
         setupLabel()
         setupCorrectLabel()
-        
-        self.view.backgroundColor = UIColor.black
-        
+
         self.correctLabel.text = "Find a computer"
         
         
@@ -76,7 +74,10 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         captureSession.addOutput(captureOutput)
         
         let previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-        previewLayer.frame = view.frame
+        previewLayer.frame.size = CGSize(width: 600, height: 600)
+        previewLayer.position = CGPoint(x: self.view.frame.width/2, y: self.view.frame.height/2)
+//        previewLayer.frame.size = innerView.frame.size
+        //previewLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
         view.layer.addSublayer(previewLayer)
         
         captureSession.startRunning()
@@ -96,21 +97,20 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
                 
                 
             
-                if self.label.text == "computer" || self.label.text == "desktop computer" && self.correctCounter == 0 && self.correctLabel.text == "Find a computer" {
+                if self.label.text == "computer" || self.label.text == "desktop computer" || self.label.text == "laptop" || self.label.text == "computer keyboard" && self.correctCounter == 0 && self.correctLabel.text == "Find a computer" {
                     AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
                     self.correctCounter += 1
                     self.correctLabel.text = "Find a cup"
                    
                 }
-                if self.label.text == "cup" || self.label.text == "espresso" && self.correctCounter == 1 && self.correctLabel.text == "Find a cup"{
+                if self.label.text == "cup" || self.label.text == "espresso" || self.label.text == "coffee mug" || self.label.text == "teapot" && self.correctCounter == 1 && self.correctLabel.text == "Find a cup"{
                     AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
                     self.correctCounter += 1
                     self.correctLabel.text = "Find a clock"
                     
                 }
-                if self.label.text == "analog clock" || self.label.text == "wall clock" && self.correctCounter == 2{
+                if self.label.text == "analog clock" || self.label.text == "wall clock" || self.label.text == "stop watch" && self.correctCounter == 2{
                     AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
-                    self.correctLabel.textColor = .green
                     self.correctLabel.text = "Congrats, you succeeded!"
                     
                 }
