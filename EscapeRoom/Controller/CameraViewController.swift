@@ -1,26 +1,16 @@
-//
-//  CameraViewController.swift
-//  EscapeRoom
-//
-//  Created by Matilda Dahlberg on 2019-02-04.
-//  Copyright © 2019 Matilda Dahlberg. All rights reserved.
-//
-
 import UIKit
 import AVFoundation
 import Vision
 
-
 class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
+    
     @IBOutlet weak var unlockButton: UIButton!
     @IBOutlet weak var exitButton: UIButton!
     
     let availableDevices = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInWideAngleCamera], mediaType: AVMediaType.video, position: .back).devices
-    
     var correctCounter = 0
-    
     var previewLayer = AVCaptureVideoPreviewLayer()
-    
+    let captureSession = AVCaptureSession()
     let label: UILabel = {
         let label = UILabel()
         label.textColor = .black
@@ -43,25 +33,15 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         super.viewDidLoad()
         unlockButton.layer.cornerRadius = 15
         exitButton.layer.cornerRadius = 15
-        
         view.addSubview(label)
         view.addSubview(correctLabel)
-        
         setupCaptureSession()
-        
         setupLabel()
         setupCorrectLabel()
-
         self.correctLabel.text = "Find a computer"
-        
-        
     }
     
     func setupCaptureSession() {
-        
-        // creates a new capture session
-        let captureSession = AVCaptureSession()
-        
         // get capture device, add device input to capture session
         do {
             if let captureDevice = availableDevices.first {
@@ -70,25 +50,15 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         } catch {
             print(error.localizedDescription)
         }
-        
         // setup output, add output to our capture session
         let captureOutput = AVCaptureVideoDataOutput()
         captureSession.addOutput(captureOutput)
-        
         previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
         previewLayer.frame.size = CGSize(width: 600, height: 600)
         previewLayer.position = CGPoint(x: self.view.frame.width/2, y: self.view.frame.height/2)
-//        previewLayer.frame.size = innerView.frame.size
-        //previewLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
         view.layer.addSublayer(previewLayer)
-//        previewLayer.isHidden = true
-       
-       
-        
         captureSession.startRunning()
-        
         captureOutput.setSampleBufferDelegate(self, queue: DispatchQueue(label: "videoQueue"))
-        
     }
     
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
@@ -100,27 +70,26 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
             DispatchQueue.main.async(execute: {
                 self.label.text = "\(Observation.identifier)"
  
-                if self.label.text == "computer" || self.label.text == "desktop computer" || self.label.text == "laptop" || self.label.text == "computer keyboard" && self.correctCounter == 0 && self.correctLabel.text == "Find a computer" {
+                if self.label.text == "computer" && self.correctCounter == 0 || self.label.text == "desktop computer" && self.correctCounter == 0 || self.label.text == "laptop" && self.correctCounter == 0 || self.label.text == "computer keyboard" && self.correctCounter == 0 && self.correctLabel.text == "Find a computer" {
                     AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
                     self.correctCounter += 1
                     self.correctLabel.text = "Find a cup"
                    
                 }
-                if self.label.text == "cup" || self.label.text == "espresso" || self.label.text == "coffee mug" || self.label.text == "teapot" && self.correctCounter == 1 && self.correctLabel.text == "Find a cup"{
+                if self.label.text == "cup" && self.correctCounter == 1 || self.label.text == "espresso" && self.correctCounter == 1 || self.label.text == "coffee mug" && self.correctCounter == 1 || self.label.text == "teapot" && self.correctCounter == 1 && self.correctLabel.text == "Find a cup"{
                     AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
                     self.correctCounter += 1
                     self.correctLabel.text = "Find a clock"
-                    
+                    print("Counter: \(self.correctCounter)")
                 }
-                if self.label.text == "analog clock" || self.label.text == "wall clock" || self.label.text == "stop watch" && self.correctCounter == 2{
+                if self.label.text == "analog clock" && self.correctCounter == 2 || self.label.text == "wall clock" && self.correctCounter == 2 || self.label.text == "digital watch" && self.correctCounter == 2{
                     AudioServicesPlayAlertSound(1519)
                     self.correctLabel.isHidden = true
                     self.previewLayer.isHidden = true
                     self.unlockButton.isHidden = false
                     self.label.isHidden = true
+                    self.captureSession.stopRunning()
                 }
-              
-
             })
         }
         guard let pixelBuffer: CVPixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
