@@ -10,6 +10,10 @@
 		7B2D43392209AD2E0078120A /* CompassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2D43382209AD2E0078120A /* CompassViewController.swift */; };
 		EB344188220AE1A900EB1993 /* TurnIphoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB344187220AE1A900EB1993 /* TurnIphoneViewController.swift */; };
 		EB34418A220AE1C700EB1993 /* PlaySoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB344189220AE1C700EB1993 /* PlaySoundViewController.swift */; };
+		EB34418F220AF39600EB1993 /* pianoD.wav in Resources */ = {isa = PBXBuildFile; fileRef = EB34418B220AF39600EB1993 /* pianoD.wav */; };
+		EB344190220AF39600EB1993 /* pianoF.wav in Resources */ = {isa = PBXBuildFile; fileRef = EB34418C220AF39600EB1993 /* pianoF.wav */; };
+		EB344191220AF39600EB1993 /* pianoE.wav in Resources */ = {isa = PBXBuildFile; fileRef = EB34418D220AF39600EB1993 /* pianoE.wav */; };
+		EB344192220AF39600EB1993 /* pianoG.wav in Resources */ = {isa = PBXBuildFile; fileRef = EB34418E220AF39600EB1993 /* pianoG.wav */; };
 		EB56E319220456740010B442 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB56E318220456740010B442 /* AppDelegate.swift */; };
 		EB56E31B220456740010B442 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB56E31A220456740010B442 /* ViewController.swift */; };
 		EB56E31E220456740010B442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB56E31C220456740010B442 /* Main.storyboard */; };
@@ -44,6 +48,10 @@
 		7B2D43382209AD2E0078120A /* CompassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompassViewController.swift; sourceTree = "<group>"; };
 		EB344187220AE1A900EB1993 /* TurnIphoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurnIphoneViewController.swift; sourceTree = "<group>"; };
 		EB344189220AE1C700EB1993 /* PlaySoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySoundViewController.swift; sourceTree = "<group>"; };
+		EB34418B220AF39600EB1993 /* pianoD.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = pianoD.wav; sourceTree = "<group>"; };
+		EB34418C220AF39600EB1993 /* pianoF.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = pianoF.wav; sourceTree = "<group>"; };
+		EB34418D220AF39600EB1993 /* pianoE.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = pianoE.wav; sourceTree = "<group>"; };
+		EB34418E220AF39600EB1993 /* pianoG.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = pianoG.wav; sourceTree = "<group>"; };
 		EB56E315220456740010B442 /* EscapeRoom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EscapeRoom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB56E318220456740010B442 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB56E31A220456740010B442 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +125,10 @@
 				EBFFC51C2208412300879045 /* CameraViewController.swift */,
 				EB344187220AE1A900EB1993 /* TurnIphoneViewController.swift */,
 				EB344189220AE1C700EB1993 /* PlaySoundViewController.swift */,
+				EB34418B220AF39600EB1993 /* pianoD.wav */,
+				EB34418D220AF39600EB1993 /* pianoE.wav */,
+				EB34418C220AF39600EB1993 /* pianoF.wav */,
+				EB34418E220AF39600EB1993 /* pianoG.wav */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -274,7 +286,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB344190220AF39600EB1993 /* pianoF.wav in Resources */,
 				EB56E323220456750010B442 /* LaunchScreen.storyboard in Resources */,
+				EB344191220AF39600EB1993 /* pianoE.wav in Resources */,
+				EB344192220AF39600EB1993 /* pianoG.wav in Resources */,
+				EB34418F220AF39600EB1993 /* pianoD.wav in Resources */,
 				EB56E320220456750010B442 /* Assets.xcassets in Resources */,
 				EB56E31E220456740010B442 /* Main.storyboard in Resources */,
 			);
