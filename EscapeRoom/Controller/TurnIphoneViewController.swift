@@ -31,7 +31,7 @@ class TurnIphoneViewController: UIViewController {
         }
         if UIDevice.current.orientation == .portrait {
             if left == true {
-                descriptionLabel.text = "Turn iPhone to the öl right and then back"
+                descriptionLabel.text = "Turn iPhone to the right and then back"
             }
             if left == true && right == true {
                 descriptionLabel.text = ""
