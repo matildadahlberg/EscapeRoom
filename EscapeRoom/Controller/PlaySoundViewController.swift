@@ -8,17 +8,16 @@
 
 import UIKit
 import AVFoundation
-import SpriteKit
 
 class PlaySoundViewController: UIViewController, AVAudioPlayerDelegate {
     
+    @IBOutlet weak var startbuttonOutlet: UIButton!
+    
+    @IBOutlet var soundButtons: [UIButton]!
     @IBOutlet weak var exitButton: UIButton!
     @IBOutlet weak var unlockButton: UIButton!
     
-    @IBOutlet weak var greenOutler: UIButton!
-    @IBOutlet weak var blueOutlet: UIButton!
-    @IBOutlet weak var orangeOutlet: UIButton!
-    @IBOutlet weak var redOutlet: UIButton!
+    
     
     var playlist = [Int]()
     var currentItem = 0
@@ -26,13 +25,11 @@ class PlaySoundViewController: UIViewController, AVAudioPlayerDelegate {
     var numberOfTaps = 0
     
     
-    var playerD : AVAudioPlayer = AVAudioPlayer()
-    var playerE : AVAudioPlayer = AVAudioPlayer()
-    var playerF : AVAudioPlayer = AVAudioPlayer()
-    var playerG : AVAudioPlayer = AVAudioPlayer()
-    
-    let arrayOfSounds = ["pianoD","pianoF", "pianoG", "pianoE"]
-    
+    var playerD:AVAudioPlayer!
+    var playerE:AVAudioPlayer!
+    var playerF:AVAudioPlayer!
+    var playerG:AVAudioPlayer!
+ 
     
     
     override func viewDidLoad() {
@@ -40,46 +37,47 @@ class PlaySoundViewController: UIViewController, AVAudioPlayerDelegate {
         exitButton.layer.cornerRadius = 15
         unlockButton.isHidden = true
         
-        greenOutler.layer.cornerRadius = 10
-        blueOutlet.layer.cornerRadius = 10
-        orangeOutlet.layer.cornerRadius = 10
-        redOutlet.layer.cornerRadius = 10
+        soundButtons[0].layer.cornerRadius = 10
+        soundButtons[1].layer.cornerRadius = 10
+        soundButtons[2].layer.cornerRadius = 10
+        soundButtons[3].layer.cornerRadius = 10
+        
+        startbuttonOutlet.layer.cornerRadius = 10
         
         playSounds()
         
     }
     
-    @IBAction func greenButton(_ sender: Any) {
+    
+    @IBAction func startSoundButton(_ sender: Any) {
+        
         if readyForUser{
+        let button = sender as! UIButton
+        
+        switch button.tag {
+        case 1:
             playerD.play()
-            checkIfCorrect(buttonPressed: greenOutler)
-        }
-    }
-    @IBAction func blueButton(_ sender: Any) {
-        if readyForUser{
+            checkIfCorrect(buttonPressed: 1)
+        case 2:
             playerE.play()
-            checkIfCorrect(buttonPressed: blueOutlet)
-        }
-    }
-    
-    @IBAction func orangeButton(_ sender: Any) {
-        if readyForUser{
+            checkIfCorrect(buttonPressed: 2)
+        case 3:
             playerF.play()
-            checkIfCorrect(buttonPressed: orangeOutlet)
-        }
-    }
-    
-    @IBAction func redButton(_ sender: Any) {
-        if readyForUser{
+            checkIfCorrect(buttonPressed: 3)
+        case 4:
             playerG.play()
-            checkIfCorrect(buttonPressed: redOutlet)
+            checkIfCorrect(buttonPressed: 4)
+        default:
+            break
         }
+        }
+        
     }
     
     @IBAction func startSound(_ sender: Any) {
         let randomNumber = Int(arc4random_uniform(4) + 1)
         playlist.append(randomNumber)
-        //startSoundButton.isHidden = true
+        startbuttonOutlet.isHidden = true
         playNextItem()
     }
     
@@ -98,9 +96,9 @@ class PlaySoundViewController: UIViewController, AVAudioPlayerDelegate {
         
         do {
             try playerD = AVAudioPlayer(contentsOf: urlD)
-            try playerD = AVAudioPlayer(contentsOf: urlE)
-            try playerD = AVAudioPlayer(contentsOf: urlF)
-            try playerD = AVAudioPlayer(contentsOf: urlG)
+            try playerE = AVAudioPlayer(contentsOf: urlE)
+            try playerF = AVAudioPlayer(contentsOf: urlF)
+            try playerG = AVAudioPlayer(contentsOf: urlG)
             
             
         }catch{
@@ -125,10 +123,7 @@ class PlaySoundViewController: UIViewController, AVAudioPlayerDelegate {
             
         }else{
             readyForUser = true
-            greenOutler.isHighlighted = false
-            blueOutlet.isHighlighted = false
-            orangeOutlet.isHighlighted = false
-            redOutlet.isHighlighted = false
+            resetButtonHighlights()
         }
         
     }
@@ -138,23 +133,20 @@ class PlaySoundViewController: UIViewController, AVAudioPlayerDelegate {
         
         switch selectedItem {
         case 1:
+            highLightButtonWithTag(tag: 1)
             playerD.play()
-            greenOutler.isHighlighted = true
             break
         case 2:
+            highLightButtonWithTag(tag: 2)
             playerE.play()
-            greenOutler.isHighlighted = false
-            blueOutlet.isHighlighted = true
             break
         case 3:
+            highLightButtonWithTag(tag: 3)
             playerF.play()
-            blueOutlet.isHighlighted = false
-            orangeOutlet.isHighlighted = true
             break
         case 4:
+            highLightButtonWithTag(tag: 4)
             playerG.play()
-            orangeOutlet.isHighlighted = false
-            redOutlet.isHighlighted = true
             break
         default:
             break
@@ -163,16 +155,44 @@ class PlaySoundViewController: UIViewController, AVAudioPlayerDelegate {
         currentItem += 1
     }
     
-    func checkIfCorrect(buttonPressed: UIButton) {
-
-//        if buttonPressed == playlist[numberOfTaps]{
+    func highLightButtonWithTag(tag: Int){
+        switch tag {
+        case 1:
+            resetButtonHighlights()
+            soundButtons[tag - 1].setImage(UIImage(named: "greenPressed"), for: .normal)
+        case 2:
+            resetButtonHighlights()
+            soundButtons[tag - 1].setImage(UIImage(named:"bluePressed"), for: .normal)
+        case 3:
+            resetButtonHighlights()
+            soundButtons[tag - 1].setImage(UIImage(named:"orangePressed"), for: .normal)
+        case 4:
+            resetButtonHighlights()
+            soundButtons[tag - 1].setImage(UIImage(named:"redPressed"), for: .normal)
+        default:
+            break
+        }
+        
+    }
+    
+    func resetButtonHighlights(){
+        soundButtons[0].setImage(UIImage(named: "green"), for: .normal)
+        soundButtons[1].setImage(UIImage(named: "blue"), for: .normal)
+        soundButtons[2].setImage(UIImage(named: "orange"), for: .normal)
+        soundButtons[3].setImage(UIImage(named: "red"), for: .normal)
+    
+    }
+    
+    func checkIfCorrect(buttonPressed: Int) {
+        
+        if buttonPressed == playlist[numberOfTaps]{
             if numberOfTaps == playlist.count - 1{
                 unlockButton.isHidden = false
             }
-//        }
-
+        }
+        
     }
-
+    
     
     
     //    func playRed(){

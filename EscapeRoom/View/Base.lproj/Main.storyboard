@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="K4n-a9-bNM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wdj-xm-v3R">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -19,18 +19,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0J8-cj-Stf">
-                                <rect key="frame" x="121" y="380" width="132" height="53"/>
+                                <rect key="frame" x="109" y="368" width="156" height="77"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Start ">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <segue destination="Xk0-pu-yh9" kind="show" id="EK4-qx-G4B"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Escape Room" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L4m-Gh-CmH">
+                                <rect key="frame" x="81" y="95" width="213" height="167"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="58"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.79715949296951294" green="0.99355882406234741" blue="0.91764098405838013" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
@@ -39,7 +46,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-538" y="182"/>
+            <point key="canvasLocation" x="-538.39999999999998" y="181.77339901477833"/>
         </scene>
         <!--Shake&SpinnController-->
         <scene sceneID="UKI-94-ClE">
@@ -286,6 +293,49 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="MRC-Zi-BGH"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wcp-DF-Cgi">
+                                <rect key="frame" x="55" y="245" width="115" height="115"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="green"/>
+                                <connections>
+                                    <action selector="startSoundButton:" destination="mlU-Yq-odZ" eventType="touchUpInside" id="Lep-nA-qW2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qga-kP-5kl">
+                                <rect key="frame" x="208" y="245" width="115" height="115"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="blue"/>
+                                <connections>
+                                    <action selector="startSoundButton:" destination="mlU-Yq-odZ" eventType="touchUpInside" id="y2g-SM-aGI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mK9-Jw-lVA">
+                                <rect key="frame" x="55" y="390" width="115" height="115"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="orange"/>
+                                <connections>
+                                    <action selector="startSoundButton:" destination="mlU-Yq-odZ" eventType="touchUpInside" id="yf9-f8-hXQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dgy-sg-yx0">
+                                <rect key="frame" x="165" y="612" width="44" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="Play">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="startSound:" destination="mlU-Yq-odZ" eventType="touchUpInside" id="ddA-ZK-Zef"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rt2-1S-5dI">
+                                <rect key="frame" x="208" y="390" width="115" height="115"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="red"/>
+                                <connections>
+                                    <action selector="startSoundButton:" destination="mlU-Yq-odZ" eventType="touchUpInside" id="SIS-2z-KyH"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C79-KT-1Ip">
                                 <rect key="frame" x="109" y="368" width="156" height="77"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -304,12 +354,17 @@
                     </view>
                     <connections>
                         <outlet property="exitButton" destination="eCO-4d-Eif" id="8CZ-ox-nmX"/>
+                        <outlet property="startbuttonOutlet" destination="dgy-sg-yx0" id="B3w-YN-szg"/>
                         <outlet property="unlockButton" destination="C79-KT-1Ip" id="ccO-mH-LnK"/>
+                        <outletCollection property="soundButtons" destination="Wcp-DF-Cgi" collectionClass="NSMutableArray" id="IyJ-rr-5W0"/>
+                        <outletCollection property="soundButtons" destination="Qga-kP-5kl" collectionClass="NSMutableArray" id="FZt-oy-004"/>
+                        <outletCollection property="soundButtons" destination="mK9-Jw-lVA" collectionClass="NSMutableArray" id="3bP-cX-Nd9"/>
+                        <outletCollection property="soundButtons" destination="rt2-1S-5dI" collectionClass="NSMutableArray" id="akh-dW-O4S"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VTb-Fe-Q5e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4628" y="188"/>
+            <point key="canvasLocation" x="4628" y="187.68472906403943"/>
         </scene>
         <!--Distance View Controller-->
         <scene sceneID="7an-09-z7K">
@@ -330,7 +385,71 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="igG-GA-9D6"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="crack1" translatesAutoresizingMaskIntoConstraints="NO" id="mH5-QY-zEl">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="crack2" translatesAutoresizingMaskIntoConstraints="NO" id="0aX-sF-5Bg">
+                                <rect key="frame" x="0.0" y="-5" width="375" height="817"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="crack3" translatesAutoresizingMaskIntoConstraints="NO" id="WmQ-U2-t8y">
+                                <rect key="frame" x="0.0" y="-5" width="375" height="817"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="crack4" translatesAutoresizingMaskIntoConstraints="NO" id="6ER-O1-mNK">
+                                <rect key="frame" x="0.0" y="-5" width="375" height="817"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OBe-U0-a2y">
+                                <rect key="frame" x="109" y="368" width="156" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Unlock next room">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="wdj-xm-v3R" kind="show" id="Www-wU-Nm7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.79715949296951294" green="0.99355882406234741" blue="0.91764098405838013" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="MVc-A9-Rms"/>
+                    </view>
+                    <connections>
+                        <outlet property="exitButton" destination="xA9-vk-EGX" id="fuw-1Q-Pfa"/>
+                        <outlet property="image1" destination="mH5-QY-zEl" id="XFd-a1-yng"/>
+                        <outlet property="image2" destination="0aX-sF-5Bg" id="p2M-zJ-mJH"/>
+                        <outlet property="image3" destination="WmQ-U2-t8y" id="qqz-R8-i5l"/>
+                        <outlet property="image4" destination="6ER-O1-mNK" id="JB0-XL-ypJ"/>
+                        <outlet property="unlockButton" destination="OBe-U0-a2y" id="bYe-Cq-wis"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aRG-go-3Hn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5456.8000000000002" y="187.68472906403943"/>
+        </scene>
+        <!--Moving View Controller-->
+        <scene sceneID="c7x-lm-vdv">
+            <objects>
+                <viewController id="wdj-xm-v3R" customClass="MovingViewController" customModule="EscapeRoom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="A5f-0x-U2F">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jMN-p3-NJY">
+                                <rect key="frame" x="16" y="44" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Exit">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="xZP-s5-rIY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rdd-Zu-dEM">
                                 <rect key="frame" x="109" y="368" width="156" height="77"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -340,23 +459,31 @@
                                 </state>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.79715949296951294" green="0.99355882406234741" blue="0.91764098405838013" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <viewLayoutGuide key="safeArea" id="MVc-A9-Rms"/>
+                        <color key="backgroundColor" red="0.797159493" green="0.99355882409999996" blue="0.91764098409999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="Ymh-gc-RIV"/>
                     </view>
                     <connections>
-                        <outlet property="exitButton" destination="xA9-vk-EGX" id="fuw-1Q-Pfa"/>
-                        <outlet property="unlockButton" destination="OBe-U0-a2y" id="bYe-Cq-wis"/>
+                        <outlet property="exitButton" destination="jMN-p3-NJY" id="xO1-Gk-Q5q"/>
+                        <outlet property="unlockButton" destination="rdd-Zu-dEM" id="vea-57-P6B"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aRG-go-3Hn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q8Z-WH-HsT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5457" y="188"/>
+            <point key="canvasLocation" x="6342" y="188"/>
         </scene>
     </scenes>
     <resources>
+        <image name="blue" width="600" height="600"/>
+        <image name="crack1" width="1600" height="1096.800048828125"/>
+        <image name="crack2" width="1600" height="1538.4000244140625"/>
+        <image name="crack3" width="1600" height="1036.800048828125"/>
+        <image name="crack4" width="1600" height="1384"/>
+        <image name="green" width="512" height="512"/>
+        <image name="orange" width="570" height="570"/>
         <image name="pinata" width="34.751590728759766" height="52.1783447265625"/>
+        <image name="red" width="700" height="629"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="MRC-Zi-BGH"/>
+        <segue reference="xZP-s5-rIY"/>
     </inferredMetricsTieBreakers>
 </document>

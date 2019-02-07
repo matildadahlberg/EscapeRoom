@@ -6,17 +6,26 @@ class DistanceViewController: UIViewController {
     
     @IBOutlet weak var unlockButton: UIButton!
     @IBOutlet weak var exitButton: UIButton!
+    @IBOutlet weak var image1: UIImageView!
+    @IBOutlet weak var image2: UIImageView!
+    @IBOutlet weak var image3: UIImageView!
+    @IBOutlet weak var image4: UIImageView!
     
     var descriptionLabel = UILabel()
-    
     var recorder: AVAudioRecorder!
     var levelTimer = Timer()
+    var screenCracked = false
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupText()
         exitButton.layer.cornerRadius = 15
         unlockButton.isHidden = true
+        image1.isHidden = true
+        image2.isHidden = true
+        image3.isHidden = true
+        image4.isHidden = true
         
         let documents = URL(fileURLWithPath: NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)[0])
         let url = documents.appendingPathComponent("record.caf")
@@ -49,21 +58,34 @@ class DistanceViewController: UIViewController {
     @objc func decibelLevel() {
         recorder.updateMeters()
         let level = recorder.averagePower(forChannel: 0)
-        print(level)
+        
+        if level < -10 && level > -20{
+            image1.isHidden = false
+        }
+        if level < 0 && level > -10{
+            image2.isHidden = false
+        }
+        if level < 5 && level > 0{
+            image3.isHidden = false
+        }
+        if level > 5 {
+            image4.isHidden = false
+            screenCracked = true
+        }
+        if screenCracked {
+            levelTimer.invalidate()
+            unlockButton.isHidden = false
+            unlockButton.layer.cornerRadius = 15
+            descriptionLabel.text = ""
+        }
     }
     
     func setupText(){
-        
         descriptionLabel = UILabel(frame: CGRect(x: self.view.frame.width/2 - 175 , y: self.view.frame.height/2 - 50, width: 350, height: 100))
         descriptionLabel.textAlignment = .center
         descriptionLabel.numberOfLines = 2
         descriptionLabel.text = "Scream until the screen cracks "
         descriptionLabel.font = UIFont(name: "Helvetica", size: 30)
         self.view.addSubview(descriptionLabel)
-        
     }
-    
-
-  
-
 }
