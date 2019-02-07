@@ -1,70 +1,66 @@
 import UIKit
-import CoreLocation
+import AVFoundation
+import CoreAudio
 
-class DistanceViewController: UIViewController, CLLocationManagerDelegate {
+class DistanceViewController: UIViewController {
     
     @IBOutlet weak var unlockButton: UIButton!
     @IBOutlet weak var exitButton: UIButton!
     
     var descriptionLabel = UILabel()
-    var metersLeftLabel = UILabel()
     
-    let locationManager = CLLocationManager()
-    var startCoordinates = CLLocation()
-    var newLati = ""
-    var newLong = ""
-    var metersLeft = 10
+    var recorder: AVAudioRecorder!
+    var levelTimer = Timer()
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         setupText()
         exitButton.layer.cornerRadius = 15
         unlockButton.isHidden = true
         
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.requestAlwaysAuthorization()
-        locationManager.startUpdatingLocation()
-
+        let documents = URL(fileURLWithPath: NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)[0])
+        let url = documents.appendingPathComponent("record.caf")
+        
+        let recordSettings: [String: Any] = [
+            AVFormatIDKey:              kAudioFormatAppleIMA4,
+            AVSampleRateKey:            44100.0,
+            AVNumberOfChannelsKey:      2,
+            AVEncoderBitRateKey:        12800,
+            AVLinearPCMBitDepthKey:     16,
+            AVEncoderAudioQualityKey:   AVAudioQuality.max.rawValue
+        ]
+        
+        let audioSession = AVAudioSession.sharedInstance()
+        do {
+            try audioSession.setCategory(.playAndRecord, mode: .default)
+            try audioSession.setActive(true)
+            try recorder = AVAudioRecorder(url:url, settings: recordSettings)
+            
+        } catch {
+            return
+        }
+        recorder.prepareToRecord()
+        recorder.isMeteringEnabled = true
+        recorder.record()
+        levelTimer = Timer.scheduledTimer(timeInterval: 0.05, target: self, selector: #selector(decibelLevel), userInfo: nil, repeats: true)
         
     }
     
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let locationValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
-        
-        
-        startCoordinates = CLLocation(latitude: locationValue.latitude, longitude: locationValue.longitude)
-        print("START: \(startCoordinates)")
-        
-        
-        let currentCoordinates = CLLocation(latitude: locationValue.latitude, longitude: locationValue.longitude)
-        print("NEW: \(currentCoordinates)")
-        
-        let distance = currentCoordinates.distance(from: startCoordinates) / 1000
-        
-        print("DISTANSEN ÄR: \(distance) km")
+    @objc func decibelLevel() {
+        recorder.updateMeters()
+        let level = recorder.averagePower(forChannel: 0)
+        print(level)
     }
-
-    
-    
     
     func setupText(){
         
-        descriptionLabel = UILabel(frame: CGRect(x: self.view.frame.width/2 - 175 , y: 100, width: 350, height: 100))
+        descriptionLabel = UILabel(frame: CGRect(x: self.view.frame.width/2 - 175 , y: self.view.frame.height/2 - 50, width: 350, height: 100))
         descriptionLabel.textAlignment = .center
         descriptionLabel.numberOfLines = 2
-        descriptionLabel.text = "Move yourself 10 meters in any direction"
+        descriptionLabel.text = "Scream until the screen cracks "
         descriptionLabel.font = UIFont(name: "Helvetica", size: 30)
         self.view.addSubview(descriptionLabel)
         
-        metersLeftLabel = UILabel(frame: CGRect(x: self.view.frame.width/2 - 250, y: 300, width: 500, height: 200))
-        metersLeftLabel.textAlignment = .center
-        metersLeftLabel.text = "\(metersLeft)m"
-        metersLeftLabel.font = UIFont(name: "Helvetica", size: 150)
-        self.view.addSubview(metersLeftLabel)
-        
-    
     }
     
 
