@@ -52,7 +52,7 @@ class DistanceViewController: UIViewController {
         recorder.isMeteringEnabled = true
         recorder.record()
         levelTimer = Timer.scheduledTimer(timeInterval: 0.05, target: self, selector: #selector(decibelLevel), userInfo: nil, repeats: true)
-        
+
     }
     
     @objc func decibelLevel() {
@@ -66,7 +66,11 @@ class DistanceViewController: UIViewController {
             image2.isHidden = false
             image3.isHidden = false
         }
+<<<<<<< HEAD
+        if level < 5 && level > 0 {
+=======
         if level > 0 {
+>>>>>>> 730e5c62f01eb76c538d2f1d173e25fbcb0af94e
             image4.isHidden = false
             screenCracked = true
         }
