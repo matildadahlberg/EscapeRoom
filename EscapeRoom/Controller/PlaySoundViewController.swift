@@ -40,9 +40,7 @@ class PlaySoundViewController: UIViewController, AVAudioPlayerDelegate {
         unlockButton.isHidden = true
         startbuttonOutlet.layer.cornerRadius = 10
         
-        
         playSounds()
-        
     }
     
     
@@ -68,7 +66,6 @@ class PlaySoundViewController: UIViewController, AVAudioPlayerDelegate {
                 break
             }
         }
-        
     }
     
     @IBAction func startSound(_ sender: Any) {
@@ -91,18 +88,14 @@ class PlaySoundViewController: UIViewController, AVAudioPlayerDelegate {
         
         let audioPlayerG = Bundle.main.path(forResource: "pianoG", ofType: "wav")!
         let urlG = URL(fileURLWithPath: audioPlayerG)
-        
         do {
             try playerD = AVAudioPlayer(contentsOf: urlD)
             try playerE = AVAudioPlayer(contentsOf: urlE)
             try playerF = AVAudioPlayer(contentsOf: urlF)
             try playerG = AVAudioPlayer(contentsOf: urlG)
-            
-            
         }catch{
             print(error)
         }
-        
         playerD.delegate = self
         playerE.delegate = self
         playerF.delegate = self
@@ -112,24 +105,17 @@ class PlaySoundViewController: UIViewController, AVAudioPlayerDelegate {
         playerE.numberOfLoops = 0
         playerF.numberOfLoops = 0
         playerG.numberOfLoops = 0
-        
-        
     }
     
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
-        
         if currentItem <= playlist.count - 1{
             playNextItem()
-            
         }
-            
-            
         else{
             readyForUser = true
             resetButtonHighlights()
             enableButtons()
         }
-        
     }
     
     func playNextItem(){
@@ -155,7 +141,6 @@ class PlaySoundViewController: UIViewController, AVAudioPlayerDelegate {
         default:
             break
         }
-        
         currentItem += 1
     }
     
@@ -176,7 +161,6 @@ class PlaySoundViewController: UIViewController, AVAudioPlayerDelegate {
         default:
             break
         }
-        
     }
     
     func resetButtonHighlights(){
@@ -184,7 +168,6 @@ class PlaySoundViewController: UIViewController, AVAudioPlayerDelegate {
         soundButtons[1].setImage(UIImage(named: "blue"), for: .normal)
         soundButtons[2].setImage(UIImage(named: "orange"), for: .normal)
         soundButtons[3].setImage(UIImage(named: "red"), for: .normal)
-        
     }
     
     func checkIfCorrect(buttonPressed: Int) {
@@ -194,20 +177,13 @@ class PlaySoundViewController: UIViewController, AVAudioPlayerDelegate {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.10) {
                     self.anotherRound()
                 }
-                
-                
             }
-            
             numberOfTaps += 1
-            
         }
-            
         else{
             //game over
             resetGame()
-            
         }
-        
     }
     
     func resetGame(){
@@ -219,7 +195,6 @@ class PlaySoundViewController: UIViewController, AVAudioPlayerDelegate {
         startbuttonOutlet.setTitle("Try again", for: .normal)
         untilEnd = 0
         disableButtons()
-        
     }
     
     func anotherRound(){
@@ -243,7 +218,6 @@ class PlaySoundViewController: UIViewController, AVAudioPlayerDelegate {
             
             playNextItem()
         }
-        
     }
     
     func endOfGame(){
@@ -258,23 +232,17 @@ class PlaySoundViewController: UIViewController, AVAudioPlayerDelegate {
         soundButtons[3].isHidden = true
         
         unlockButton.isHidden = false
-        
     }
     
     func disableButtons(){
         for button in soundButtons{
             button.isUserInteractionEnabled = false
-            
         }
-        
     }
     
     func enableButtons(){
         for button in soundButtons{
             button.isUserInteractionEnabled = true
-            
         }
     }
-    
-    
 }

@@ -64,11 +64,13 @@ class DistanceViewController: UIViewController {
         }
         if level < 0 && level > -10{
             image2.isHidden = false
-        }
-        if level < 5 && level > 0{
             image3.isHidden = false
         }
+<<<<<<< HEAD
         if level < 5 && level > 0 {
+=======
+        if level > 0 {
+>>>>>>> 730e5c62f01eb76c538d2f1d173e25fbcb0af94e
             image4.isHidden = false
             screenCracked = true
         }
