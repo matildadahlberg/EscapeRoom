@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wdj-xm-v3R">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oi7-zr-G5B">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -457,6 +457,9 @@
                                 <state key="normal" title="Unlock next room">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="oi7-zr-G5B" kind="show" id="ZAS-T2-orR"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.797159493" green="0.99355882409999996" blue="0.91764098409999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -471,6 +474,101 @@
             </objects>
             <point key="canvasLocation" x="6342" y="188"/>
         </scene>
+        <!--MemoryViewController-->
+        <scene sceneID="Tdg-k2-PqU">
+            <objects>
+                <viewController id="oi7-zr-G5B" userLabel="MemoryViewController" customClass="MemoryViewController" customModule="EscapeRoom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NcL-PI-Ohb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rl4-Gy-5C3">
+                                <rect key="frame" x="16" y="44" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Exit">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="fKf-lj-ky2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gqp-gz-Fcb">
+                                <rect key="frame" x="39" y="151" width="125" height="125"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="memoryBack"/>
+                                <connections>
+                                    <action selector="lionCardButton1:" destination="oi7-zr-G5B" eventType="touchUpInside" id="eeH-Lu-oO3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SGq-DI-QrK">
+                                <rect key="frame" x="39" y="344" width="125" height="125"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="memoryBack"/>
+                                <connections>
+                                    <action selector="dogCardButton:" destination="oi7-zr-G5B" eventType="touchUpInside" id="hgH-EZ-lb7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qW2-uh-WRn">
+                                <rect key="frame" x="39" y="533" width="125" height="125"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="memoryBack"/>
+                                <connections>
+                                    <action selector="lionCardButton2:" destination="oi7-zr-G5B" eventType="touchUpInside" id="lFp-2a-BWN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="trP-mg-Aga">
+                                <rect key="frame" x="209" y="151" width="125" height="125"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="memoryBack"/>
+                                <connections>
+                                    <action selector="tigerCardButton1:" destination="oi7-zr-G5B" eventType="touchUpInside" id="Rug-KQ-eWE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZZf-eJ-uKc">
+                                <rect key="frame" x="209" y="344" width="125" height="125"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="memoryBack"/>
+                                <connections>
+                                    <action selector="tigerCardButton2:" destination="oi7-zr-G5B" eventType="touchUpInside" id="egk-6p-upd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v8n-DO-C0N">
+                                <rect key="frame" x="109" y="368" width="156" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Unlock next room">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="io1-L6-ck4">
+                                <rect key="frame" x="209" y="533" width="125" height="125"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="memoryBack"/>
+                                <connections>
+                                    <action selector="dogCardButton2:" destination="oi7-zr-G5B" eventType="touchUpInside" id="rom-hZ-AGq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.79698091745376587" green="0.99324887990951538" blue="0.91764074563980103" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="Ty0-rs-zHx"/>
+                    </view>
+                    <connections>
+                        <outlet property="dogCard1" destination="SGq-DI-QrK" id="auu-YX-jdb"/>
+                        <outlet property="dogCard2" destination="io1-L6-ck4" id="f3q-HY-tfx"/>
+                        <outlet property="exitButton" destination="rl4-Gy-5C3" id="LH0-0S-4oF"/>
+                        <outlet property="lionCard1" destination="Gqp-gz-Fcb" id="3dF-XX-Shl"/>
+                        <outlet property="lionCard2" destination="qW2-uh-WRn" id="JCP-ZI-hkY"/>
+                        <outlet property="tigerCard1" destination="trP-mg-Aga" id="qcn-OX-nyp"/>
+                        <outlet property="tigerCard2" destination="ZZf-eJ-uKc" id="mWH-zQ-E9a"/>
+                        <outlet property="unlockButton" destination="v8n-DO-C0N" id="I2n-Iu-WdN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V5k-Bz-Izg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7141.6000000000004" y="187.68472906403943"/>
+        </scene>
     </scenes>
     <resources>
         <image name="blue" width="600" height="600"/>
@@ -479,11 +577,12 @@
         <image name="crack3" width="1600" height="1036.800048828125"/>
         <image name="crack4" width="1600" height="1384"/>
         <image name="green" width="512" height="512"/>
+        <image name="memoryBack" width="512" height="512"/>
         <image name="orange" width="570" height="570"/>
         <image name="pinata" width="34.751590728759766" height="52.1783447265625"/>
         <image name="red" width="700" height="629"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="xZP-s5-rIY"/>
+        <segue reference="fKf-lj-ky2"/>
     </inferredMetricsTieBreakers>
 </document>
