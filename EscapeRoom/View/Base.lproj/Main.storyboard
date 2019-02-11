@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wdj-xm-v3R">
+=======
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tdD-e8-bLm">
+>>>>>>> matildas
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -471,6 +475,162 @@
             </objects>
             <point key="canvasLocation" x="6342" y="188"/>
         </scene>
+<<<<<<< HEAD
+=======
+        <!--MemoryViewController-->
+        <scene sceneID="Tdg-k2-PqU">
+            <objects>
+                <viewController id="oi7-zr-G5B" userLabel="MemoryViewController" customClass="MemoryViewController" customModule="EscapeRoom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NcL-PI-Ohb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rl4-Gy-5C3">
+                                <rect key="frame" x="16" y="44" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Exit">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="fKf-lj-ky2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gqp-gz-Fcb">
+                                <rect key="frame" x="39" y="151" width="125" height="125"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="memoryBack"/>
+                                <connections>
+                                    <action selector="memoryCardPressed:" destination="oi7-zr-G5B" eventType="touchUpInside" id="YOg-Vt-8En"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SGq-DI-QrK">
+                                <rect key="frame" x="39" y="344" width="125" height="125"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="memoryBack"/>
+                                <connections>
+                                    <action selector="memoryCardPressed:" destination="oi7-zr-G5B" eventType="touchUpInside" id="pw3-eA-loF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="5" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qW2-uh-WRn">
+                                <rect key="frame" x="39" y="533" width="125" height="125"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="memoryBack"/>
+                                <connections>
+                                    <action selector="memoryCardPressed:" destination="oi7-zr-G5B" eventType="touchUpInside" id="5FW-o6-aQ2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="trP-mg-Aga">
+                                <rect key="frame" x="209" y="151" width="125" height="125"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="memoryBack"/>
+                                <connections>
+                                    <action selector="memoryCardPressed:" destination="oi7-zr-G5B" eventType="touchUpInside" id="OsS-c3-G8f"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZZf-eJ-uKc">
+                                <rect key="frame" x="209" y="344" width="125" height="125"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="memoryBack"/>
+                                <connections>
+                                    <action selector="memoryCardPressed:" destination="oi7-zr-G5B" eventType="touchUpInside" id="c5N-hh-71T"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v8n-DO-C0N">
+                                <rect key="frame" x="109" y="368" width="156" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Unlock next room">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="tdD-e8-bLm" kind="show" id="B5K-a0-XoU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="6" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="io1-L6-ck4">
+                                <rect key="frame" x="209" y="533" width="125" height="125"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="memoryBack"/>
+                                <connections>
+                                    <action selector="memoryCardPressed:" destination="oi7-zr-G5B" eventType="touchUpInside" id="Tzc-2g-RIH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.79698091745376587" green="0.99324887990951538" blue="0.91764074563980103" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="Ty0-rs-zHx"/>
+                    </view>
+                    <connections>
+                        <outlet property="dogCard1" destination="SGq-DI-QrK" id="auu-YX-jdb"/>
+                        <outlet property="dogCard2" destination="io1-L6-ck4" id="f3q-HY-tfx"/>
+                        <outlet property="exitButton" destination="rl4-Gy-5C3" id="LH0-0S-4oF"/>
+                        <outlet property="lionCard1" destination="Gqp-gz-Fcb" id="3dF-XX-Shl"/>
+                        <outlet property="lionCard2" destination="qW2-uh-WRn" id="JCP-ZI-hkY"/>
+                        <outlet property="tigerCard1" destination="trP-mg-Aga" id="qcn-OX-nyp"/>
+                        <outlet property="tigerCard2" destination="ZZf-eJ-uKc" id="mWH-zQ-E9a"/>
+                        <outlet property="unlockButton" destination="v8n-DO-C0N" id="I2n-Iu-WdN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V5k-Bz-Izg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7141.6000000000004" y="187.68472906403943"/>
+        </scene>
+        <!--VolumeController-->
+        <scene sceneID="3LR-5h-58K">
+            <objects>
+                <viewController id="tdD-e8-bLm" userLabel="VolumeController" customClass="VolumeViewController" customModule="EscapeRoom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xys-gY-jwK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3F6-hV-kb9">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="50.666666666666664"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2oF-Dc-dTe">
+                                <rect key="frame" x="16" y="44" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Exit">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="5L9-PX-0JQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="teq-6W-QOJ">
+                                <rect key="frame" x="109" y="368" width="156" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Unlock next room">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Make the screen turn red by increase the volume" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CmY-5b-O2k">
+                                <rect key="frame" x="66" y="258" width="242" height="87"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.79698091745376587" green="0.99324887990951538" blue="0.91764074563980103" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="VfM-Vh-Lwm"/>
+                    </view>
+                    <connections>
+                        <outlet property="exitButton" destination="2oF-Dc-dTe" id="7r8-JM-Pya"/>
+                        <outlet property="imageView" destination="3F6-hV-kb9" id="oOu-rW-qo7"/>
+                        <outlet property="label" destination="CmY-5b-O2k" id="ul7-wt-a6t"/>
+                        <outlet property="unlockButton" destination="teq-6W-QOJ" id="03x-n5-09k"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qmd-Lr-QgH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7141.6000000000004" y="996.79802955665025"/>
+        </scene>
+>>>>>>> matildas
     </scenes>
     <resources>
         <image name="blue" width="600" height="600"/>
@@ -484,6 +644,10 @@
         <image name="red" width="700" height="629"/>
     </resources>
     <inferredMetricsTieBreakers>
+<<<<<<< HEAD
         <segue reference="xZP-s5-rIY"/>
+=======
+        <segue reference="MRC-Zi-BGH"/>
+>>>>>>> matildas
     </inferredMetricsTieBreakers>
 </document>

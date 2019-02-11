@@ -9,7 +9,7 @@
 import UIKit
 
 class MemoryViewController: UIViewController {
-
+    
     @IBOutlet weak var exitButton: UIButton!
     
     
@@ -24,35 +24,45 @@ class MemoryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         exitButton.layer.cornerRadius = 15
         unlockButton.isHidden = true
+        
+        
+        
+        
+        
     }
     
-    @IBAction func lionCardButton1(_ sender: Any) {
-        lionCard1.setImage(UIImage(named: "lion"), for: .normal)
+    @IBAction func memoryCardPressed(_ sender: Any) {
+        
+        let button = sender as! UIButton
+        
+        switch button.tag {
+        case 1:
+            lionCard1.setImage(UIImage(named: "lion"), for: .normal)
+        case 2:
+            tigerCard1.setImage(UIImage(named: "tiger"), for: .normal)
+        case 3:
+            dogCard1.setImage(UIImage(named: "dog"), for: .normal)
+        case 4:
+            tigerCard2.setImage(UIImage(named: "tiger"), for: .normal)
+        case 5:
+            lionCard2.setImage(UIImage(named: "lion"), for: .normal)
+        case 6:
+            dogCard2.setImage(UIImage(named: "dog"), for: .normal)
+        default:
+            break
+        }
+        
+        
+        
+        
     }
     
     
-    @IBAction func tigerCardButton1(_ sender: Any) {
-        tigerCard1.setImage(UIImage(named: "tiger"), for: .normal)
-    }
     
-    @IBAction func dogCardButton(_ sender: Any) {
-        dogCard1.setImage(UIImage(named: "dog"), for: .normal)
-    }
     
-    @IBAction func tigerCardButton2(_ sender: Any) {
-        tigerCard2.setImage(UIImage(named: "tiger"), for: .normal)
-    }
     
-    @IBAction func lionCardButton2(_ sender: Any) {
-        lionCard2.setImage(UIImage(named: "lion"), for: .normal)
-    }
     
-    @IBAction func dogCardButton2(_ sender: Any) {
-        dogCard2.setImage(UIImage(named: "dog"), for: .normal)
-    }
-    
-
 }
