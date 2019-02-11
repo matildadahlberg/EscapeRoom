@@ -52,7 +52,7 @@ class DistanceViewController: UIViewController {
         recorder.isMeteringEnabled = true
         recorder.record()
         levelTimer = Timer.scheduledTimer(timeInterval: 0.05, target: self, selector: #selector(decibelLevel), userInfo: nil, repeats: true)
-        
+
     }
     
     @objc func decibelLevel() {
@@ -65,10 +65,10 @@ class DistanceViewController: UIViewController {
         if level < 0 && level > -10{
             image2.isHidden = false
         }
-        if level < 5 && level > 0{
+        if level < 5 && level > 0 {
             image3.isHidden = false
         }
-        if level > 5 {
+        if level > 0 {
             image4.isHidden = false
             screenCracked = true
         }
@@ -78,8 +78,9 @@ class DistanceViewController: UIViewController {
             unlockButton.layer.cornerRadius = 15
             descriptionLabel.text = ""
         }
+        
+        
     }
-    
     func setupText(){
         descriptionLabel = UILabel(frame: CGRect(x: self.view.frame.width/2 - 175 , y: self.view.frame.height/2 - 50, width: 350, height: 100))
         descriptionLabel.textAlignment = .center

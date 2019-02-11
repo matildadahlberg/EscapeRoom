@@ -25,6 +25,7 @@
 		EB56E339220456750010B442 /* EscapeRoomUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB56E338220456750010B442 /* EscapeRoomUITests.swift */; };
 		EB56E347220457730010B442 /* ShakeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB56E346220457730010B442 /* ShakeViewController.swift */; };
 		EB56E349220457920010B442 /* PinataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB56E348220457920010B442 /* PinataViewController.swift */; };
+		EBA864FA220DB429007890F9 /* MemoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA864F9220DB429007890F9 /* MemoryViewController.swift */; };
 		EBFFC51D2208412300879045 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFFC51C2208412300879045 /* CameraViewController.swift */; };
 		EBFFC5212208899000879045 /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = EBFFC5202208899000879045 /* Resnet50.mlmodel */; };
 /* End PBXBuildFile section */
@@ -71,6 +72,7 @@
 		EB56E33A220456750010B442 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB56E346220457730010B442 /* ShakeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeViewController.swift; sourceTree = "<group>"; };
 		EB56E348220457920010B442 /* PinataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinataViewController.swift; sourceTree = "<group>"; };
+		EBA864F9220DB429007890F9 /* MemoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryViewController.swift; sourceTree = "<group>"; };
 		EBFFC51C2208412300879045 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		EBFFC5202208899000879045 /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Resnet50.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -131,6 +133,7 @@
 				EB344189220AE1C700EB1993 /* PlaySoundViewController.swift */,
 				7B2D433A220B13000078120A /* DistanceViewController.swift */,
 				7B2D433C220C5D3D0078120A /* MovingViewController.swift */,
+				EBA864F9220DB429007890F9 /* MemoryViewController.swift */,
 				EB34418B220AF39600EB1993 /* pianoD.wav */,
 				EB34418D220AF39600EB1993 /* pianoE.wav */,
 				EB34418C220AF39600EB1993 /* pianoF.wav */,
@@ -332,6 +335,7 @@
 				EB56E349220457920010B442 /* PinataViewController.swift in Sources */,
 				EBFFC5212208899000879045 /* Resnet50.mlmodel in Sources */,
 				7B2D433D220C5D3D0078120A /* MovingViewController.swift in Sources */,
+				EBA864FA220DB429007890F9 /* MemoryViewController.swift in Sources */,
 				EB34418A220AE1C700EB1993 /* PlaySoundViewController.swift in Sources */,
 				EB56E319220456740010B442 /* AppDelegate.swift in Sources */,
 			);
@@ -515,7 +519,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dahlberg.EscapeRoom;
+				PRODUCT_BUNDLE_IDENTIFIER = com.madahlbessrg.EscapeRoom;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -533,7 +537,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dahlberg.EscapeRoom;
+				PRODUCT_BUNDLE_IDENTIFIER = com.madahlbessrg.EscapeRoom;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
