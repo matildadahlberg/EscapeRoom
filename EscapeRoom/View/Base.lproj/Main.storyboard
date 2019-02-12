@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wdj-xm-v3R">
-=======
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tdD-e8-bLm">
->>>>>>> matildas
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -475,8 +471,6 @@
             </objects>
             <point key="canvasLocation" x="6342" y="188"/>
         </scene>
-<<<<<<< HEAD
-=======
         <!--MemoryViewController-->
         <scene sceneID="Tdg-k2-PqU">
             <objects>
@@ -630,7 +624,6 @@
             </objects>
             <point key="canvasLocation" x="7141.6000000000004" y="996.79802955665025"/>
         </scene>
->>>>>>> matildas
     </scenes>
     <resources>
         <image name="blue" width="600" height="600"/>
@@ -639,15 +632,12 @@
         <image name="crack3" width="1600" height="1036.800048828125"/>
         <image name="crack4" width="1600" height="1384"/>
         <image name="green" width="512" height="512"/>
+        <image name="memoryBack" width="512" height="512"/>
         <image name="orange" width="570" height="570"/>
         <image name="pinata" width="34.751590728759766" height="52.1783447265625"/>
         <image name="red" width="700" height="629"/>
     </resources>
     <inferredMetricsTieBreakers>
-<<<<<<< HEAD
         <segue reference="xZP-s5-rIY"/>
-=======
-        <segue reference="MRC-Zi-BGH"/>
->>>>>>> matildas
     </inferredMetricsTieBreakers>
 </document>

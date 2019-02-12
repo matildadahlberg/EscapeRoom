@@ -6,6 +6,7 @@ class PinataViewController: UIViewController {
     @IBOutlet weak var unlockButton: UIButton!
     @IBOutlet weak var exitButton: UIButton!
     
+    var time = UILabel()
     
     var timer = Timer()
     var seconds = 10
@@ -26,6 +27,9 @@ class PinataViewController: UIViewController {
         setupView()
         unlockButton.isHidden = true
         exitButton.layer.cornerRadius = 15
+        
+        time.frame = CGRect(x: self.view.frame.width - 70, y: 40, width: 100, height: 20)
+        self.view.addSubview(time)
         
         
         pinataImage.isUserInteractionEnabled = true
