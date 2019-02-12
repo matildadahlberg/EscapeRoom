@@ -21,6 +21,7 @@ class TurnIphoneViewController: UIViewController {
         self.view.addSubview(descriptionLabel)
     }
     
+    
     override func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
         
         if UIDevice.current.orientation == .landscapeLeft {
