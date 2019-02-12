@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wdj-xm-v3R">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oi7-zr-G5B">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -490,46 +490,6 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="fKf-lj-ky2"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="1" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gqp-gz-Fcb">
-                                <rect key="frame" x="39" y="151" width="125" height="125"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="memoryBack"/>
-                                <connections>
-                                    <action selector="memoryCardPressed:" destination="oi7-zr-G5B" eventType="touchUpInside" id="YOg-Vt-8En"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="3" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SGq-DI-QrK">
-                                <rect key="frame" x="39" y="344" width="125" height="125"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="memoryBack"/>
-                                <connections>
-                                    <action selector="memoryCardPressed:" destination="oi7-zr-G5B" eventType="touchUpInside" id="pw3-eA-loF"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="5" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qW2-uh-WRn">
-                                <rect key="frame" x="39" y="533" width="125" height="125"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="memoryBack"/>
-                                <connections>
-                                    <action selector="memoryCardPressed:" destination="oi7-zr-G5B" eventType="touchUpInside" id="5FW-o6-aQ2"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="2" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="trP-mg-Aga">
-                                <rect key="frame" x="209" y="151" width="125" height="125"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="memoryBack"/>
-                                <connections>
-                                    <action selector="memoryCardPressed:" destination="oi7-zr-G5B" eventType="touchUpInside" id="OsS-c3-G8f"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="4" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZZf-eJ-uKc">
-                                <rect key="frame" x="209" y="344" width="125" height="125"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="memoryBack"/>
-                                <connections>
-                                    <action selector="memoryCardPressed:" destination="oi7-zr-G5B" eventType="touchUpInside" id="c5N-hh-71T"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v8n-DO-C0N">
                                 <rect key="frame" x="109" y="368" width="156" height="77"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -542,26 +502,56 @@
                                     <segue destination="tdD-e8-bLm" kind="show" id="B5K-a0-XoU"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="6" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="io1-L6-ck4">
-                                <rect key="frame" x="209" y="533" width="125" height="125"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZMx-b4-clh">
+                                <rect key="frame" x="0.0" y="144" width="375" height="525"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="memoryBack"/>
-                                <connections>
-                                    <action selector="memoryCardPressed:" destination="oi7-zr-G5B" eventType="touchUpInside" id="Tzc-2g-RIH"/>
-                                </connections>
-                            </button>
+                                <color key="backgroundColor" red="0.79698091745376587" green="0.99324887990951538" blue="0.91764074563980103" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="SF8-p1-qpk">
+                                    <size key="itemSize" width="180" height="165"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CardCell" id="y5D-rw-59x" customClass="CardCollectionViewCell" customModule="EscapeRoom" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="180" height="165"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="180" height="165"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AJR-RX-TkC">
+                                                    <rect key="frame" x="0.0" y="0.0" width="180" height="165"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="memoryBack" translatesAutoresizingMaskIntoConstraints="NO" id="Zhh-Ph-v92">
+                                                    <rect key="frame" x="0.0" y="0.0" width="180" height="165"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="Zhh-Ph-v92" secondAttribute="bottom" id="4ui-3k-mdB"/>
+                                            <constraint firstAttribute="trailing" secondItem="AJR-RX-TkC" secondAttribute="trailing" id="9Yn-nu-JWM"/>
+                                            <constraint firstAttribute="trailing" secondItem="Zhh-Ph-v92" secondAttribute="trailing" id="AWC-JH-Arl"/>
+                                            <constraint firstItem="Zhh-Ph-v92" firstAttribute="top" secondItem="y5D-rw-59x" secondAttribute="top" id="Iig-2W-Lej"/>
+                                            <constraint firstItem="AJR-RX-TkC" firstAttribute="leading" secondItem="y5D-rw-59x" secondAttribute="leading" id="ddt-Zr-xW8"/>
+                                            <constraint firstAttribute="bottom" secondItem="AJR-RX-TkC" secondAttribute="bottom" id="hGc-Gp-EMh"/>
+                                            <constraint firstItem="Zhh-Ph-v92" firstAttribute="leading" secondItem="y5D-rw-59x" secondAttribute="leading" id="wIt-dc-8tT"/>
+                                            <constraint firstItem="AJR-RX-TkC" firstAttribute="top" secondItem="y5D-rw-59x" secondAttribute="top" id="zqQ-3u-N2k"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="backImageView" destination="Zhh-Ph-v92" id="WHM-gG-XZo"/>
+                                            <outlet property="frontImageView" destination="AJR-RX-TkC" id="1LI-qe-JcP"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="0.79698091745376587" green="0.99324887990951538" blue="0.91764074563980103" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="Ty0-rs-zHx"/>
                     </view>
                     <connections>
-                        <outlet property="dogCard1" destination="SGq-DI-QrK" id="auu-YX-jdb"/>
-                        <outlet property="dogCard2" destination="io1-L6-ck4" id="f3q-HY-tfx"/>
+                        <outlet property="collectionView" destination="ZMx-b4-clh" id="Vf4-Dj-dfU"/>
                         <outlet property="exitButton" destination="rl4-Gy-5C3" id="LH0-0S-4oF"/>
-                        <outlet property="lionCard1" destination="Gqp-gz-Fcb" id="3dF-XX-Shl"/>
-                        <outlet property="lionCard2" destination="qW2-uh-WRn" id="JCP-ZI-hkY"/>
-                        <outlet property="tigerCard1" destination="trP-mg-Aga" id="qcn-OX-nyp"/>
-                        <outlet property="tigerCard2" destination="ZZf-eJ-uKc" id="mWH-zQ-E9a"/>
                         <outlet property="unlockButton" destination="v8n-DO-C0N" id="I2n-Iu-WdN"/>
                     </connections>
                 </viewController>
@@ -638,6 +628,6 @@
         <image name="red" width="700" height="629"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="xZP-s5-rIY"/>
+        <segue reference="fKf-lj-ky2"/>
     </inferredMetricsTieBreakers>
 </document>

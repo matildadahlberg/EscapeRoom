@@ -10,6 +10,9 @@
 		7B2D43392209AD2E0078120A /* CompassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2D43382209AD2E0078120A /* CompassViewController.swift */; };
 		7B2D433B220B13000078120A /* DistanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2D433A220B13000078120A /* DistanceViewController.swift */; };
 		7B2D433D220C5D3D0078120A /* MovingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2D433C220C5D3D0078120A /* MovingViewController.swift */; };
+		EB33A6232212CD76009CDF30 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB33A6222212CD76009CDF30 /* CardModel.swift */; };
+		EB33A6252212CE46009CDF30 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB33A6242212CE46009CDF30 /* Card.swift */; };
+		EB33A6272212D2AA009CDF30 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB33A6262212D2AA009CDF30 /* CardCollectionViewCell.swift */; };
 		EB344188220AE1A900EB1993 /* TurnIphoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB344187220AE1A900EB1993 /* TurnIphoneViewController.swift */; };
 		EB34418A220AE1C700EB1993 /* PlaySoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB344189220AE1C700EB1993 /* PlaySoundViewController.swift */; };
 		EB34418F220AF39600EB1993 /* pianoD.wav in Resources */ = {isa = PBXBuildFile; fileRef = EB34418B220AF39600EB1993 /* pianoD.wav */; };
@@ -52,6 +55,9 @@
 		7B2D43382209AD2E0078120A /* CompassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompassViewController.swift; sourceTree = "<group>"; };
 		7B2D433A220B13000078120A /* DistanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceViewController.swift; sourceTree = "<group>"; };
 		7B2D433C220C5D3D0078120A /* MovingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovingViewController.swift; sourceTree = "<group>"; };
+		EB33A6222212CD76009CDF30 /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
+		EB33A6242212CE46009CDF30 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		EB33A6262212D2AA009CDF30 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		EB344187220AE1A900EB1993 /* TurnIphoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurnIphoneViewController.swift; sourceTree = "<group>"; };
 		EB344189220AE1C700EB1993 /* PlaySoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySoundViewController.swift; sourceTree = "<group>"; };
 		EB34418B220AF39600EB1993 /* pianoD.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = pianoD.wav; sourceTree = "<group>"; };
@@ -137,6 +143,9 @@
 				7B2D433C220C5D3D0078120A /* MovingViewController.swift */,
 				EBA864F9220DB429007890F9 /* MemoryViewController.swift */,
 				EB62E7132211706D00384445 /* VolumeViewController.swift */,
+				EB33A6222212CD76009CDF30 /* CardModel.swift */,
+				EB33A6242212CE46009CDF30 /* Card.swift */,
+				EB33A6262212D2AA009CDF30 /* CardCollectionViewCell.swift */,
 				EB34418B220AF39600EB1993 /* pianoD.wav */,
 				EB34418D220AF39600EB1993 /* pianoE.wav */,
 				EB34418C220AF39600EB1993 /* pianoF.wav */,
@@ -332,9 +341,12 @@
 				EB56E347220457730010B442 /* ShakeViewController.swift in Sources */,
 				EBFFC51D2208412300879045 /* CameraViewController.swift in Sources */,
 				EB56E31B220456740010B442 /* ViewController.swift in Sources */,
+				EB33A6232212CD76009CDF30 /* CardModel.swift in Sources */,
 				7B2D433B220B13000078120A /* DistanceViewController.swift in Sources */,
 				7B2D43392209AD2E0078120A /* CompassViewController.swift in Sources */,
 				EB344188220AE1A900EB1993 /* TurnIphoneViewController.swift in Sources */,
+				EB33A6252212CE46009CDF30 /* Card.swift in Sources */,
+				EB33A6272212D2AA009CDF30 /* CardCollectionViewCell.swift in Sources */,
 				EB56E349220457920010B442 /* PinataViewController.swift in Sources */,
 				EBFFC5212208899000879045 /* Resnet50.mlmodel in Sources */,
 				7B2D433D220C5D3D0078120A /* MovingViewController.swift in Sources */,
