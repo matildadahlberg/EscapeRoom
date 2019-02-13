@@ -20,7 +20,7 @@ class CompassViewController: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-
+        
         unlockButton.isHidden = true
         exitButton.layer.cornerRadius = 15
         
@@ -55,7 +55,7 @@ class CompassViewController: UIViewController, CLLocationManagerDelegate {
                 unlockButton.layer.cornerRadius = 15
                 locationManager.stopUpdatingHeading()
             }
-
+            
         }
     }
     
@@ -73,9 +73,4 @@ class CompassViewController: UIViewController, CLLocationManagerDelegate {
         countLabel.font = UIFont(name: "Helvetica", size: 30)
         self.view.addSubview(countLabel)
     }
-    
-   
-    
-
-
 }

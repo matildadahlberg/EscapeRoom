@@ -39,7 +39,7 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         setupCaptureSession()
         setupLabel()
         setupCorrectLabel()
-        self.correctLabel.text = "Find a computer"
+        self.correctLabel.text = "Find an envelope"
     }
     
     func setupCaptureSession() {
@@ -70,20 +70,8 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
             
             DispatchQueue.main.async(execute: {
                 self.label.text = "\(Observation.identifier)"
- 
-                if self.label.text == "computer" && self.correctCounter == 0 || self.label.text == "desktop computer" && self.correctCounter == 0 || self.label.text == "laptop" && self.correctCounter == 0 || self.label.text == "computer keyboard" && self.correctCounter == 0 && self.correctLabel.text == "Find a computer" {
-                    AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
-                    self.correctCounter += 1
-                    self.correctLabel.text = "Find a cup"
-                   
-                }
-                if self.label.text == "cup" && self.correctCounter == 1 || self.label.text == "espresso" && self.correctCounter == 1 || self.label.text == "coffee mug" && self.correctCounter == 1 || self.label.text == "teapot" && self.correctCounter == 1 && self.correctLabel.text == "Find a cup"{
-                    AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
-                    self.correctCounter += 1
-                    self.correctLabel.text = "Find a clock"
-                    print("Counter: \(self.correctCounter)")
-                }
-                if self.label.text == "analog clock" && self.correctCounter == 2 || self.label.text == "wall clock" && self.correctCounter == 2 || self.label.text == "digital watch" && self.correctCounter == 2{
+                
+                if self.label.text == "envelope" {
                     AudioServicesPlayAlertSound(1519)
                     self.correctLabel.isHidden = true
                     self.previewLayer.isHidden = true
@@ -108,7 +96,6 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         correctLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         correctLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 50).isActive = true
     }
-    
 }
 
 

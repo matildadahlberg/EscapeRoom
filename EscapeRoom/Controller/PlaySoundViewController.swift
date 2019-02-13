@@ -17,8 +17,6 @@ class PlaySoundViewController: UIViewController, AVAudioPlayerDelegate {
     @IBOutlet weak var exitButton: UIButton!
     @IBOutlet weak var unlockButton: UIButton!
     
-    
-    
     var playlist = [Int]()
     var currentItem = 0
     var readyForUser = false
@@ -26,13 +24,10 @@ class PlaySoundViewController: UIViewController, AVAudioPlayerDelegate {
     
     var untilEnd = 0
     
-    
     var playerD:AVAudioPlayer!
     var playerE:AVAudioPlayer!
     var playerF:AVAudioPlayer!
     var playerG:AVAudioPlayer!
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +37,6 @@ class PlaySoundViewController: UIViewController, AVAudioPlayerDelegate {
         
         playSounds()
     }
-    
     
     @IBAction func startSoundButton(_ sender: Any) {
         

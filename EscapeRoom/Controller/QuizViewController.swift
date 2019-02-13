@@ -24,7 +24,7 @@ class QuizViewController: UIViewController {
         Question(question: "How tall is Victoria Tower?", answer: ["118m", "176m", "88m", "200m"], correctAnswer: "118m"),
         Question(question: "When was the first iPhone released?", answer: ["2004", "2010", "2007", "2009"], correctAnswer: "2007")
     ]
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupText()
@@ -128,9 +128,6 @@ class QuizViewController: UIViewController {
         answer4.layer.cornerRadius = 15
         answer4.addTarget(self, action: #selector(checkAnswer), for: .touchDown)
         self.view.addSubview(answer4)
-
+        
     }
-    
-    
-  
 }
