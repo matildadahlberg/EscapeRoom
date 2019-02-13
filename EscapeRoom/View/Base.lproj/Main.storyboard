@@ -27,17 +27,8 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="ctM-mM-NEV" kind="show" id="bjw-wg-IDn"/>
+                                    <segue destination="cZ2-Wh-bul" kind="show" id="GZf-VA-h4l"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nx3-mG-FqZ">
-                                <rect key="frame" x="67" y="516" width="241" height="62"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="Scoreboard">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ESCAPE ROOM" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dqa-dj-M6W">
                                 <rect key="frame" x="69" y="118" width="236" height="192"/>
@@ -53,77 +44,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B8P-to-Ch9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3292" y="-690"/>
-        </scene>
-        <!--ChooseGameView-->
-        <scene sceneID="VEi-oS-hD9">
-            <objects>
-                <viewController id="ctM-mM-NEV" userLabel="ChooseGameView" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="yBP-Yi-KJh">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CHOOSE GAME:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i5N-M8-kW6">
-                                <rect key="frame" x="32" y="145" width="310" height="86"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZR-xx-rjb">
-                                <rect key="frame" x="67" y="302" width="241" height="62"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="Jail Breakout">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="cZ2-Wh-bul" kind="show" id="n7n-4S-l94"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UeD-ve-lpF">
-                                <rect key="frame" x="67" y="493" width="241" height="62"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="Zoo Breakout">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LYp-5W-uxZ">
-                                <rect key="frame" x="67" y="400" width="241" height="62"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="Hospital Breakout">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rEV-2K-K4T">
-                                <rect key="frame" x="16" y="44" width="42" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="Back">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="i80-A7-zcx" kind="show" id="gZz-fd-QoJ"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="0.797159493" green="0.99355882409999996" blue="0.91764098409999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <viewLayoutGuide key="safeArea" id="OKn-qg-dH4"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vUl-U9-SDn" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2386" y="-690"/>
+            <point key="canvasLocation" x="-2369" y="-690"/>
         </scene>
         <!--GameDescriptionView-->
         <scene sceneID="eil-7G-4eC">
             <objects>
-                <viewController id="cZ2-Wh-bul" userLabel="GameDescriptionView" sceneMemberID="viewController">
+                <viewController id="cZ2-Wh-bul" userLabel="GameDescriptionView" customClass="StartViewController" customModule="EscapeRoom" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CQ0-CO-ocG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -137,6 +63,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="startGameButton:" destination="cZ2-Wh-bul" eventType="touchUpInside" id="ZOP-W3-8mO"/>
                                     <segue destination="BYZ-38-t0r" kind="show" id="boY-ir-K6K"/>
                                 </connections>
                             </button>
@@ -163,22 +90,33 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="ctM-mM-NEV" kind="show" id="isi-pq-MxK"/>
+                                    <segue destination="i80-A7-zcx" kind="show" id="him-Fq-IPi"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H2x-h3-gBi">
+                                <rect key="frame" x="156" y="717" width="87" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.797159493" green="0.99355882409999996" blue="0.91764098409999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="8aO-z6-jPB"/>
                     </view>
+                    <connections>
+                        <outlet property="startGameButton" destination="1my-bo-rBy" id="t8m-V2-leO"/>
+                        <outlet property="time" destination="H2x-h3-gBi" id="A1Q-L8-5W2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ojt-L4-Jcv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1482" y="-690"/>
+            <point key="canvasLocation" x="-1482.4000000000001" y="-690.14778325123154"/>
         </scene>
         <!--Level1DescriptionView-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" userLabel="Level1DescriptionView" customClass="ViewController" customModule="EscapeRoom" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="Level1DescriptionView" customClass="DescriptionViewController" customModule="EscapeRoom" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -192,8 +130,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="startGameButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ATf-5q-yjn"/>
-                                    <segue destination="Xk0-pu-yh9" kind="show" id="EK4-qx-G4B"/>
+                                    <segue destination="Xk0-pu-yh9" kind="show" id="9gL-nh-LR8"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CWt-a5-1hn">
@@ -222,17 +159,24 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qir-l6-GwZ">
+                                <rect key="frame" x="285" y="50" width="74" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.79715949296951294" green="0.99355882406234741" blue="0.91764098405838013" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="startButton" destination="0J8-cj-Stf" id="rjP-vI-s3d"/>
+                        <outlet property="timeLabel" destination="Qir-l6-GwZ" id="ikH-fn-bxe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-590" y="-690"/>
+            <point key="canvasLocation" x="-591.20000000000005" y="-690.14778325123154"/>
         </scene>
         <!--Level2View-->
         <scene sceneID="UKI-94-ClE">
@@ -265,12 +209,20 @@
                                     <segue destination="BpT-yq-l4C" kind="show" id="tDZ-Yf-abq"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgk-Oi-u0S">
+                                <rect key="frame" x="285" y="44" width="74" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.79715949296951294" green="0.99355882406234741" blue="0.91764098405838013" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="C7f-uh-Diw"/>
                     </view>
                     <connections>
                         <outlet property="exitButton" destination="HNh-yh-GqN" id="vOx-uH-f6v"/>
+                        <outlet property="timeLabel" destination="cgk-Oi-u0S" id="Oxe-vF-UiP"/>
                         <outlet property="unlockButton" destination="7qS-cU-YjW" id="qil-nS-c6d"/>
                     </connections>
                 </viewController>
@@ -314,6 +266,13 @@
                                     <segue destination="BpT-yq-l4C" kind="show" id="3TE-sf-mvJ"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j70-RN-EeL">
+                                <rect key="frame" x="285" y="44" width="74" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.7992777343965014" green="1" blue="0.91816337610623899" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="fRy-rc-9G3"/>
@@ -321,6 +280,7 @@
                     <connections>
                         <outlet property="exitButton" destination="LnI-Id-faW" id="1Dd-rb-X1Y"/>
                         <outlet property="pinataImage" destination="wvG-er-YpS" id="v25-Ak-bHL"/>
+                        <outlet property="timeLabel" destination="j70-RN-EeL" id="AmV-ex-3CC"/>
                         <outlet property="unlockButton" destination="Eo7-Lv-TmR" id="MnU-IR-Vdn"/>
                     </connections>
                 </viewController>
@@ -345,7 +305,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="19C-RP-R9c" kind="show" id="FGp-sS-OCt"/>
+                                    <segue destination="f6O-RQ-yBQ" kind="show" id="1rc-o0-ltq"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Grq-qV-39x">
@@ -356,9 +316,16 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="gd6-0r-zAf" kind="show" id="cFi-KC-c5E"/>
+                                    <segue destination="19C-RP-R9c" kind="show" id="ZNY-M6-Vmv"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UrT-QC-gZE">
+                                <rect key="frame" x="285" y="44" width="74" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.79715949296951294" green="0.99355882406234741" blue="0.91764098405838013" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="hzD-co-tLQ"/>
@@ -370,7 +337,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rub-UK-DxS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3750" y="-690"/>
+            <point key="canvasLocation" x="5474" y="-690"/>
         </scene>
         <!--Level4View-->
         <scene sceneID="PsS-0N-N1O">
@@ -389,7 +356,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="f6O-RQ-yBQ" kind="show" id="QLd-y5-CYO"/>
+                                    <segue destination="19C-RP-R9c" kind="show" id="yKL-9i-qzy"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JG6-9q-NRE">
@@ -400,9 +367,16 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="19C-RP-R9c" kind="show" id="OU2-RB-XEm"/>
+                                    <segue destination="gd6-0r-zAf" kind="show" id="mDw-2n-j8G"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LpV-YK-ItO">
+                                <rect key="frame" x="285" y="44" width="74" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.79715949296951294" green="0.99355882406234741" blue="0.91764098405838013" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="wps-wL-Y9j"/>
@@ -414,7 +388,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XnY-ZY-TCE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5540" y="-690"/>
+            <point key="canvasLocation" x="3746" y="-690"/>
         </scene>
         <!--Level5View-->
         <scene sceneID="2g9-oH-NPv">
@@ -806,7 +780,7 @@
         <!--Level2DescriptionView-->
         <scene sceneID="9PV-ym-jKF">
             <objects>
-                <viewController id="BpT-yq-l4C" userLabel="Level2DescriptionView" sceneMemberID="viewController">
+                <viewController id="BpT-yq-l4C" userLabel="Level2DescriptionView" customClass="DescriptionViewController" customModule="EscapeRoom" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Nge-MF-jvZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -849,43 +823,29 @@
                                     <segue destination="Xk0-pu-yh9" kind="show" id="fP8-Eg-Jiq"/>
                                 </connections>
                             </button>
-                        </subviews>
-                        <color key="backgroundColor" red="0.797159493" green="0.99355882409999996" blue="0.91764098409999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <viewLayoutGuide key="safeArea" id="ajV-LS-n0K"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pQx-sI-MnA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1140" y="-690"/>
-        </scene>
-        <!--GameOverView-->
-        <scene sceneID="gDj-10-W1B">
-            <objects>
-                <viewController id="bGE-1v-I7e" userLabel="GameOverView" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5qI-PT-OZK">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Game Over" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdb-lL-4ij">
-                                <rect key="frame" x="31" y="169" width="313" height="101"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wiu-1Z-zgB">
+                                <rect key="frame" x="285" y="44" width="74" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="57"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.797159493" green="0.99355882409999996" blue="0.91764098409999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <viewLayoutGuide key="safeArea" id="2kT-cY-SeQ"/>
+                        <viewLayoutGuide key="safeArea" id="ajV-LS-n0K"/>
                     </view>
+                    <connections>
+                        <outlet property="timeLabel" destination="wiu-1Z-zgB" id="oCb-Ig-3WZ"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CBz-Go-UnM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pQx-sI-MnA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1140" y="221"/>
+            <point key="canvasLocation" x="1140" y="-690"/>
         </scene>
         <!--Level3DescriptionView-->
         <scene sceneID="pqg-wi-hcR">
             <objects>
-                <viewController id="gd6-0r-zAf" userLabel="Level3DescriptionView" sceneMemberID="viewController">
+                <viewController id="gd6-0r-zAf" userLabel="Level3DescriptionView" customClass="DescriptionViewController" customModule="EscapeRoom" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FT9-sI-Gdh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -899,7 +859,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="ZP0-nd-5YO" kind="show" id="VAA-7E-cbt"/>
+                                    <segue destination="v1b-NQ-cD3" kind="show" id="yeO-k0-R0f"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="InD-Uw-9ML">
@@ -928,10 +888,20 @@
                                     <segue destination="IKw-Pt-RkT" kind="show" id="mMc-cf-T0I"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3lS-TV-Ehu">
+                                <rect key="frame" x="285" y="44" width="74" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.797159493" green="0.99355882409999996" blue="0.91764098409999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="GDg-8v-XAb"/>
                     </view>
+                    <connections>
+                        <outlet property="timeLabel" destination="3lS-TV-Ehu" id="KAh-nA-O3h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e6A-Ms-Y3A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -954,7 +924,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="v1b-NQ-cD3" kind="show" id="fFN-7j-LB9"/>
+                                    <segue destination="ZP0-nd-5YO" kind="show" id="OVU-mY-6vF"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="VgS-4d-Pdc">
@@ -980,9 +950,16 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="ZP0-nd-5YO" kind="show" id="Kad-Wh-1lj"/>
+                                    <segue destination="v1b-NQ-cD3" kind="show" id="yz8-m5-XeR"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L72-QT-bJa">
+                                <rect key="frame" x="285" y="44" width="74" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.797159493" green="0.99355882409999996" blue="0.91764098409999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="K5l-IX-wH7"/>
@@ -1035,7 +1012,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="v1b-NQ-cD3" kind="show" id="dtQ-AA-kKu"/>
+                                    <segue destination="ZP0-nd-5YO" kind="show" id="wco-Fq-k2U"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1341,21 +1318,20 @@
         <segue reference="9xP-G0-XcR"/>
         <segue reference="flA-Rd-dTX"/>
         <segue reference="cFn-mo-Tyc"/>
-        <segue reference="yCb-QZ-U9i"/>
-        <segue reference="OU2-RB-XEm"/>
-        <segue reference="cFi-KC-c5E"/>
+        <segue reference="1rc-o0-ltq"/>
+        <segue reference="ZNY-M6-Vmv"/>
+        <segue reference="mDw-2n-j8G"/>
         <segue reference="3TE-sf-mvJ"/>
         <segue reference="9lj-dp-aIp"/>
         <segue reference="UQE-su-1lo"/>
         <segue reference="Mmj-cX-03s"/>
         <segue reference="ExJ-OS-iTS"/>
-        <segue reference="iIv-NM-cvD"/>
-        <segue reference="dtQ-AA-kKu"/>
-        <segue reference="Kad-Wh-1lj"/>
-        <segue reference="fP8-Eg-Jiq"/>
+        <segue reference="TA5-Gb-wsJ"/>
+        <segue reference="yz8-m5-XeR"/>
+        <segue reference="OVU-mY-6vF"/>
+        <segue reference="9gL-nh-LR8"/>
         <segue reference="O4c-zN-D6E"/>
-        <segue reference="VMt-eQ-TQf"/>
+        <segue reference="boY-ir-K6K"/>
         <segue reference="OoC-ys-wh5"/>
-        <segue reference="isi-pq-MxK"/>
     </inferredMetricsTieBreakers>
 </document>
