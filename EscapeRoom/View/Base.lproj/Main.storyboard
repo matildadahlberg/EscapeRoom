@@ -273,6 +273,53 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jsO-Wo-sbF" customClass="MBCircularProgressBarView">
+                                <rect key="frame" x="105" y="610" width="164" height="130"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="showValueString" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                        <real key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="progressColor">
+                                        <color key="value" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progressLineWidth">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="valueFontSize">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progressRotationAngle">
+                                        <real key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progressAngle">
+                                        <real key="value" value="100"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="emptyLineColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="emptyLineStrokeColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iHe-eB-NlC">
+                                <rect key="frame" x="152" y="646" width="71" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="TAP">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapButton:" destination="Xk0-pu-yh9" eventType="touchUpInside" id="21c-jI-aag"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.7992777343965014" green="1" blue="0.91816337610623899" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="fRy-rc-9G3"/>
@@ -280,13 +327,15 @@
                     <connections>
                         <outlet property="exitButton" destination="LnI-Id-faW" id="1Dd-rb-X1Y"/>
                         <outlet property="pinataImage" destination="wvG-er-YpS" id="v25-Ak-bHL"/>
+                        <outlet property="progressView" destination="jsO-Wo-sbF" id="iXW-IP-r6I"/>
+                        <outlet property="tapButton" destination="iHe-eB-NlC" id="WHY-wH-W8a"/>
                         <outlet property="timeLabel" destination="j70-RN-EeL" id="AmV-ex-3CC"/>
                         <outlet property="unlockButton" destination="Eo7-Lv-TmR" id="MnU-IR-Vdn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0hG-Ms-kPS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="274" y="-690"/>
+            <point key="canvasLocation" x="272.80000000000001" y="-690.14778325123154"/>
         </scene>
         <!--Level3View-->
         <scene sceneID="Sl0-X9-XG6">
@@ -1329,9 +1378,9 @@
         <segue reference="TA5-Gb-wsJ"/>
         <segue reference="yz8-m5-XeR"/>
         <segue reference="OVU-mY-6vF"/>
-        <segue reference="9gL-nh-LR8"/>
+        <segue reference="fP8-Eg-Jiq"/>
         <segue reference="O4c-zN-D6E"/>
-        <segue reference="boY-ir-K6K"/>
+        <segue reference="VMt-eQ-TQf"/>
         <segue reference="OoC-ys-wh5"/>
     </inferredMetricsTieBreakers>
 </document>
