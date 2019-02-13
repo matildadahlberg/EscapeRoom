@@ -1,4 +1,5 @@
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
     
@@ -16,8 +17,13 @@ class ViewController: UIViewController {
         totalTime.minute = 0
         time.frame = CGRect(x: self.view.frame.width - 70, y: 40, width: 100, height: 20)
         self.view.addSubview(time)
-        gameTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(startTimer), userInfo: nil, repeats: true)
     }
+    
+    @IBAction func startGameButton(_ sender: UIButton) {
+        gameTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(startTimer), userInfo: nil, repeats: true)
+        
+    }
+    
     
     @objc func startTimer() {
         totalTime.seconds += 1
@@ -43,6 +49,7 @@ class ViewController: UIViewController {
 struct totalTime {
     static var seconds = 0
     static var minute = 0
+    static var lives = 3
     
 }
 

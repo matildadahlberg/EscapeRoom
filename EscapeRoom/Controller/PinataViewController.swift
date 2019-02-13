@@ -11,15 +11,12 @@ class PinataViewController: UIViewController {
     var seconds = 10
     var touches = -1
     
-
     var totalTimer = Timer()
-    
     
     var tapped = 0
     var timerLabel = UILabel()
     var pinataLabel = UILabel()
     var startButton = UIButton()
-    
     
     
     override func viewDidLoad() {
@@ -44,7 +41,15 @@ class PinataViewController: UIViewController {
             timerLabel.text = "\(seconds)"
         }
         if tapped != 20 && seconds == 0{
+            timer.invalidate()
+            seconds = 10
             timerLabel.text = "Oh, you were too slow!"
+            totalTime.lives -= 1
+            print(totalTime.lives)
+        }
+        
+        if totalTime.lives == 0 {
+            print("DU DOG")
         }
     }
     
