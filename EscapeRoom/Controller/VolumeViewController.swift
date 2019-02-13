@@ -23,26 +23,37 @@ class VolumeViewController: UIViewController {
     
     private var audioLevel : Float = 0.0
     var volume : Float = 0
-   
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
         unlockButton.isHidden = true
         exitButton.layer.cornerRadius = 15
         
         listenVolumeButton()
-    
+        
         volume = AVAudioSession.sharedInstance().outputVolume
+        print(volume)
         
-    
+        
         imageView.backgroundColor = UIColor.red
-//        imageView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.imageView.frame.height * volume)
+        imageView.frame = CGRect(x: 0, y: self.view.frame.maxY, width: self.view.frame.width, height: self.view.frame.height * CGFloat(volume))
         
-       
+        let currentY = imageView.frame.origin.y
         
-//        label.text = "Lower the volume as much as possible to start the challange"
+        if volume == 1.0{
+            UIView.animate(withDuration: 1, animations: {
+                self.imageView.frame = CGRect(x: 0, y: currentY - 820, width: self.view.frame.width, height: self.view.frame.height * 100)
+            }, completion: nil)
+            unlockButton.isHidden = false
+            unlockButton.layer.cornerRadius = 15
+            label.isHidden = true
+        }
+        
         
     }
     
@@ -50,6 +61,7 @@ class VolumeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         listenVolumeButton()
     }
+    
     
     func listenVolumeButton(){
         
@@ -66,60 +78,46 @@ class VolumeViewController: UIViewController {
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if keyPath == "outputVolume"{
-            let audioSession = AVAudioSession.sharedInstance().outputVolume
+            let audioSession = AVAudioSession.sharedInstance()
             
             
+            let currentY = imageView.frame.origin.y
             
-            
-            if audioSession > 0{
+            if audioSession.outputVolume > 0{
+                
+                
                 label.text = "Make the screen turn red by increase the volume"
-                if audioSession > audioLevel {
+                if audioSession.outputVolume > audioLevel {
                     
-                    audioLevel = audioSession
+                    
+                    audioLevel = audioSession.outputVolume
                     
                     print("UPP: \(audioLevel)")
                     
-                    
-                        UIView.animate(withDuration: 1, animations: {
-                            self.imageView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.imageView.frame.height + 812/16 )
-                            self.imageView.backgroundColor = UIColor.red
-                        }, completion: nil)
-                        
-                    
-                    if audioLevel > 0.0{
-                        label.textColor = UIColor.white
-                    }
-                    
-                    
-                }
-            }
-            if audioSession < audioLevel {
-                audioLevel = audioSession
-                print("NER: \(audioLevel)")
-                
-                
-                
+                    //                    if audioLevel > 0.0625{
                     UIView.animate(withDuration: 1, animations: {
-                        self.imageView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.imageView.frame.height - 800 )
-                        self.imageView.backgroundColor = UIColor.blue
-                        self.label.text = "Make the screen turn blue by lower the volume"
+                        self.imageView.frame = CGRect(x: 0, y: currentY - 50, width: self.view.frame.width, height: self.view.frame.height)
+                        self.imageView.backgroundColor = UIColor.red
                     }, completion: nil)
                     
-                    
-                    if audioLevel < 0.5 {
+                    //                    }
+                    if audioLevel == 1.0{
+                        UIView.animate(withDuration: 1, animations: {
+                            self.imageView.frame = CGRect(x: 0, y: currentY - 600, width: self.view.frame.width, height: self.view.frame.height * 100)
+                        }, completion: nil)
                         unlockButton.isHidden = false
                         unlockButton.layer.cornerRadius = 15
                         label.isHidden = true
                     }
+                    
+                    
+                    
+                }
+                
                 
             }
             
         }
     }  
-    
-    
-    
-    
-    
     
 }
