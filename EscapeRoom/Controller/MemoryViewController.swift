@@ -11,17 +11,13 @@ import UIKit
 class MemoryViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     @IBOutlet weak var exitButton: UIButton!
-    
     @IBOutlet weak var unlockButton: UIButton!
-    
     @IBOutlet weak var collectionView: UICollectionView!
+    
     var model = CardModel()
     var cardArray = [Card]()
-    
     var count = 0
-    
     var firstFlippedCardIndex : IndexPath?
-    
     var  cards : CardCollectionViewCell?
     
     override func viewDidLoad() {
@@ -92,13 +88,11 @@ class MemoryViewController: UIViewController, UICollectionViewDelegate, UICollec
             
         }
         else{
-            
             cardOne.isFlipped = false
             cardTwo.isFlipped = false
             
             cardOneCell?.flipBack()
             cardTwoCell?.flipBack()
-            
         }
         
         firstFlippedCardIndex = nil
@@ -113,9 +107,7 @@ class MemoryViewController: UIViewController, UICollectionViewDelegate, UICollec
                 unlockButton.isHidden = false
                 collectionView.isHidden = true
             }
-            
         }
     }
-    
 }
 

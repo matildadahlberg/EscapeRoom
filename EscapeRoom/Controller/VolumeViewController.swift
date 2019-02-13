@@ -13,32 +13,21 @@ import AVFoundation
 class VolumeViewController: UIViewController {
     
     @IBOutlet weak var label: UILabel!
-    
     @IBOutlet weak var imageView: UIView!
-    
     @IBOutlet weak var exitButton: UIButton!
     @IBOutlet weak var unlockButton: UIButton!
-    
-    
     
     private var audioLevel : Float = 0.0
     var volume : Float = 0
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        
         unlockButton.isHidden = true
         exitButton.layer.cornerRadius = 15
         
         listenVolumeButton()
         
         volume = AVAudioSession.sharedInstance().outputVolume
-        print(volume)
-        
         
         imageView.backgroundColor = UIColor.red
         imageView.frame = CGRect(x: 0, y: self.view.frame.maxY, width: self.view.frame.width, height: self.view.frame.height * CGFloat(volume))
@@ -53,18 +42,13 @@ class VolumeViewController: UIViewController {
             unlockButton.layer.cornerRadius = 15
             label.isHidden = true
         }
-        
-        
     }
-    
     
     override func viewWillAppear(_ animated: Bool) {
         listenVolumeButton()
     }
     
-    
     func listenVolumeButton(){
-        
         let audioSession = AVAudioSession.sharedInstance()
         do {
             try audioSession.setActive(true, options: [])
@@ -80,27 +64,19 @@ class VolumeViewController: UIViewController {
         if keyPath == "outputVolume"{
             let audioSession = AVAudioSession.sharedInstance()
             
-            
             let currentY = imageView.frame.origin.y
             
             if audioSession.outputVolume > 0{
                 
-                
                 label.text = "Make the screen turn red by increase the volume"
                 if audioSession.outputVolume > audioLevel {
-                    
-                    
                     audioLevel = audioSession.outputVolume
                     
-                    print("UPP: \(audioLevel)")
-                    
-                    //                    if audioLevel > 0.0625{
                     UIView.animate(withDuration: 1, animations: {
                         self.imageView.frame = CGRect(x: 0, y: currentY - 50, width: self.view.frame.width, height: self.view.frame.height)
                         self.imageView.backgroundColor = UIColor.red
                     }, completion: nil)
                     
-                    //                    }
                     if audioLevel == 1.0{
                         UIView.animate(withDuration: 1, animations: {
                             self.imageView.frame = CGRect(x: 0, y: currentY - 600, width: self.view.frame.width, height: self.view.frame.height * 100)
@@ -109,15 +85,8 @@ class VolumeViewController: UIViewController {
                         unlockButton.layer.cornerRadius = 15
                         label.isHidden = true
                     }
-                    
-                    
-                    
                 }
-                
-                
             }
-            
         }
-    }  
-    
+    }
 }

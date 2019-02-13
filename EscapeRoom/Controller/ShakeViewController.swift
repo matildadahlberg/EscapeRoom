@@ -33,7 +33,7 @@ class ShakeViewController: UIViewController {
             unlockButton.layer.cornerRadius = 15
         }
     }
-   
+    
     func setupView(){
         
         descriptionLabel = UILabel(frame: CGRect(x: self.view.frame.width/2 - 150 , y: 100, width: 300, height: 100))

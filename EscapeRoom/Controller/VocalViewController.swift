@@ -15,8 +15,7 @@ class VocalViewController: UIViewController {
     var recorder: AVAudioRecorder!
     var levelTimer = Timer()
     var screenCracked = false
-    
-    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         setupText()
@@ -52,7 +51,7 @@ class VocalViewController: UIViewController {
         recorder.isMeteringEnabled = true
         recorder.record()
         levelTimer = Timer.scheduledTimer(timeInterval: 0.05, target: self, selector: #selector(decibelLevel), userInfo: nil, repeats: true)
-
+        
     }
     
     @objc func decibelLevel() {
@@ -78,8 +77,6 @@ class VocalViewController: UIViewController {
             unlockButton.layer.cornerRadius = 15
             descriptionLabel.text = ""
         }
-        
-        
     }
     func setupText(){
         descriptionLabel = UILabel(frame: CGRect(x: self.view.frame.width/2 - 175 , y: self.view.frame.height/2 - 50, width: 350, height: 100))
