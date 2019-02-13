@@ -1,0 +1,16 @@
+PODS:
+  - MBCircularProgressBar (0.3.5)
+
+DEPENDENCIES:
+  - MBCircularProgressBar
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - MBCircularProgressBar
+
+SPEC CHECKSUMS:
+  MBCircularProgressBar: 0b795b722a5eb5b0923822f90474e2576a1a7855
+
+PODFILE CHECKSUM: b318cb2273ce16960e05878ce8391e546ccb80f3
+
+COCOAPODS: 1.6.0
