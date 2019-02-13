@@ -2,7 +2,7 @@ import UIKit
 import AVFoundation
 import CoreAudio
 
-class DistanceViewController: UIViewController {
+class VocalViewController: UIViewController {
     
     @IBOutlet weak var unlockButton: UIButton!
     @IBOutlet weak var exitButton: UIButton!
@@ -64,13 +64,13 @@ class DistanceViewController: UIViewController {
         }
         if level < 0 && level > -10{
             image2.isHidden = false
+            screenCracked = true
         }
         if level < 5 && level > 0 {
             image3.isHidden = false
         }
         if level > 0 {
             image4.isHidden = false
-            screenCracked = true
         }
         if screenCracked {
             levelTimer.invalidate()

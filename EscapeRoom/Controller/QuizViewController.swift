@@ -1,6 +1,6 @@
 import UIKit
 
-class MovingViewController: UIViewController {
+class QuizViewController: UIViewController {
     
     @IBOutlet weak var exitButton: UIButton!
     @IBOutlet weak var unlockButton: UIButton!
