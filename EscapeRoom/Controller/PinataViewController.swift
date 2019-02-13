@@ -7,17 +7,17 @@ class PinataViewController: UIViewController {
     @IBOutlet weak var exitButton: UIButton!
     
     var time = UILabel()
-    
     var timer = Timer()
     var seconds = 10
     var touches = -1
     
+
+    var totalTimer = Timer()
+    
+    
     var tapped = 0
-    
     var timerLabel = UILabel()
-    
     var pinataLabel = UILabel()
-    
     var startButton = UIButton()
     
     
@@ -27,21 +27,14 @@ class PinataViewController: UIViewController {
         setupView()
         unlockButton.isHidden = true
         exitButton.layer.cornerRadius = 15
-        
-        time.frame = CGRect(x: self.view.frame.width - 70, y: 40, width: 100, height: 20)
-        self.view.addSubview(time)
-        
-        
+
+        totalTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateGameTimer), userInfo: nil, repeats: true)
+
+
         pinataImage.isUserInteractionEnabled = true
-        
         let tap = UITapGestureRecognizer(target: self, action: #selector(imageTapped))
-        
         tap.numberOfTapsRequired = 1
-        
         view.addGestureRecognizer(tap)
-        
-     
-        
         
     }
     
@@ -52,14 +45,10 @@ class PinataViewController: UIViewController {
         }
         if tapped != 20 && seconds == 0{
             timerLabel.text = "Oh, you were too slow!"
-            
         }
     }
     
-    
-    
     func setupView(){
-        
         
         //TIMER LABEL
         timerLabel = UILabel(frame: CGRect(x: self.view.frame.width/2 - 150, y: 100, width: 300, height: 90))
@@ -77,20 +66,17 @@ class PinataViewController: UIViewController {
         pinataLabel.numberOfLines = 2
         self.view.addSubview(pinataLabel)
         
-        
+        time.frame = CGRect(x: self.view.frame.width - 70, y: 40, width: 100, height: 20)
+        self.view.addSubview(time)
     }
     
     @objc private func imageTapped(_ recognizer: UITapGestureRecognizer) {
-        print("image tapped")
         
         tapped += 1
         touches += 1
         if touches == 0 {
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(PinataViewController.updateTimer)), userInfo: nil, repeats: true)
         }
-        
-      
-        
         if tapped == 20 && seconds > 0{
             pinataImage.image = UIImage(named: "destroyedPinata")
             unlockButton.isHidden = false
@@ -98,13 +84,26 @@ class PinataViewController: UIViewController {
             timerLabel.isHidden = true
             pinataLabel.text = ""
         }
+   
+    }
+    
+    @objc func updateGameTimer() {
+        totalTime.seconds += 1
+        
+        if totalTime.seconds < 60 {
+            time.text = "\(totalTime.seconds)s"
+        }
+        
+        if totalTime.seconds == 60 {
+            totalTime.seconds = 0
+            totalTime.minute += 1
+            time.text = "\(totalTime.minute)m \(totalTime.seconds)s"
+        }
+        
+        if totalTime.minute > 0 {
+            time.text = "\(totalTime.minute)m \(totalTime.seconds)s"
+        }
 
-     
-        
-        
-        
-        
-        
     }
     
 }

@@ -70,4 +70,13 @@ class CardCollectionViewCell: UICollectionViewCell {
         
     }
     
+    func getBackCards(){
+        
+        backImageView.alpha = 1
+        
+       frontImageView.alpha = 1
+            
+       
+    }
+    
 }

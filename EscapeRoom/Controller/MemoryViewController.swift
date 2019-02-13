@@ -20,7 +20,18 @@ class MemoryViewController: UIViewController, UICollectionViewDelegate, UICollec
     var model = CardModel()
     var cardArray = [Card]()
     
+    
     var firstFlippedCardIndex : IndexPath?
+    
+    var  cards : CardCollectionViewCell?
+    
+    
+    
+    var timerLabel = UILabel()
+    var restartTimeButton = UIButton()
+    
+    var timer = Timer()
+    var seconds = 10
     
     
     
@@ -35,8 +46,47 @@ class MemoryViewController: UIViewController, UICollectionViewDelegate, UICollec
         collectionView.delegate = self
         collectionView.dataSource = self
         
+        timerLabel = UILabel(frame: CGRect(x: self.view.frame.width/2 - 150, y: 60, width: 300, height: 90))
+        timerLabel.textAlignment = .center
+        timerLabel.text = "10"
+        timerLabel.font = UIFont(name: "Helvetica", size: 30)
+        timerLabel.numberOfLines = 2
+        self.view.addSubview(timerLabel)
+        
+        restartTimeButton = UIButton(type: .system) // let preferred over var here
+        restartTimeButton.frame = CGRect(x: self.view.frame.width/2 - 150, y: 700, width: 300, height: 44)
+        restartTimeButton.backgroundColor = UIColor.black
+        restartTimeButton.setTitleColor(.white, for: .normal)
+        restartTimeButton.setTitle("Try Again", for: .normal)
+        restartTimeButton.addTarget(self, action: #selector(MemoryViewController.resetTimer), for: UIControl.Event.touchUpInside)
+        self.view.addSubview(restartTimeButton)
+        
+        startTimer()
         
         
+        
+        
+    }
+    
+    @objc func countdownTimer(){
+        if seconds > 0{
+            seconds -= 1
+            timerLabel.text = "\(seconds)"
+        }
+    }
+    
+    @objc func resetTimer(){
+   
+        timer.invalidate()
+        seconds = 10
+        timerLabel.text = "10"
+        cards?.getBackCards()
+        collectionView.reloadData()
+        startTimer()
+    }
+    
+    func startTimer(){
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(countdownTimer)), userInfo: nil, repeats: true)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -57,15 +107,17 @@ class MemoryViewController: UIViewController, UICollectionViewDelegate, UICollec
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         //check if time left, then you wont be able to turn cards
-        //for example if seconds <= 0{
-        //return }
+        if seconds <= 0{
+            return
+            
+        }
         
         let cell = collectionView.cellForItem(at: indexPath) as! CardCollectionViewCell
         
         let card = cardArray[indexPath.row]
         
         if card.isFlipped == false && card.isMatched == false {
-             cell.flip()
+            cell.flip()
             
             card.isFlipped = true
             
@@ -99,7 +151,7 @@ class MemoryViewController: UIViewController, UICollectionViewDelegate, UICollec
             cardTwoCell?.remove()
             
             checkGameEnded()
-            
+         
         }
         else{
             
@@ -111,6 +163,7 @@ class MemoryViewController: UIViewController, UICollectionViewDelegate, UICollec
             
             
         }
+       
         
         firstFlippedCardIndex = nil
         
@@ -133,24 +186,28 @@ class MemoryViewController: UIViewController, UICollectionViewDelegate, UICollec
         if isWon == true {
             
             //if theres time left and every card is matched, do this
+            if seconds > 0{
+                timer.invalidate()
+            }
             unlockButton.isHidden = false
             print("win")
-        
+            
         }
         else{
             
             //if theres no time left and every card is not matched, do this
-            //if seconds > 0{return}
+            if seconds > 0{
+                return
+                
+                
+                
+            }
             
             print("lose")
             
         }
         
     }
-    
-    
-    
-    
     
     
 }
