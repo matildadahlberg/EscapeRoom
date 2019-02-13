@@ -6,7 +6,6 @@ class TurnIphoneViewController: UIViewController {
     @IBOutlet weak var unlockButton: UIButton!
     
     var descriptionLabel = UILabel()
-    var left = false
     var right = false
     
     override func viewDidLoad() {
@@ -24,17 +23,12 @@ class TurnIphoneViewController: UIViewController {
     
     override func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
         
-        if UIDevice.current.orientation == .landscapeLeft {
-            left = true
-        }
         if UIDevice.current.orientation == .landscapeRight {
             right = true
         }
         if UIDevice.current.orientation == .portrait {
-            if left == true {
-                descriptionLabel.text = "Turn iPhone to the right and then back"
-            }
-            if left == true && right == true {
+            
+            if right == true {
                 descriptionLabel.text = ""
                 unlockButton.isHidden = false
                 unlockButton.layer.cornerRadius = 15

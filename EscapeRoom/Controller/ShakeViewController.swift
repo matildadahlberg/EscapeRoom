@@ -6,6 +6,7 @@ class ShakeViewController: UIViewController {
     
     @IBOutlet weak var unlockButton: UIButton!
     @IBOutlet weak var exitButton: UIButton!
+    @IBOutlet weak var timeLabel: UILabel!
     
     var descriptionLabel = UILabel()
     var countLabel = UILabel()
