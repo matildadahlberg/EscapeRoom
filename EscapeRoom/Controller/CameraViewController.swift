@@ -9,37 +9,15 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     @IBOutlet weak var timeLabel: UILabel!
     
     let availableDevices = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInWideAngleCamera], mediaType: AVMediaType.video, position: .back).devices
-    var correctCounter = 0
+    var foundObject : String = ""
     var previewLayer = AVCaptureVideoPreviewLayer()
     let captureSession = AVCaptureSession()
-    let label: UILabel = {
-        let label = UILabel()
-        label.textColor = .black
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Label"
-        label.font = label.font.withSize(20)
-        return label
-    }()
-    
-    let correctLabel: UILabel = {
-        let correctLabel = UILabel()
-        correctLabel.textColor = .black
-        correctLabel.translatesAutoresizingMaskIntoConstraints = false
-        correctLabel.text = "Label"
-        correctLabel.font = correctLabel.font.withSize(20)
-        return correctLabel
-    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         unlockButton.layer.cornerRadius = 15
         exitButton.layer.cornerRadius = 15
-        view.addSubview(label)
-        view.addSubview(correctLabel)
         setupCaptureSession()
-        setupLabel()
-        setupCorrectLabel()
-        self.correctLabel.text = "Find an envelope"
     }
     
     func setupCaptureSession() {
@@ -67,34 +45,20 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         let request = VNCoreMLRequest(model: model) { (finishedRequest, error) in
             guard let results = finishedRequest.results as? [VNClassificationObservation] else { return }
             guard let Observation = results.first else { return }
-            
+            self.foundObject = "\(Observation.identifier)"
+        
             DispatchQueue.main.async(execute: {
-                self.label.text = "\(Observation.identifier)"
-                
-                if self.label.text == "envelope" {
+                if self.foundObject == "envelope" {
                     AudioServicesPlayAlertSound(1519)
-                    self.correctLabel.isHidden = true
                     self.previewLayer.isHidden = true
                     self.unlockButton.isHidden = false
-                    self.label.isHidden = true
                     self.captureSession.stopRunning()
                 }
             })
         }
         guard let pixelBuffer: CVPixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
-        
         // executes request
         try? VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:]).perform([request])
-    }
-    
-    func setupLabel() {
-        label.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        label.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -50).isActive = true
-    }
-    
-    func setupCorrectLabel() {
-        correctLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        correctLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 50).isActive = true
     }
 }
 

@@ -18,6 +18,7 @@ class PinataViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tapButton.layer.cornerRadius = 0.5 * tapButton.bounds.size.width
         progressView.value = 0
         progressView.maxValue = 20
         updateTimeLabel = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
@@ -29,23 +30,17 @@ class PinataViewController: UIViewController {
     
     @IBAction func tapButton(_ sender: Any) {
         tapped += 1
-        
-        UIView.animate(withDuration: 0) {
+        AudioServicesPlayAlertSound(1519)
+        UIView.animate(withDuration: 0.1) {
             self.progressView.value = CGFloat(self.tapped)
         }
-        AudioServicesPlayAlertSound(1519)
-        print("TAPPED")
-        
         if tapped == 20 {
             pinataImage.image = UIImage(named: "destroyedPinata")
             unlockButton.isHidden = false
             tapButton.isHidden = true
             progressView.isHidden = true
-            
-            
         }
     }
-    
     
     @objc func updateTime() {
         timeLabel.text = "\(Time.seconds)s"
