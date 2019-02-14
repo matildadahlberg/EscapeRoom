@@ -2,7 +2,7 @@ import UIKit
 import MBCircularProgressBar
 import AudioToolbox
 
-class PinataViewController: UIViewController {
+class TapLockViewController: UIViewController {
     
     @IBOutlet weak var pinataImage: UIImageView!
     @IBOutlet weak var unlockButton: UIButton!

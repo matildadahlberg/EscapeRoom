@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		315647FD2960D8DAE8049941 /* Pods_EscapeRoomUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 440D923F1524CFCAEB11380A /* Pods_EscapeRoomUITests.framework */; };
 		7B2D43392209AD2E0078120A /* CompassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2D43382209AD2E0078120A /* CompassViewController.swift */; };
-		7B2D433B220B13000078120A /* VocalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2D433A220B13000078120A /* VocalViewController.swift */; };
+		7B2D433B220B13000078120A /* BlowCandleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2D433A220B13000078120A /* BlowCandleViewController.swift */; };
 		7B2D433D220C5D3D0078120A /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2D433C220C5D3D0078120A /* QuizViewController.swift */; };
 		7B7F03072215B6AE008D4EA3 /* FirstPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7F03062215B6AE008D4EA3 /* FirstPageViewController.swift */; };
 		7BD812E322140977002BEAA5 /* GameTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD812E222140977002BEAA5 /* GameTime.swift */; };
@@ -20,7 +20,7 @@
 		EB33A6252212CE46009CDF30 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB33A6242212CE46009CDF30 /* Card.swift */; };
 		EB33A6272212D2AA009CDF30 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB33A6262212D2AA009CDF30 /* CardCollectionViewCell.swift */; };
 		EB344188220AE1A900EB1993 /* TurnIphoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB344187220AE1A900EB1993 /* TurnIphoneViewController.swift */; };
-		EB34418A220AE1C700EB1993 /* PlaySoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB344189220AE1C700EB1993 /* PlaySoundViewController.swift */; };
+		EB34418A220AE1C700EB1993 /* PatPetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB344189220AE1C700EB1993 /* PatPetViewController.swift */; };
 		EB34418F220AF39600EB1993 /* pianoD.wav in Resources */ = {isa = PBXBuildFile; fileRef = EB34418B220AF39600EB1993 /* pianoD.wav */; };
 		EB344190220AF39600EB1993 /* pianoF.wav in Resources */ = {isa = PBXBuildFile; fileRef = EB34418C220AF39600EB1993 /* pianoF.wav */; };
 		EB344191220AF39600EB1993 /* pianoE.wav in Resources */ = {isa = PBXBuildFile; fileRef = EB34418D220AF39600EB1993 /* pianoE.wav */; };
@@ -33,7 +33,7 @@
 		EB56E32E220456750010B442 /* EscapeRoomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB56E32D220456750010B442 /* EscapeRoomTests.swift */; };
 		EB56E339220456750010B442 /* EscapeRoomUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB56E338220456750010B442 /* EscapeRoomUITests.swift */; };
 		EB56E347220457730010B442 /* ShakeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB56E346220457730010B442 /* ShakeViewController.swift */; };
-		EB56E349220457920010B442 /* PinataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB56E348220457920010B442 /* PinataViewController.swift */; };
+		EB56E349220457920010B442 /* TapLockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB56E348220457920010B442 /* TapLockViewController.swift */; };
 		EB62E7142211706D00384445 /* VolumeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB62E7132211706D00384445 /* VolumeViewController.swift */; };
 		EBA864FA220DB429007890F9 /* MemoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA864F9220DB429007890F9 /* MemoryViewController.swift */; };
 		EBCB664B221562D8003FCE63 /* Titillium_Web in Resources */ = {isa = PBXBuildFile; fileRef = EBCB664A221562D8003FCE63 /* Titillium_Web */; };
@@ -66,7 +66,7 @@
 		5AE2A91300D103D8FD9F5CCF /* Pods_EscapeRoomTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EscapeRoomTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		692E4A3584DF9E3DBF3EDC67 /* Pods-EscapeRoomTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EscapeRoomTests.release.xcconfig"; path = "Target Support Files/Pods-EscapeRoomTests/Pods-EscapeRoomTests.release.xcconfig"; sourceTree = "<group>"; };
 		7B2D43382209AD2E0078120A /* CompassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompassViewController.swift; sourceTree = "<group>"; };
-		7B2D433A220B13000078120A /* VocalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocalViewController.swift; sourceTree = "<group>"; };
+		7B2D433A220B13000078120A /* BlowCandleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlowCandleViewController.swift; sourceTree = "<group>"; };
 		7B2D433C220C5D3D0078120A /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		7B3FB975A16E1B2EAFEF99C1 /* Pods-EscapeRoomTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EscapeRoomTests.debug.xcconfig"; path = "Target Support Files/Pods-EscapeRoomTests/Pods-EscapeRoomTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7B7F03062215B6AE008D4EA3 /* FirstPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPageViewController.swift; sourceTree = "<group>"; };
@@ -79,7 +79,7 @@
 		EB33A6242212CE46009CDF30 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		EB33A6262212D2AA009CDF30 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		EB344187220AE1A900EB1993 /* TurnIphoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurnIphoneViewController.swift; sourceTree = "<group>"; };
-		EB344189220AE1C700EB1993 /* PlaySoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySoundViewController.swift; sourceTree = "<group>"; };
+		EB344189220AE1C700EB1993 /* PatPetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatPetViewController.swift; sourceTree = "<group>"; };
 		EB34418B220AF39600EB1993 /* pianoD.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = pianoD.wav; sourceTree = "<group>"; };
 		EB34418C220AF39600EB1993 /* pianoF.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = pianoF.wav; sourceTree = "<group>"; };
 		EB34418D220AF39600EB1993 /* pianoE.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = pianoE.wav; sourceTree = "<group>"; };
@@ -98,7 +98,7 @@
 		EB56E338220456750010B442 /* EscapeRoomUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscapeRoomUITests.swift; sourceTree = "<group>"; };
 		EB56E33A220456750010B442 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB56E346220457730010B442 /* ShakeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeViewController.swift; sourceTree = "<group>"; };
-		EB56E348220457920010B442 /* PinataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinataViewController.swift; sourceTree = "<group>"; };
+		EB56E348220457920010B442 /* TapLockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapLockViewController.swift; sourceTree = "<group>"; };
 		EB62E7132211706D00384445 /* VolumeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeViewController.swift; sourceTree = "<group>"; };
 		EBA864F9220DB429007890F9 /* MemoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryViewController.swift; sourceTree = "<group>"; };
 		EBCB664A221562D8003FCE63 /* Titillium_Web */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Titillium_Web; sourceTree = "<group>"; };
@@ -187,11 +187,11 @@
 				EB56E346220457730010B442 /* ShakeViewController.swift */,
 				7BD812E42214231F002BEAA5 /* DescriptionViewController.swift */,
 				7B2D43382209AD2E0078120A /* CompassViewController.swift */,
-				EB56E348220457920010B442 /* PinataViewController.swift */,
+				EB56E348220457920010B442 /* TapLockViewController.swift */,
 				EBFFC51C2208412300879045 /* CameraViewController.swift */,
 				EB344187220AE1A900EB1993 /* TurnIphoneViewController.swift */,
-				EB344189220AE1C700EB1993 /* PlaySoundViewController.swift */,
-				7B2D433A220B13000078120A /* VocalViewController.swift */,
+				EB344189220AE1C700EB1993 /* PatPetViewController.swift */,
+				7B2D433A220B13000078120A /* BlowCandleViewController.swift */,
 				7B2D433C220C5D3D0078120A /* QuizViewController.swift */,
 				EBA864F9220DB429007890F9 /* MemoryViewController.swift */,
 				EB62E7132211706D00384445 /* VolumeViewController.swift */,
@@ -503,16 +503,16 @@
 				EBFFC51D2208412300879045 /* CameraViewController.swift in Sources */,
 				EB56E31B220456740010B442 /* StartViewController.swift in Sources */,
 				EB33A6232212CD76009CDF30 /* CardModel.swift in Sources */,
-				7B2D433B220B13000078120A /* VocalViewController.swift in Sources */,
+				7B2D433B220B13000078120A /* BlowCandleViewController.swift in Sources */,
 				7B2D43392209AD2E0078120A /* CompassViewController.swift in Sources */,
 				EB344188220AE1A900EB1993 /* TurnIphoneViewController.swift in Sources */,
 				EB33A6252212CE46009CDF30 /* Card.swift in Sources */,
 				EB33A6272212D2AA009CDF30 /* CardCollectionViewCell.swift in Sources */,
-				EB56E349220457920010B442 /* PinataViewController.swift in Sources */,
+				EB56E349220457920010B442 /* TapLockViewController.swift in Sources */,
 				EBFFC5212208899000879045 /* Resnet50.mlmodel in Sources */,
 				7B2D433D220C5D3D0078120A /* QuizViewController.swift in Sources */,
 				EBA864FA220DB429007890F9 /* MemoryViewController.swift in Sources */,
-				EB34418A220AE1C700EB1993 /* PlaySoundViewController.swift in Sources */,
+				EB34418A220AE1C700EB1993 /* PatPetViewController.swift in Sources */,
 				7BD812E52214231F002BEAA5 /* DescriptionViewController.swift in Sources */,
 				EB62E7142211706D00384445 /* VolumeViewController.swift in Sources */,
 				EB56E319220456740010B442 /* AppDelegate.swift in Sources */,
