@@ -2,7 +2,7 @@ import UIKit
 import AVFoundation
 import CoreAudio
 
-class VocalViewController: UIViewController {
+class BlowCandleViewController: UIViewController {
     
     @IBOutlet weak var unlockButton: UIButton!
     @IBOutlet weak var exitButton: UIButton!

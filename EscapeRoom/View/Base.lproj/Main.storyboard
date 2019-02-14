@@ -250,7 +250,7 @@
         <!--Level1View-->
         <scene sceneID="a6Z-fZ-iVy">
             <objects>
-                <viewController id="Xk0-pu-yh9" userLabel="Level1View" customClass="PinataViewController" customModule="EscapeRoom" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Xk0-pu-yh9" userLabel="Level1View" customClass="TapLockViewController" customModule="EscapeRoom" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yoj-dn-oru">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -379,7 +379,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="f6O-RQ-yBQ" kind="show" id="1rc-o0-ltq"/>
+                                    <segue destination="lLZ-Zb-iCq" kind="show" id="ekg-UV-Mg8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Grq-qV-39x">
@@ -390,7 +390,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="19C-RP-R9c" kind="show" id="ZNY-M6-Vmv"/>
+                                    <segue destination="HJC-Do-SO7" kind="show" id="b0I-8s-ong"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UrT-QC-gZE">
@@ -411,7 +411,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rub-UK-DxS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5474" y="-690"/>
+            <point key="canvasLocation" x="14238" y="-690"/>
         </scene>
         <!--Level4View-->
         <scene sceneID="PsS-0N-N1O">
@@ -452,11 +452,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Camera" translatesAutoresizingMaskIntoConstraints="NO" id="nux-Pl-XNe">
-                                <rect key="frame" x="81" y="648" width="35" height="27"/>
+                                <rect key="frame" x="78" y="699" width="35" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Find an envelope" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uWw-nb-XQn">
-                                <rect key="frame" x="148" y="648" width="130" height="28"/>
+                                <rect key="frame" x="143" y="698" width="130" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -540,7 +540,7 @@
         <!--Level6View-->
         <scene sceneID="oxS-VY-DcM">
             <objects>
-                <viewController id="mlU-Yq-odZ" userLabel="Level6View" customClass="PlaySoundViewController" customModule="EscapeRoom" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="mlU-Yq-odZ" userLabel="Level6View" customClass="PatPetViewController" customModule="EscapeRoom" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="G0F-6D-3hM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -554,49 +554,6 @@
                                 </state>
                                 <connections>
                                     <segue destination="ycR-Ic-I3q" kind="show" id="cFn-mo-Tyc"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wcp-DF-Cgi">
-                                <rect key="frame" x="55" y="245" width="115" height="115"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="green"/>
-                                <connections>
-                                    <action selector="startSoundButton:" destination="mlU-Yq-odZ" eventType="touchUpInside" id="Lep-nA-qW2"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qga-kP-5kl">
-                                <rect key="frame" x="208" y="245" width="115" height="115"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="blue"/>
-                                <connections>
-                                    <action selector="startSoundButton:" destination="mlU-Yq-odZ" eventType="touchUpInside" id="y2g-SM-aGI"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mK9-Jw-lVA">
-                                <rect key="frame" x="55" y="390" width="115" height="115"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="orange"/>
-                                <connections>
-                                    <action selector="startSoundButton:" destination="mlU-Yq-odZ" eventType="touchUpInside" id="yf9-f8-hXQ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dgy-sg-yx0">
-                                <rect key="frame" x="165" y="612" width="44" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <state key="normal" title="Play">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="startSound:" destination="mlU-Yq-odZ" eventType="touchUpInside" id="ddA-ZK-Zef"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rt2-1S-5dI">
-                                <rect key="frame" x="208" y="390" width="115" height="115"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="red"/>
-                                <connections>
-                                    <action selector="startSoundButton:" destination="mlU-Yq-odZ" eventType="touchUpInside" id="SIS-2z-KyH"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C79-KT-1Ip">
@@ -617,12 +574,7 @@
                     </view>
                     <connections>
                         <outlet property="exitButton" destination="eCO-4d-Eif" id="8CZ-ox-nmX"/>
-                        <outlet property="startbuttonOutlet" destination="dgy-sg-yx0" id="B3w-YN-szg"/>
                         <outlet property="unlockButton" destination="C79-KT-1Ip" id="ccO-mH-LnK"/>
-                        <outletCollection property="soundButtons" destination="Wcp-DF-Cgi" collectionClass="NSMutableArray" id="IyJ-rr-5W0"/>
-                        <outletCollection property="soundButtons" destination="Qga-kP-5kl" collectionClass="NSMutableArray" id="FZt-oy-004"/>
-                        <outletCollection property="soundButtons" destination="mK9-Jw-lVA" collectionClass="NSMutableArray" id="3bP-cX-Nd9"/>
-                        <outletCollection property="soundButtons" destination="rt2-1S-5dI" collectionClass="NSMutableArray" id="akh-dW-O4S"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VTb-Fe-Q5e" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -632,7 +584,7 @@
         <!--Level7View-->
         <scene sceneID="7an-09-z7K">
             <objects>
-                <viewController id="K4n-a9-bNM" userLabel="Level7View" customClass="VocalViewController" customModule="EscapeRoom" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="K4n-a9-bNM" userLabel="Level7View" customClass="BlowCandleViewController" customModule="EscapeRoom" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5Td-ZL-Fob">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -753,7 +705,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="HJC-Do-SO7" kind="show" id="soJ-Bw-hB5"/>
+                                    <segue destination="19C-RP-R9c" kind="show" id="NxM-Rf-p1d"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v8n-DO-C0N">
@@ -765,7 +717,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="lLZ-Zb-iCq" kind="show" id="UHV-vt-Kv9"/>
+                                    <segue destination="f6O-RQ-yBQ" kind="show" id="2kb-HF-Ez6"/>
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZMx-b4-clh">
@@ -823,7 +775,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V5k-Bz-Izg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="14198" y="-690"/>
+            <point key="canvasLocation" x="5484" y="-690"/>
         </scene>
         <!--Level10View-->
         <scene sceneID="3LR-5h-58K">
@@ -1052,7 +1004,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="ZP0-nd-5YO" kind="show" id="OVU-mY-6vF"/>
+                                    <segue destination="oi7-zr-G5B" kind="show" id="k56-p0-VJh"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1096,7 +1048,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="ZP0-nd-5YO" kind="show" id="wco-Fq-k2U"/>
+                                    <segue destination="oi7-zr-G5B" kind="show" id="sBK-mb-yJx"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ww8-8L-nY4">
@@ -1327,7 +1279,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="oi7-zr-G5B" kind="show" id="40t-uD-wvs"/>
+                                    <segue destination="ZP0-nd-5YO" kind="show" id="4Jn-iL-hB5"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1371,7 +1323,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="oi7-zr-G5B" kind="show" id="9lj-dp-aIp"/>
+                                    <segue destination="ZP0-nd-5YO" kind="show" id="trw-bE-oi7"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ySa-tM-NrJ">
@@ -1410,37 +1362,33 @@
         <image name="SneakyMan" width="696" height="512"/>
         <image name="Wall" width="544" height="512"/>
         <image name="Window" width="346" height="397"/>
-        <image name="blue" width="600" height="600"/>
         <image name="crack1" width="1600" height="1096.800048828125"/>
         <image name="crack2" width="1600" height="1538.4000244140625"/>
         <image name="crack3" width="1600" height="1036.800048828125"/>
         <image name="crack4" width="1600" height="1384"/>
-        <image name="green" width="512" height="512"/>
         <image name="i1" width="57" height="103"/>
         <image name="memoryBack" width="512" height="512"/>
-        <image name="orange" width="570" height="570"/>
-        <image name="red" width="700" height="629"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="iBx-0B-LQs"/>
-        <segue reference="z62-KG-HTr"/>
-        <segue reference="c5o-wJ-eQC"/>
+        <segue reference="ekg-UV-Mg8"/>
+        <segue reference="b0I-8s-ong"/>
+        <segue reference="9xP-G0-XcR"/>
         <segue reference="dyG-Pm-7Dc"/>
         <segue reference="fZ9-FH-SlP"/>
-        <segue reference="Gsd-ek-nud"/>
-        <segue reference="yKL-9i-qzy"/>
-        <segue reference="u9E-ed-QrV"/>
+        <segue reference="2kb-HF-Ez6"/>
+        <segue reference="NxM-Rf-p1d"/>
+        <segue reference="mDw-2n-j8G"/>
         <segue reference="3TE-sf-mvJ"/>
-        <segue reference="9lj-dp-aIp"/>
+        <segue reference="sBK-mb-yJx"/>
         <segue reference="UQE-su-1lo"/>
         <segue reference="Mmj-cX-03s"/>
         <segue reference="ExJ-OS-iTS"/>
         <segue reference="gCu-u0-gUQ"/>
         <segue reference="yz8-m5-XeR"/>
-        <segue reference="OVU-mY-6vF"/>
+        <segue reference="trw-bE-oi7"/>
         <segue reference="fP8-Eg-Jiq"/>
-        <segue reference="XhZ-xP-uag"/>
-        <segue reference="boY-ir-K6K"/>
+        <segue reference="pGq-9E-2Fg"/>
+        <segue reference="VMt-eQ-TQf"/>
         <segue reference="GZf-VA-h4l"/>
     </inferredMetricsTieBreakers>
 </document>
