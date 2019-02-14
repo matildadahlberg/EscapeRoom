@@ -10,6 +10,7 @@ class TurnIphoneViewController: UIViewController {
     
     @IBOutlet weak var arrow: UIImageView!
     
+    @IBOutlet weak var iphoneHorizontal: UIImageView!
     var change = true
     
     var currentAnimation = 0
@@ -34,34 +35,35 @@ class TurnIphoneViewController: UIViewController {
         descriptionLabel.text = "Turn iPhone to the left and then back"
         self.view.addSubview(descriptionLabel)
         
+        iphoneHorizontal.isHidden = true
        
-        
-//                arrow.isHidden = false
-//
-//                UIView.animate(withDuration: 10, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: [],
-//                               animations: { [unowned self] in
-//
-//
-//                                    self.iphoneVertical.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi/2))
-//                                self.arrow.isHidden = true
-//
-//
-//
-//
-//                }) { [unowned self] (finished: Bool) in
-//                    self.arrow.isHidden = true
-//                    self.iphoneVertical.transform = CGAffineTransform.identity
-//
-//                }
-        
-  
-        var images: [UIImage] = []
         for i in 1...2 {
-            images.append(UIImage(named: "i\(i)")!)
+//                arrow.isHidden = false
+
+                UIView.animate(withDuration: 5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: [],
+                               animations: { [unowned self] in
+
+
+                                    self.iphoneVertical.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi/2))
+//                                self.arrow.isHidden = true
+
+
+
+
+                }) { [unowned self] (finished: Bool) in
+//                    self.arrow.isHidden = true
+                    self.iphoneVertical.transform = CGAffineTransform.identity
+
+                }
         }
-        iphoneVertical.animationImages = images
-        iphoneVertical.animationDuration = 3.0
-        iphoneVertical.startAnimating()
+  
+//        var images: [UIImage] = []
+//        for i in 1...2 {
+//            images.append(UIImage(named: "i\(i)")!)
+//        }
+//        iphoneVertical.animationImages = images
+//        iphoneVertical.animationDuration = 3.0
+//        iphoneVertical.startAnimating()
     }
     
 
