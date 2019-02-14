@@ -37,6 +37,7 @@
 		EB62E7142211706D00384445 /* VolumeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB62E7132211706D00384445 /* VolumeViewController.swift */; };
 		EBA864FA220DB429007890F9 /* MemoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA864F9220DB429007890F9 /* MemoryViewController.swift */; };
 		EBCB664B221562D8003FCE63 /* Titillium_Web in Resources */ = {isa = PBXBuildFile; fileRef = EBCB664A221562D8003FCE63 /* Titillium_Web */; };
+		EBCB664D2215B458003FCE63 /* SpaceMono-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EBCB664C2215B458003FCE63 /* SpaceMono-Bold.ttf */; };
 		EBFFC51D2208412300879045 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFFC51C2208412300879045 /* CameraViewController.swift */; };
 		EBFFC5212208899000879045 /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = EBFFC5202208899000879045 /* Resnet50.mlmodel */; };
 /* End PBXBuildFile section */
@@ -101,6 +102,7 @@
 		EB62E7132211706D00384445 /* VolumeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeViewController.swift; sourceTree = "<group>"; };
 		EBA864F9220DB429007890F9 /* MemoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryViewController.swift; sourceTree = "<group>"; };
 		EBCB664A221562D8003FCE63 /* Titillium_Web */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Titillium_Web; sourceTree = "<group>"; };
+		EBCB664C2215B458003FCE63 /* SpaceMono-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpaceMono-Bold.ttf"; sourceTree = "<group>"; };
 		EBFFC51C2208412300879045 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		EBFFC5202208899000879045 /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Resnet50.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -161,6 +163,7 @@
 			children = (
 				EBFFC5202208899000879045 /* Resnet50.mlmodel */,
 				EB56E31F220456750010B442 /* Assets.xcassets */,
+				EBCB664C2215B458003FCE63 /* SpaceMono-Bold.ttf */,
 				EBCB664A221562D8003FCE63 /* Titillium_Web */,
 			);
 			path = Sources;
@@ -375,6 +378,7 @@
 				EB56E323220456750010B442 /* LaunchScreen.storyboard in Resources */,
 				EB344191220AF39600EB1993 /* pianoE.wav in Resources */,
 				EB344192220AF39600EB1993 /* pianoG.wav in Resources */,
+				EBCB664D2215B458003FCE63 /* SpaceMono-Bold.ttf in Resources */,
 				EB34418F220AF39600EB1993 /* pianoD.wav in Resources */,
 				EB56E320220456750010B442 /* Assets.xcassets in Resources */,
 				EB56E31E220456740010B442 /* Main.storyboard in Resources */,
