@@ -31,7 +31,7 @@ class PinataViewController: UIViewController {
     @IBAction func tapButton(_ sender: Any) {
         tapped += 1
         AudioServicesPlayAlertSound(1519)
-        UIView.animate(withDuration: 0.1) {
+        UIView.animate(withDuration: 0) {
             self.progressView.value = CGFloat(self.tapped)
         }
         if tapped == 20 {
@@ -43,7 +43,19 @@ class PinataViewController: UIViewController {
     }
     
     @objc func updateTime() {
-        timeLabel.text = "\(Time.seconds)s"
+        
+        if Time.seconds < 10 {
+            timeLabel.text = "\(Time.minute):0\(Time.seconds)"
+        }
+        
+        if Time.seconds == 10 || Time.seconds > 10 &&  Time.seconds < 60 {
+            timeLabel.text = "\(Time.minute):\(Time.seconds)"
+        }
+        if Time.seconds == 60 {
+            Time.minute += 1
+            Time.seconds = 0
+            timeLabel.text = "\(Time.minute):0\(Time.seconds)"
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
