@@ -11,6 +11,7 @@
 		7B2D43392209AD2E0078120A /* CompassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2D43382209AD2E0078120A /* CompassViewController.swift */; };
 		7B2D433B220B13000078120A /* VocalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2D433A220B13000078120A /* VocalViewController.swift */; };
 		7B2D433D220C5D3D0078120A /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2D433C220C5D3D0078120A /* QuizViewController.swift */; };
+		7B7F03072215B6AE008D4EA3 /* FirstPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7F03062215B6AE008D4EA3 /* FirstPageViewController.swift */; };
 		7BD812E322140977002BEAA5 /* GameTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD812E222140977002BEAA5 /* GameTime.swift */; };
 		7BD812E52214231F002BEAA5 /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD812E42214231F002BEAA5 /* DescriptionViewController.swift */; };
 		C0D1798AFEA96E7FF2FE8A04 /* Pods_EscapeRoom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E02F161EFFCFAD1142D6DFD /* Pods_EscapeRoom.framework */; };
@@ -67,6 +68,7 @@
 		7B2D433A220B13000078120A /* VocalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocalViewController.swift; sourceTree = "<group>"; };
 		7B2D433C220C5D3D0078120A /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		7B3FB975A16E1B2EAFEF99C1 /* Pods-EscapeRoomTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EscapeRoomTests.debug.xcconfig"; path = "Target Support Files/Pods-EscapeRoomTests/Pods-EscapeRoomTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7B7F03062215B6AE008D4EA3 /* FirstPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPageViewController.swift; sourceTree = "<group>"; };
 		7BD812E222140977002BEAA5 /* GameTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTime.swift; sourceTree = "<group>"; };
 		7BD812E42214231F002BEAA5 /* DescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
 		8E02F161EFFCFAD1142D6DFD /* Pods_EscapeRoom.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EscapeRoom.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -177,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				EB56E318220456740010B442 /* AppDelegate.swift */,
+				7B7F03062215B6AE008D4EA3 /* FirstPageViewController.swift */,
 				EB56E31A220456740010B442 /* StartViewController.swift */,
 				EB56E346220457730010B442 /* ShakeViewController.swift */,
 				7BD812E42214231F002BEAA5 /* DescriptionViewController.swift */,
@@ -509,6 +512,7 @@
 				7BD812E52214231F002BEAA5 /* DescriptionViewController.swift in Sources */,
 				EB62E7142211706D00384445 /* VolumeViewController.swift in Sources */,
 				EB56E319220456740010B442 /* AppDelegate.swift in Sources */,
+				7B7F03072215B6AE008D4EA3 /* FirstPageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
