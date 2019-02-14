@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="goo-YQ-xsU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="i80-A7-zcx">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -469,12 +469,12 @@
                                     <segue destination="gd6-0r-zAf" kind="show" id="u9E-ed-QrV"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="i2" translatesAutoresizingMaskIntoConstraints="NO" id="Nwb-zd-dzN">
-                                <rect key="frame" x="159" y="708" width="103" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="i1" translatesAutoresizingMaskIntoConstraints="NO" id="zoO-rZ-R8b">
                                 <rect key="frame" x="159" y="662" width="57" height="103"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Arrow" translatesAutoresizingMaskIntoConstraints="NO" id="kJV-2B-lhg">
+                                <rect key="frame" x="209" y="636" width="31" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -482,8 +482,8 @@
                         <viewLayoutGuide key="safeArea" id="REz-qu-oDG"/>
                     </view>
                     <connections>
+                        <outlet property="arrow" destination="kJV-2B-lhg" id="wKc-8n-Ao9"/>
                         <outlet property="exitButton" destination="0vH-de-r2w" id="u7S-NR-LH1"/>
-                        <outlet property="iphoneHorizontal" destination="Nwb-zd-dzN" id="shd-cD-haF"/>
                         <outlet property="iphoneVertical" destination="zoO-rZ-R8b" id="jaf-iR-ThQ"/>
                         <outlet property="unlockButton" destination="6OM-j5-IYU" id="O6S-kw-i57"/>
                     </connections>
@@ -941,7 +941,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SneakyMan" translatesAutoresizingMaskIntoConstraints="NO" id="hyF-Wc-c9w">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DoorOpen" translatesAutoresizingMaskIntoConstraints="NO" id="hyF-Wc-c9w">
                                 <rect key="frame" x="0.0" y="215" width="375" height="271"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -1351,6 +1351,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Arrow" width="369" height="512"/>
+        <image name="DoorOpen" width="683" height="512"/>
         <image name="Hat" width="724" height="512"/>
         <image name="JailBreakoutLabel" width="1032" height="512"/>
         <image name="Logo" width="861" height="345"/>
@@ -1367,7 +1369,6 @@
         <image name="crack4" width="1600" height="1384"/>
         <image name="green" width="512" height="512"/>
         <image name="i1" width="57" height="103"/>
-        <image name="i2" width="925" height="512"/>
         <image name="memoryBack" width="512" height="512"/>
         <image name="orange" width="570" height="570"/>
         <image name="pinata" width="34.751590728759766" height="52.1783447265625"/>
@@ -1380,17 +1381,17 @@
         <segue reference="dyG-Pm-7Dc"/>
         <segue reference="fZ9-FH-SlP"/>
         <segue reference="Gsd-ek-nud"/>
-        <segue reference="yKL-9i-qzy"/>
+        <segue reference="ZNY-M6-Vmv"/>
         <segue reference="u9E-ed-QrV"/>
         <segue reference="9Mw-yR-UNQ"/>
         <segue reference="9lj-dp-aIp"/>
         <segue reference="UQE-su-1lo"/>
         <segue reference="Mmj-cX-03s"/>
         <segue reference="ExJ-OS-iTS"/>
-        <segue reference="gCu-u0-gUQ"/>
-        <segue reference="yeO-k0-R0f"/>
-        <segue reference="wco-Fq-k2U"/>
-        <segue reference="fP8-Eg-Jiq"/>
+        <segue reference="3Fm-4Q-t1r"/>
+        <segue reference="yz8-m5-XeR"/>
+        <segue reference="OVU-mY-6vF"/>
+        <segue reference="9gL-nh-LR8"/>
         <segue reference="XhZ-xP-uag"/>
         <segue reference="boY-ir-K6K"/>
         <segue reference="OoC-ys-wh5"/>
