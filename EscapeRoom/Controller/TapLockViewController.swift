@@ -4,7 +4,7 @@ import AudioToolbox
 
 class TapLockViewController: UIViewController {
     
-    @IBOutlet weak var pinataImage: UIImageView!
+    @IBOutlet weak var lockImage: UIImageView!
     @IBOutlet weak var unlockButton: UIButton!
     @IBOutlet weak var exitButton: UIButton!
     @IBOutlet weak var timeLabel: UILabel!
@@ -24,7 +24,7 @@ class TapLockViewController: UIViewController {
         updateTimeLabel = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
         unlockButton.isHidden = true
         exitButton.layer.cornerRadius = 15
-        pinataImage.image = UIImage(named: "pinata")
+        lockImage.image = UIImage(named: "Lock1")
     }
     
     
@@ -34,8 +34,17 @@ class TapLockViewController: UIViewController {
         UIView.animate(withDuration: 0) {
             self.progressView.value = CGFloat(self.tapped)
         }
+        
+        if tapped % 2 == 0 {
+            lockImage.image = UIImage(named: "Lock1")
+        }
+        
+        if tapped % 2 != 0 {
+             lockImage.image = UIImage(named: "Lock2")
+        }
+        
         if tapped == 20 {
-            pinataImage.image = UIImage(named: "destroyedPinata")
+            lockImage.image = UIImage(named: "destroyedPinata")
             unlockButton.isHidden = false
             tapButton.isHidden = true
             progressView.isHidden = true

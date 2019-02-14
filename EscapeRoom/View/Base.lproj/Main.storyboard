@@ -351,7 +351,7 @@
                     </view>
                     <connections>
                         <outlet property="exitButton" destination="LnI-Id-faW" id="1Dd-rb-X1Y"/>
-                        <outlet property="pinataImage" destination="wvG-er-YpS" id="v25-Ak-bHL"/>
+                        <outlet property="lockImage" destination="wvG-er-YpS" id="v25-Ak-bHL"/>
                         <outlet property="progressView" destination="jsO-Wo-sbF" id="iXW-IP-r6I"/>
                         <outlet property="tapButton" destination="iHe-eB-NlC" id="WHY-wH-W8a"/>
                         <outlet property="timeLabel" destination="j70-RN-EeL" id="AmV-ex-3CC"/>
@@ -456,7 +456,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Find an envelope" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uWw-nb-XQn">
-                                <rect key="frame" x="143" y="698" width="130" height="28"/>
+                                <rect key="frame" x="143" y="698" width="176" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -473,7 +473,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XnY-ZY-TCE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3746" y="-690"/>
+            <point key="canvasLocation" x="3744.8000000000002" y="-690.14778325123154"/>
         </scene>
         <!--Level2View-->
         <scene sceneID="2g9-oH-NPv">
@@ -1376,7 +1376,7 @@
         <segue reference="dyG-Pm-7Dc"/>
         <segue reference="fZ9-FH-SlP"/>
         <segue reference="2kb-HF-Ez6"/>
-        <segue reference="NxM-Rf-p1d"/>
+        <segue reference="yKL-9i-qzy"/>
         <segue reference="mDw-2n-j8G"/>
         <segue reference="3TE-sf-mvJ"/>
         <segue reference="sBK-mb-yJx"/>
