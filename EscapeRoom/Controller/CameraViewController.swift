@@ -2,9 +2,8 @@ import UIKit
 import AVFoundation
 import Vision
 
-class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
+class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate, ShowsAlert {
     
-    @IBOutlet weak var unlockButton: UIButton!
     @IBOutlet weak var exitButton: UIButton!
     @IBOutlet weak var timeLabel: UILabel!
     
@@ -13,12 +12,11 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     var previewLayer = AVCaptureVideoPreviewLayer()
     let captureSession = AVCaptureSession()
     var updateTimeLabel = Timer()
+    let segue = "cameraSegue"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         updateTimeLabel = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
-        unlockButton.layer.cornerRadius = 15
-        exitButton.layer.cornerRadius = 15
         setupCaptureSession()
     }
     
@@ -53,8 +51,9 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
                 if self?.foundObject == "envelope" {
                     AudioServicesPlayAlertSound(1519)
                     self?.previewLayer.isHidden = true
-                    self?.unlockButton.isHidden = false
                     self?.captureSession.stopRunning()
+                    self?.showAlert(title: "You found it!", segue: self!.segue)
+                    
                 }
             })
         }
