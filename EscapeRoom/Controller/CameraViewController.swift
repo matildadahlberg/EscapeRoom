@@ -47,12 +47,12 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
             guard let Observation = results.first else { return }
             self.foundObject = "\(Observation.identifier)"
         
-            DispatchQueue.main.async(execute: {
-                if self.foundObject == "envelope" {
+            DispatchQueue.main.async(execute: { [weak self] in
+                if self?.foundObject == "envelope" {
                     AudioServicesPlayAlertSound(1519)
-                    self.previewLayer.isHidden = true
-                    self.unlockButton.isHidden = false
-                    self.captureSession.stopRunning()
+                    self?.previewLayer.isHidden = true
+                    self?.unlockButton.isHidden = false
+                    self?.captureSession.stopRunning()
                 }
             })
         }
