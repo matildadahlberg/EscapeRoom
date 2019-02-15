@@ -19,6 +19,8 @@ class TurnIphoneViewController: UIViewController, ShowsAlert {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        
         
         updateTimeLabel = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
         
@@ -44,15 +46,22 @@ class TurnIphoneViewController: UIViewController, ShowsAlert {
         
         if UIDevice.current.orientation == .landscapeRight {
             
-            keyHole.frame = CGRect(x: 330, y: 200, width: 41, height: 39)
+            keyHole.frame = CGRect(x: 330, y: 180, width: 41, height: 39)
             handle.image = UIImage(named: "HandleDown")
-            handle.frame = CGRect(x: 330, y: 150, width: 170, height: 80)
+            handle.frame = CGRect(x: 330, y: 110, width: 170, height: 80)
+            iphoneVertical.frame = CGRect(x: 600, y: 270, width: 65, height: 110)
+            arrow.frame = CGRect(x: 700, y: 340, width: 31, height: 43)
+            timeLabel.frame = CGRect(x: 700, y: 30, width: 80, height: 27)
             
             right = true
         }
         if UIDevice.current.orientation == .portrait {
             
             if right == true {
+                keyHole.frame = CGRect(x: self.view.frame.width/2 - 60, y: self.view.frame.width/2 + 150, width: 41, height: 39)
+                handle.image = UIImage(named: "Handle")
+                handle.frame = CGRect(x: self.view.frame.width/2 - 60, y: self.view.frame.width/2 + 90, width: 180, height: 35)
+                timeLabel.frame = CGRect(x: 290, y: 50, width: 80, height: 27)
                 showAlert(title: "You opened the door", segue: segue)
             }
         }
