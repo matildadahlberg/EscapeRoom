@@ -6,25 +6,21 @@ class BlowCandleViewController: UIViewController {
     
     @IBOutlet weak var unlockButton: UIButton!
     @IBOutlet weak var exitButton: UIButton!
-    @IBOutlet weak var image1: UIImageView!
-    @IBOutlet weak var image2: UIImageView!
-    @IBOutlet weak var image3: UIImageView!
-    @IBOutlet weak var image4: UIImageView!
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var image: UIImageView!
+    
     
     var descriptionLabel = UILabel()
     var recorder: AVAudioRecorder!
     var levelTimer = Timer()
     var screenCracked = false
+    var updateTimeLabel = Timer()
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupText()
+        updateTimeLabel = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
         exitButton.layer.cornerRadius = 15
         unlockButton.isHidden = true
-        image1.isHidden = true
-        image2.isHidden = true
-        image3.isHidden = true
-        image4.isHidden = true
         
         let documents = URL(fileURLWithPath: NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)[0])
         let url = documents.appendingPathComponent("record.caf")
@@ -59,17 +55,17 @@ class BlowCandleViewController: UIViewController {
         let level = recorder.averagePower(forChannel: 0)
         
         if level < -10 && level > -20{
-            image1.isHidden = false
+            image.isHidden = false
         }
         if level < 0 && level > -10{
-            image2.isHidden = false
+            image.isHidden = false
             screenCracked = true
         }
         if level < 5 && level > 0 {
-            image3.isHidden = false
+            image.isHidden = false
         }
         if level > 0 {
-            image4.isHidden = false
+            image.isHidden = false
         }
         if screenCracked {
             levelTimer.invalidate()
@@ -78,12 +74,21 @@ class BlowCandleViewController: UIViewController {
             descriptionLabel.text = ""
         }
     }
-    func setupText(){
-        descriptionLabel = UILabel(frame: CGRect(x: self.view.frame.width/2 - 175 , y: self.view.frame.height/2 - 50, width: 350, height: 100))
-        descriptionLabel.textAlignment = .center
-        descriptionLabel.numberOfLines = 2
-        descriptionLabel.text = "Scream until the screen cracks "
-        descriptionLabel.font = UIFont(name: "Helvetica", size: 30)
-        self.view.addSubview(descriptionLabel)
+    
+    @objc func updateTime() {
+        
+        if Time.seconds < 10 {
+            timeLabel.text = "\(Time.minute):0\(Time.seconds)"
+        }
+        
+        if Time.seconds == 10 || Time.seconds > 10 &&  Time.seconds < 60 {
+            timeLabel.text = "\(Time.minute):\(Time.seconds)"
+        }
+        if Time.seconds == 60 {
+            Time.minute += 1
+            Time.seconds = 0
+            timeLabel.text = "\(Time.minute):0\(Time.seconds)"
+        }
     }
+   
 }

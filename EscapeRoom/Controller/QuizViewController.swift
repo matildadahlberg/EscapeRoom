@@ -4,6 +4,7 @@ class QuizViewController: UIViewController {
     
     @IBOutlet weak var exitButton: UIButton!
     @IBOutlet weak var unlockButton: UIButton!
+    @IBOutlet weak var timeLabel: UILabel!
     
     var descriptionLabel = UILabel()
     var countLabel = UILabel()
@@ -12,6 +13,7 @@ class QuizViewController: UIViewController {
     var answer2 = UIButton()
     var answer3 = UIButton()
     var answer4 = UIButton()
+    var updateTimeLabel = Timer()
     
     struct Question {
         let question : String
@@ -27,6 +29,7 @@ class QuizViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateTimeLabel = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
         setupText()
         exitButton.layer.cornerRadius = 15
         unlockButton.isHidden = true
@@ -129,5 +132,21 @@ class QuizViewController: UIViewController {
         answer4.addTarget(self, action: #selector(checkAnswer), for: .touchDown)
         self.view.addSubview(answer4)
         
+    }
+    
+    @objc func updateTime() {
+        
+        if Time.seconds < 10 {
+            timeLabel.text = "\(Time.minute):0\(Time.seconds)"
+        }
+        
+        if Time.seconds == 10 || Time.seconds > 10 &&  Time.seconds < 60 {
+            timeLabel.text = "\(Time.minute):\(Time.seconds)"
+        }
+        if Time.seconds == 60 {
+            Time.minute += 1
+            Time.seconds = 0
+            timeLabel.text = "\(Time.minute):0\(Time.seconds)"
+        }
     }
 }

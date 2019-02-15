@@ -7,14 +7,16 @@ class TurnIphoneViewController: UIViewController {
     
     @IBOutlet weak var iphoneVertical: UIImageView!
     @IBOutlet weak var arrow: UIImageView!
+    @IBOutlet weak var timeLabel: UILabel!
     
     var descriptionLabel = UILabel()
     var right = false
+    var updateTimeLabel = Timer()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        updateTimeLabel = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
         exitButton.layer.cornerRadius = 15
         unlockButton.isHidden = true
         descriptionLabel = UILabel(frame: CGRect(x: self.view.frame.width/2 - 150, y: self.view.frame.height/2 - 50, width: 300, height: 100))
@@ -53,6 +55,22 @@ class TurnIphoneViewController: UIViewController {
                 unlockButton.isHidden = false
                 unlockButton.layer.cornerRadius = 15
             }
+        }
+    }
+    
+    @objc func updateTime() {
+        
+        if Time.seconds < 10 {
+            timeLabel.text = "\(Time.minute):0\(Time.seconds)"
+        }
+        
+        if Time.seconds == 10 || Time.seconds > 10 &&  Time.seconds < 60 {
+            timeLabel.text = "\(Time.minute):\(Time.seconds)"
+        }
+        if Time.seconds == 60 {
+            Time.minute += 1
+            Time.seconds = 0
+            timeLabel.text = "\(Time.minute):0\(Time.seconds)"
         }
     }
     

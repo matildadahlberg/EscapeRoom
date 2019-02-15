@@ -48,7 +48,8 @@ class TapLockViewController: UIViewController, ShowsAlert {
             unlockButton.isHidden = false
             tapButton.isHidden = true
             progressView.isHidden = true
-            showAlert(title: "WOHO")
+            showAlert(title: "You unlocked the lock")
+            
            
         }
     }
