@@ -16,12 +16,15 @@ class VolumeViewController: UIViewController {
     @IBOutlet weak var imageView: UIView!
     @IBOutlet weak var exitButton: UIButton!
     @IBOutlet weak var unlockButton: UIButton!
+    @IBOutlet weak var timeLabel: UILabel!
     
     private var audioLevel : Float = 0.0
     var volume : Float = 0
+    var updateTimeLabel = Timer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateTimeLabel = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
         unlockButton.isHidden = true
         exitButton.layer.cornerRadius = 15
         
@@ -87,6 +90,22 @@ class VolumeViewController: UIViewController {
                     }
                 }
             }
+        }
+    }
+    
+    @objc func updateTime() {
+        
+        if Time.seconds < 10 {
+            timeLabel.text = "\(Time.minute):0\(Time.seconds)"
+        }
+        
+        if Time.seconds == 10 || Time.seconds > 10 &&  Time.seconds < 60 {
+            timeLabel.text = "\(Time.minute):\(Time.seconds)"
+        }
+        if Time.seconds == 60 {
+            Time.minute += 1
+            Time.seconds = 0
+            timeLabel.text = "\(Time.minute):0\(Time.seconds)"
         }
     }
 }
