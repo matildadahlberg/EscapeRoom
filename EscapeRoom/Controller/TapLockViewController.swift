@@ -2,7 +2,7 @@ import UIKit
 import MBCircularProgressBar
 import AudioToolbox
 
-class TapLockViewController: UIViewController {
+class TapLockViewController: UIViewController, ShowsAlert {
     
     @IBOutlet weak var lockImage: UIImageView!
     @IBOutlet weak var unlockButton: UIButton!
@@ -48,6 +48,8 @@ class TapLockViewController: UIViewController {
             unlockButton.isHidden = false
             tapButton.isHidden = true
             progressView.isHidden = true
+            showAlert(title: "WOHO")
+           
         }
     }
     

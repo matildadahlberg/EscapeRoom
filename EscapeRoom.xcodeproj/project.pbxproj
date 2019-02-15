@@ -14,6 +14,7 @@
 		7B7F03072215B6AE008D4EA3 /* FirstPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7F03062215B6AE008D4EA3 /* FirstPageViewController.swift */; };
 		7BD812E322140977002BEAA5 /* GameTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD812E222140977002BEAA5 /* GameTime.swift */; };
 		7BD812E52214231F002BEAA5 /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD812E42214231F002BEAA5 /* DescriptionViewController.swift */; };
+		7BE730D92216B7E6009DC86E /* AlertModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE730D82216B7E6009DC86E /* AlertModel.swift */; };
 		C0D1798AFEA96E7FF2FE8A04 /* Pods_EscapeRoom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E02F161EFFCFAD1142D6DFD /* Pods_EscapeRoom.framework */; };
 		CA62D5AF3AE0292149319848 /* Pods_EscapeRoomTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AE2A91300D103D8FD9F5CCF /* Pods_EscapeRoomTests.framework */; };
 		EB31FF332216C07200D0BB17 /* TitilliumWeb-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB31FF282216C07100D0BB17 /* TitilliumWeb-ExtraLightItalic.ttf */; };
@@ -82,6 +83,7 @@
 		7B7F03062215B6AE008D4EA3 /* FirstPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPageViewController.swift; sourceTree = "<group>"; };
 		7BD812E222140977002BEAA5 /* GameTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTime.swift; sourceTree = "<group>"; };
 		7BD812E42214231F002BEAA5 /* DescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
+		7BE730D82216B7E6009DC86E /* AlertModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertModel.swift; sourceTree = "<group>"; };
 		8E02F161EFFCFAD1142D6DFD /* Pods_EscapeRoom.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EscapeRoom.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		972296DF39E70DE93F6247E1 /* Pods-EscapeRoomUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EscapeRoomUITests.debug.xcconfig"; path = "Target Support Files/Pods-EscapeRoomUITests/Pods-EscapeRoomUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BA3F08334699A37BF2782233 /* Pods-EscapeRoom.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EscapeRoom.debug.xcconfig"; path = "Target Support Files/Pods-EscapeRoom/Pods-EscapeRoom.debug.xcconfig"; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 				EB33A6222212CD76009CDF30 /* CardModel.swift */,
 				EB33A6242212CE46009CDF30 /* Card.swift */,
 				7BD812E222140977002BEAA5 /* GameTime.swift */,
+				7BE730D82216B7E6009DC86E /* AlertModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -546,6 +549,7 @@
 				7B2D433B220B13000078120A /* BlowCandleViewController.swift in Sources */,
 				7B2D43392209AD2E0078120A /* CompassViewController.swift in Sources */,
 				EB344188220AE1A900EB1993 /* TurnIphoneViewController.swift in Sources */,
+				7BE730D92216B7E6009DC86E /* AlertModel.swift in Sources */,
 				EB33A6252212CE46009CDF30 /* Card.swift in Sources */,
 				EB33A6272212D2AA009CDF30 /* CardCollectionViewCell.swift in Sources */,
 				EB56E349220457920010B442 /* TapLockViewController.swift in Sources */,
