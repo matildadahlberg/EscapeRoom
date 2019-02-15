@@ -15,6 +15,7 @@
 		7BD812E322140977002BEAA5 /* GameTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD812E222140977002BEAA5 /* GameTime.swift */; };
 		7BD812E52214231F002BEAA5 /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD812E42214231F002BEAA5 /* DescriptionViewController.swift */; };
 		7BE730D92216B7E6009DC86E /* AlertModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE730D82216B7E6009DC86E /* AlertModel.swift */; };
+		7BE730DC22171109009DC86E /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE730DB22171109009DC86E /* PasswordViewController.swift */; };
 		C0D1798AFEA96E7FF2FE8A04 /* Pods_EscapeRoom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E02F161EFFCFAD1142D6DFD /* Pods_EscapeRoom.framework */; };
 		CA62D5AF3AE0292149319848 /* Pods_EscapeRoomTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AE2A91300D103D8FD9F5CCF /* Pods_EscapeRoomTests.framework */; };
 		EB31FF332216C07200D0BB17 /* TitilliumWeb-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB31FF282216C07100D0BB17 /* TitilliumWeb-ExtraLightItalic.ttf */; };
@@ -84,6 +85,7 @@
 		7BD812E222140977002BEAA5 /* GameTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTime.swift; sourceTree = "<group>"; };
 		7BD812E42214231F002BEAA5 /* DescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
 		7BE730D82216B7E6009DC86E /* AlertModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertModel.swift; sourceTree = "<group>"; };
+		7BE730DB22171109009DC86E /* PasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
 		8E02F161EFFCFAD1142D6DFD /* Pods_EscapeRoom.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EscapeRoom.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		972296DF39E70DE93F6247E1 /* Pods-EscapeRoomUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EscapeRoomUITests.debug.xcconfig"; path = "Target Support Files/Pods-EscapeRoomUITests/Pods-EscapeRoomUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BA3F08334699A37BF2782233 /* Pods-EscapeRoom.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EscapeRoom.debug.xcconfig"; path = "Target Support Files/Pods-EscapeRoom/Pods-EscapeRoom.debug.xcconfig"; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 				EB34418D220AF39600EB1993 /* pianoE.wav */,
 				EB34418C220AF39600EB1993 /* pianoF.wav */,
 				EB34418E220AF39600EB1993 /* pianoG.wav */,
+				7BE730DB22171109009DC86E /* PasswordViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -558,6 +561,7 @@
 				EBA864FA220DB429007890F9 /* MemoryViewController.swift in Sources */,
 				EB34418A220AE1C700EB1993 /* PatPetViewController.swift in Sources */,
 				7BD812E52214231F002BEAA5 /* DescriptionViewController.swift in Sources */,
+				7BE730DC22171109009DC86E /* PasswordViewController.swift in Sources */,
 				EB62E7142211706D00384445 /* VolumeViewController.swift in Sources */,
 				EB56E319220456740010B442 /* AppDelegate.swift in Sources */,
 				7B7F03072215B6AE008D4EA3 /* FirstPageViewController.swift in Sources */,
