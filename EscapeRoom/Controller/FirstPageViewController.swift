@@ -6,7 +6,23 @@ class FirstPageViewController: UIViewController {
         super.viewDidLoad()
         
         let gradient: CAGradientLayer = CAGradientLayer()
+
+//        gradient.frame = self.view.bounds
         
+        gradient.bounds = view.bounds.insetBy(dx: -0.5*view.bounds.size.width, dy: -0.5*view.bounds.size.height)
+        
+        gradient.position = view.center
+        
+        view.layer.addSublayer(gradient)
+        
+        gradient.startPoint = CGPoint(x: 0.25, y: 0.5)
+        gradient.endPoint = CGPoint(x: 0.25, y: 0.75)
+        
+//        gradient.transform = CATransform3DMakeAffineTransform(CGAffineTransform(a: 0, b: 0.79, c: -0.79, d: 0, tx: 0.5, ty: 0.43))
+        
+        
+        
+        gradient.locations = [0, 0.22, 0.67, 1]
         
         gradient.colors = [
             
@@ -20,20 +36,28 @@ class FirstPageViewController: UIViewController {
             
         ]
         
-         let currentY = view.frame.origin.y
-        let currentX = view.frame.origin.x
         
-        gradient.locations = [0, 0.22, 0.67, 1]
-        gradient.startPoint = CGPoint(x: 0.25, y: 0.5)
-        gradient.endPoint = CGPoint(x: 0.75, y: 0.5)
         
-        gradient.transform = CATransform3DMakeAffineTransform(CGAffineTransform(a: 0, b: 0.79, c: -0.79, d: 0, tx: 0.5, ty: 0.43))
+        self.view.layer.addSublayer(gradient)
         
-        gradient.bounds = view.bounds.insetBy(dx: -0.5*view.bounds.size.width, dy: -0.5*view.bounds.size.height)
         
-        gradient.position = view.center
         
-        view.layer.addSublayer(gradient)
+//        let currentY = view.frame.origin.y
+//        let currentX = view.frame.origin.x
+//
+//        gradient.locations = [0, 0.22, 0.67, 1]
+//        gradient.startPoint = CGPoint(x: 0.25, y: 0.5)
+//        gradient.endPoint = CGPoint(x: 0.75, y: 0.5)
+//
+//        gradient.transform = CATransform3DMakeAffineTransform(CGAffineTransform(a: 0, b: 0.79, c: -0.79, d: 0, tx: 0.5, ty: 0.43))
+//
+//        gradient.bounds = view.bounds.insetBy(dx: -0.5*view.bounds.size.width, dy: -0.5*view.bounds.size.height)
+//
+//        gradient.position = view.center
+//
+//        view.layer.addSublayer(gradient)
+        
+       
         
 
 
