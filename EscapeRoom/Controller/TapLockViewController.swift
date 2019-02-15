@@ -12,6 +12,7 @@ class TapLockViewController: UIViewController, ShowsAlert {
     @IBOutlet weak var progressView: MBCircularProgressBarView!
     
     var tapped = 0
+    let segue = "lockSegue"
     var gameTimer = GameTime()
     var updateTimeLabel = Timer()
     
@@ -48,7 +49,7 @@ class TapLockViewController: UIViewController, ShowsAlert {
             unlockButton.isHidden = false
             tapButton.isHidden = true
             progressView.isHidden = true
-            showAlert(title: "You unlocked the lock")
+            showAlert(title: "You unlock the lock", segue: segue)
             
            
         }
