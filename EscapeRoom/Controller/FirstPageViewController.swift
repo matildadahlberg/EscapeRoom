@@ -2,26 +2,19 @@ import UIKit
 
 class FirstPageViewController: UIViewController {
 
+    @IBOutlet weak var backgroundView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let gradient: CAGradientLayer = CAGradientLayer()
 
-//        gradient.frame = self.view.bounds
+        gradient.bounds = backgroundView.bounds.insetBy(dx: -0.5*view.bounds.size.width, dy: -0.5*view.bounds.size.height)
         
-        gradient.bounds = view.bounds.insetBy(dx: -0.5*view.bounds.size.width, dy: -0.5*view.bounds.size.height)
-        
-        gradient.position = view.center
-        
-        view.layer.addSublayer(gradient)
-        
+        gradient.position = backgroundView.center
+     
         gradient.startPoint = CGPoint(x: 0.25, y: 0.5)
         gradient.endPoint = CGPoint(x: 0.25, y: 0.75)
-        
-//        gradient.transform = CATransform3DMakeAffineTransform(CGAffineTransform(a: 0, b: 0.79, c: -0.79, d: 0, tx: 0.5, ty: 0.43))
-        
-        
-        
         gradient.locations = [0, 0.22, 0.67, 1]
         
         gradient.colors = [
@@ -35,35 +28,7 @@ class FirstPageViewController: UIViewController {
             UIColor(red: 0.13, green: 0.13, blue: 0.13, alpha: 1).cgColor
             
         ]
-        
-        
-        
-        self.view.layer.addSublayer(gradient)
-        
-        
-        
-//        let currentY = view.frame.origin.y
-//        let currentX = view.frame.origin.x
-//
-//        gradient.locations = [0, 0.22, 0.67, 1]
-//        gradient.startPoint = CGPoint(x: 0.25, y: 0.5)
-//        gradient.endPoint = CGPoint(x: 0.75, y: 0.5)
-//
-//        gradient.transform = CATransform3DMakeAffineTransform(CGAffineTransform(a: 0, b: 0.79, c: -0.79, d: 0, tx: 0.5, ty: 0.43))
-//
-//        gradient.bounds = view.bounds.insetBy(dx: -0.5*view.bounds.size.width, dy: -0.5*view.bounds.size.height)
-//
-//        gradient.position = view.center
-//
-//        view.layer.addSublayer(gradient)
-        
-       
-        
-
-
-      
+ 
+        backgroundView.layer.addSublayer(gradient)
     }
-    
-    
-    
 }
