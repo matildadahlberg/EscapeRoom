@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="i80-A7-zcx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BpT-yq-l4C">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -263,18 +263,6 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="VMt-eQ-TQf"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eo7-Lv-TmR">
-                                <rect key="frame" x="109" y="529" width="156" height="77"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Unlock next room">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="BpT-yq-l4C" kind="show" id="3TE-sf-mvJ"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j70-RN-EeL">
                                 <rect key="frame" x="285" y="44" width="74" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -351,8 +339,7 @@
                         <outlet property="progressView" destination="jsO-Wo-sbF" id="iXW-IP-r6I"/>
                         <outlet property="tapButton" destination="iHe-eB-NlC" id="WHY-wH-W8a"/>
                         <outlet property="timeLabel" destination="j70-RN-EeL" id="AmV-ex-3CC"/>
-                        <outlet property="unlockButton" destination="Eo7-Lv-TmR" id="MnU-IR-Vdn"/>
-                        <segue destination="BpT-yq-l4C" kind="show" id="g0t-s1-5wA"/>
+                        <segue destination="BpT-yq-l4C" kind="show" identifier="lockSegue" id="g0t-s1-5wA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0hG-Ms-kPS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -426,18 +413,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0tr-RE-0vB">
-                                <rect key="frame" x="109" y="368" width="156" height="77"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Unlock next room">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="19C-RP-R9c" kind="show" id="yKL-9i-qzy"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JG6-9q-NRE">
                                 <rect key="frame" x="16" y="44" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -481,12 +456,12 @@
                     <connections>
                         <outlet property="exitButton" destination="JG6-9q-NRE" id="OlW-VO-zBw"/>
                         <outlet property="timeLabel" destination="VYK-M3-dkg" id="9G7-Tq-EMn"/>
-                        <outlet property="unlockButton" destination="0tr-RE-0vB" id="07R-la-VeZ"/>
+                        <segue destination="19C-RP-R9c" kind="show" identifier="cameraSegue" id="kkt-PM-d3m"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XnY-ZY-TCE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3746" y="-690"/>
+            <point key="canvasLocation" x="3777" y="-690"/>
         </scene>
         <!--Level2View-->
         <scene sceneID="2g9-oH-NPv">
@@ -505,18 +480,6 @@
                                 </state>
                                 <connections>
                                     <segue destination="BpT-yq-l4C" kind="show" id="9Mw-yR-UNQ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6OM-j5-IYU">
-                                <rect key="frame" x="109" y="368" width="156" height="77"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Unlock next room">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="gd6-0r-zAf" kind="show" id="u9E-ed-QrV"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="i1" translatesAutoresizingMaskIntoConstraints="NO" id="zoO-rZ-R8b">
@@ -551,7 +514,7 @@
                         <outlet property="exitButton" destination="0vH-de-r2w" id="u7S-NR-LH1"/>
                         <outlet property="iphoneVertical" destination="zoO-rZ-R8b" id="jaf-iR-ThQ"/>
                         <outlet property="timeLabel" destination="D1M-5W-1AH" id="Mtr-x6-v5l"/>
-                        <outlet property="unlockButton" destination="6OM-j5-IYU" id="O6S-kw-i57"/>
+                        <segue destination="gd6-0r-zAf" kind="show" identifier="doorSegue" id="ni0-gw-UkZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yvd-43-cCN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1382,9 +1345,9 @@
         <segue reference="flA-Rd-dTX"/>
         <segue reference="cFn-mo-Tyc"/>
         <segue reference="Gsd-ek-nud"/>
-        <segue reference="NxM-Rf-p1d"/>
+        <segue reference="kkt-PM-d3m"/>
         <segue reference="mDw-2n-j8G"/>
-        <segue reference="g0t-s1-5wA"/>
+        <segue reference="9Mw-yR-UNQ"/>
         <segue reference="sBK-mb-yJx"/>
         <segue reference="UQE-su-1lo"/>
         <segue reference="Mmj-cX-03s"/>
