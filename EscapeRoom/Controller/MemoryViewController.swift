@@ -1,17 +1,8 @@
-//
-//  MemoryViewController.swift
-//  EscapeRoom
-//
-//  Created by Matilda Dahlberg on 2019-02-08.
-//  Copyright © 2019 Matilda Dahlberg. All rights reserved.
-//
-
 import UIKit
 
-class MemoryViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class MemoryViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, ShowsAlert {
     
     @IBOutlet weak var exitButton: UIButton!
-    @IBOutlet weak var unlockButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var timeLabel: UILabel!
     
@@ -21,15 +12,12 @@ class MemoryViewController: UIViewController, UICollectionViewDelegate, UICollec
     var firstFlippedCardIndex : IndexPath?
     var  cards : CardCollectionViewCell?
     var updateTimeLabel = Timer()
+    let segue = "memorySegue"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         updateTimeLabel = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
-        exitButton.layer.cornerRadius = 15
-        unlockButton.isHidden = true
-        
         cardArray = model.getCards()
-        
         collectionView.delegate = self
         collectionView.dataSource = self
     }
@@ -106,8 +94,8 @@ class MemoryViewController: UIViewController, UICollectionViewDelegate, UICollec
             
             
             if card.isMatched == true && count == 3 {
-                unlockButton.isHidden = false
                 collectionView.isHidden = true
+                showAlert(title: "You solved the memory", segue: segue)
             }
         }
     }
@@ -126,6 +114,10 @@ class MemoryViewController: UIViewController, UICollectionViewDelegate, UICollec
             Time.seconds = 0
             timeLabel.text = "\(Time.minute):0\(Time.seconds)"
         }
+    }
+    
+    @IBAction func exitButton(_ sender: Any) {
+        exitAlert()
     }
 }
 

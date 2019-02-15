@@ -13,6 +13,16 @@ extension ShowsAlert where Self: UIViewController {
         }))
         present(alert, animated: true, completion: nil)
     }
+    
+    func exitAlert() {
+        let alert = UIAlertController(title: "Are you sure you want to give up?", message: nil, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "YES", style: .cancel, handler: { (_) in
+            self.performSegue(withIdentifier: "exitSegue", sender: nil)
+        }))
+        alert.addAction((UIAlertAction(title: "NO", style: .default, handler: nil)))
+        present(alert, animated: true, completion: nil)
+    }
+ 
 }
 
 

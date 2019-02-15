@@ -4,6 +4,7 @@ import AudioToolbox
 
 class TapLockViewController: UIViewController, ShowsAlert {
     
+    
     @IBOutlet weak var lockImage: UIImageView!
     @IBOutlet weak var exitButton: UIButton!
     @IBOutlet weak var timeLabel: UILabel!
@@ -42,7 +43,7 @@ class TapLockViewController: UIViewController, ShowsAlert {
         }
         
         if tapped == 20 {
-            showAlert(title: "You unlock the lock", segue: segue)
+            showAlert(title: "You unlocked the lock", segue: segue)
         }
     }
     
@@ -64,6 +65,10 @@ class TapLockViewController: UIViewController, ShowsAlert {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         updateTimeLabel.invalidate()
+    }
+    
+    @IBAction func exitButton(_ sender: Any) {
+        exitAlert()
     }
 }
 

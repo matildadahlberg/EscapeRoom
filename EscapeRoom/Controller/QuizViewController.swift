@@ -1,19 +1,19 @@
 import UIKit
+import AudioToolbox
 
-class QuizViewController: UIViewController {
+class QuizViewController: UIViewController, ShowsAlert{
     
     @IBOutlet weak var exitButton: UIButton!
-    @IBOutlet weak var unlockButton: UIButton!
     @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet weak var answerA: UIButton!
+    @IBOutlet weak var answerB: UIButton!
+    @IBOutlet weak var answerC: UIButton!
+    @IBOutlet weak var answerD: UIButton!
     
-    var descriptionLabel = UILabel()
-    var countLabel = UILabel()
     var questionNumber = 1
-    var answer1 = UIButton()
-    var answer2 = UIButton()
-    var answer3 = UIButton()
-    var answer4 = UIButton()
     var updateTimeLabel = Timer()
+    let segue = "quizSegue"
     
     struct Question {
         let question : String
@@ -22,21 +22,18 @@ class QuizViewController: UIViewController {
     }
     
     var questions : [Question] = [
-        Question(question: "What's the name of the capital in Denmark?", answer: ["Stockholm", "Oslo", "Paris", "Copenhagen"], correctAnswer: "Copenhagen"),
-        Question(question: "How tall is Victoria Tower?", answer: ["118m", "176m", "88m", "200m"], correctAnswer: "118m"),
-        Question(question: "When was the first iPhone released?", answer: ["2004", "2010", "2007", "2009"], correctAnswer: "2007")
+        Question(question: "Which year did Mark Zuckerberg launch Facebook?", answer: ["1999", "2004", "2006", "2000"], correctAnswer: "2004"),
+        Question(question: "The tsunami that swept 2004 into various coastal parts of Asia was one of the largest natural catastrophe so far, how many people died?", answer: ["230 000", "70 000", "150 000", "500 000"], correctAnswer: "230 000"),
+        Question(question: "What does MMIV stand for in Roman numerals?", answer: ["2006", "1004", "2004", "106"], correctAnswer: "2004")
     ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         updateTimeLabel = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
-        setupText()
-        exitButton.layer.cornerRadius = 15
-        unlockButton.isHidden = true
         updateQuestion()
     }
     
-    @objc func checkAnswer(sender: AnyObject) {
+    @IBAction func answerButton(_ sender: Any) {
         
         let button = sender as! UIButton
         let title = button.titleLabel?.text
@@ -45,93 +42,40 @@ class QuizViewController: UIViewController {
             questionNumber += 1
             updateQuestion()
         } else {
-            
+            AudioServicesPlayAlertSound(1519)
             questionNumber = 1
             updateQuestion()
         }
     }
     
+    
     func updateQuestion() {
         
         if questionNumber == 1 {
-            descriptionLabel.text = questions[0].question
-            countLabel.text = "Question \(questionNumber)/3"
-            answer1.setTitle("\(questions[0].answer[0])", for: .normal)
-            answer2.setTitle("\(questions[0].answer[1])", for: .normal)
-            answer3.setTitle("\(questions[0].answer[2])", for: .normal)
-            answer4.setTitle("\(questions[0].answer[3])", for: .normal)
+            questionLabel.text = questions[0].question
+            answerA.setTitle("\(questions[0].answer[0])", for: .normal)
+            answerB.setTitle("\(questions[0].answer[1])", for: .normal)
+            answerC.setTitle("\(questions[0].answer[2])", for: .normal)
+            answerD.setTitle("\(questions[0].answer[3])", for: .normal)
         }
         if questionNumber == 2 {
-            descriptionLabel.text = questions[1].question
-            countLabel.text = "Question \(questionNumber)/3"
-            answer1.setTitle("\(questions[1].answer[0])", for: .normal)
-            answer2.setTitle("\(questions[1].answer[1])", for: .normal)
-            answer3.setTitle("\(questions[1].answer[2])", for: .normal)
-            answer4.setTitle("\(questions[1].answer[3])", for: .normal)
+            questionLabel.text = questions[1].question
+            answerA.setTitle("\(questions[1].answer[0])", for: .normal)
+            answerB.setTitle("\(questions[1].answer[1])", for: .normal)
+            answerC.setTitle("\(questions[1].answer[2])", for: .normal)
+            answerD.setTitle("\(questions[1].answer[3])", for: .normal)
         }
         if questionNumber == 3 {
-            descriptionLabel.text = questions[2].question
-            countLabel.text = "Question \(questionNumber)/3"
-            answer1.setTitle("\(questions[2].answer[0])", for: .normal)
-            answer2.setTitle("\(questions[2].answer[1])", for: .normal)
-            answer3.setTitle("\(questions[2].answer[2])", for: .normal)
-            answer4.setTitle("\(questions[2].answer[3])", for: .normal)
+            questionLabel.text = questions[2].question
+            answerA.setTitle("\(questions[2].answer[0])", for: .normal)
+            answerB.setTitle("\(questions[2].answer[1])", for: .normal)
+            answerC.setTitle("\(questions[2].answer[2])", for: .normal)
+            answerD.setTitle("\(questions[2].answer[3])", for: .normal)
         }
         
         if questionNumber == 4 {
-            descriptionLabel.text = ""
-            countLabel.text = ""
-            unlockButton.isHidden = false
-            answer1.isHidden = true
-            answer2.isHidden = true
-            answer3.isHidden = true
-            answer4.isHidden = true
-            unlockButton.layer.cornerRadius = 15
+            showAlert(title: "You answered all question correct!", segue: segue)
         }
-    }
-    
-    func setupText(){
-        countLabel = UILabel(frame: CGRect(x: self.view.frame.width/2 - 150 , y: 100, width: 300, height: 50))
-        countLabel.textAlignment = .center
-        countLabel.text = "Question 1/3"
-        countLabel.font = UIFont(name: "Helvetica", size: 20)
-        self.view.addSubview(countLabel)
-        
-        descriptionLabel = UILabel(frame: CGRect(x: self.view.frame.width/2 - 175 , y: 200, width: 350, height: 100))
-        descriptionLabel.textAlignment = .center
-        descriptionLabel.numberOfLines = 2
-        descriptionLabel.text = "Question"
-        descriptionLabel.font = UIFont(name: "Helvetica", size: 30)
-        self.view.addSubview(descriptionLabel)
-        
-        answer1 = UIButton(frame: CGRect(x: self.view.frame.width/2 - 145, y: 500, width: 125, height: 75))
-        answer1.backgroundColor = UIColor.black
-        answer1.setTitle("A", for: .normal)
-        answer1.layer.cornerRadius = 15
-        answer1.addTarget(self, action: #selector(checkAnswer), for: .touchDown)
-        self.view.addSubview(answer1)
-        
-        answer2 = UIButton(frame: CGRect(x: self.view.frame.width/2 + 20, y: 500, width: 125, height: 75))
-        answer2.backgroundColor = UIColor.black
-        answer2.setTitle("B", for: .normal)
-        answer2.layer.cornerRadius = 15
-        answer2.addTarget(self, action: #selector(checkAnswer), for: .touchDown)
-        self.view.addSubview(answer2)
-        
-        answer3 = UIButton(frame: CGRect(x: self.view.frame.width/2 - 145, y: 610, width: 125, height: 75))
-        answer3.backgroundColor = UIColor.black
-        answer3.setTitle("C", for: .normal)
-        answer3.layer.cornerRadius = 15
-        answer3.addTarget(self, action: #selector(checkAnswer), for: .touchDown)
-        self.view.addSubview(answer3)
-        
-        answer4 = UIButton(frame: CGRect(x: self.view.frame.width/2 + 20, y: 610, width: 125, height: 75))
-        answer4.backgroundColor = UIColor.black
-        answer4.setTitle("D", for: .normal)
-        answer4.layer.cornerRadius = 15
-        answer4.addTarget(self, action: #selector(checkAnswer), for: .touchDown)
-        self.view.addSubview(answer4)
-        
     }
     
     @objc func updateTime() {
@@ -148,5 +92,9 @@ class QuizViewController: UIViewController {
             Time.seconds = 0
             timeLabel.text = "\(Time.minute):0\(Time.seconds)"
         }
+    }
+    
+    @IBAction func exitButton(_ sender: Any) {
+        exitAlert()
     }
 }

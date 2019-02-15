@@ -77,6 +77,10 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
             timeLabel.text = "\(Time.minute):0\(Time.seconds)"
         }
     }
+    
+    @IBAction func exitButton(_ sender: Any) {
+        exitAlert()
+    }
 }
 
 
