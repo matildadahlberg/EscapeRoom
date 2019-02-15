@@ -33,7 +33,7 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         let captureOutput = AVCaptureVideoDataOutput()
         captureSession.addOutput(captureOutput)
         previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-        previewLayer.frame.size = CGSize(width: 600, height:600 )
+        previewLayer.frame.size = CGSize(width: 500, height:500 )
         previewLayer.position = CGPoint(x: self.view.frame.width/2, y: self.view.frame.height/2)
         view.layer.addSublayer(previewLayer)
         captureSession.startRunning()

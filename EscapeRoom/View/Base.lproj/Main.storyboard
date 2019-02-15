@@ -10,9 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="TitilliumWeb-Bold.ttf">
-            <string>TitilliumWeb-Bold</string>
-        </array>
         <array key="TitilliumWeb-SemiBold.ttf">
             <string>TitilliumWeb-SemiBold</string>
         </array>
@@ -1318,6 +1315,7 @@
     </scenes>
     <resources>
         <image name="Arrow" width="369" height="512"/>
+        <image name="Camera" width="664" height="512"/>
         <image name="DoorOpen" width="683" height="512"/>
         <image name="Hat" width="724" height="512"/>
         <image name="JailBreakoutLabel" width="1032" height="512"/>
@@ -1325,21 +1323,23 @@
         <image name="OkeyButton" width="978" height="512"/>
         <image name="PlayButton" width="1524" height="512"/>
         <image name="SneakyMan" width="696" height="512"/>
-        <image name="Wall" width="627" height="512"/>
+        <image name="Wall" width="544" height="512"/>
         <image name="Window" width="346" height="397"/>
+        <image name="Wire" width="16" height="16"/>
         <image name="crack1" width="1600" height="1096.800048828125"/>
         <image name="crack2" width="1600" height="1538.4000244140625"/>
         <image name="crack3" width="1600" height="1036.800048828125"/>
         <image name="crack4" width="1600" height="1384"/>
         <image name="i1" width="57" height="103"/>
         <image name="memoryBack" width="512" height="512"/>
+        <image name="pinata" width="16" height="16"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="ekg-UV-Mg8"/>
         <segue reference="b0I-8s-ong"/>
         <segue reference="9xP-G0-XcR"/>
         <segue reference="dyG-Pm-7Dc"/>
-        <segue reference="fZ9-FH-SlP"/>
+        <segue reference="cFn-mo-Tyc"/>
         <segue reference="2kb-HF-Ez6"/>
         <segue reference="NxM-Rf-p1d"/>
         <segue reference="mDw-2n-j8G"/>
