@@ -2,9 +2,8 @@ import UIKit
 import AudioToolbox
 
 
-class ShakeViewController: UIViewController {
+class ShakeViewController: UIViewController, ShowsAlert {
     
-    @IBOutlet weak var unlockButton: UIButton!
     @IBOutlet weak var exitButton: UIButton!
     @IBOutlet weak var timeLabel: UILabel!
     
@@ -12,45 +11,24 @@ class ShakeViewController: UIViewController {
     var countLabel = UILabel()
     var count = 3
     var updateTimeLabel = Timer()
+    let segue = "shakeSegue"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         updateTimeLabel = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
-        unlockButton.isHidden = true
-        exitButton.layer.cornerRadius = 15
-        setupView()
     }
     
     override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         if motion == .motionShake && count > 0 {
             count -= 1
-            countLabel.text = "\(count)"
             AudioServicesPlayAlertSound(1519)
         }
         
         if motion == .motionShake && count == 0 {
-            descriptionLabel.text = ""
-            countLabel.text = ""
-            unlockButton.isHidden = false
-            unlockButton.layer.cornerRadius = 15
+            showAlert(title: "The door is open!", segue: segue)
         }
     }
     
-    func setupView(){
-        
-        descriptionLabel = UILabel(frame: CGRect(x: self.view.frame.width/2 - 150 , y: 100, width: 300, height: 100))
-        descriptionLabel.textAlignment = .center
-        descriptionLabel.text = "Shake the phone"
-        descriptionLabel.font = UIFont(name: "Helvetica", size: 30)
-        self.view.addSubview(descriptionLabel)
-        
-        countLabel = UILabel(frame: CGRect(x: self.view.frame.width/2 - 150, y: 300, width: 300, height: 200))
-        countLabel.textAlignment = .center
-        countLabel.text = "\(count)"
-        countLabel.font = UIFont(name: "Helvetica", size: 200)
-        self.view.addSubview(countLabel)
-        
-    }
     
     @objc func updateTime() {
         
@@ -66,6 +44,10 @@ class ShakeViewController: UIViewController {
             Time.seconds = 0
             timeLabel.text = "\(Time.minute):0\(Time.seconds)"
         }
+    }
+    
+    @IBAction func exitButton(_ sender: Any) {
+        exitAlert()
     }
 }
 

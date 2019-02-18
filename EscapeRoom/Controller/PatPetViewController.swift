@@ -1,23 +1,20 @@
 import UIKit
 
-class PatPetViewController: UIViewController {
+class PatPetViewController: UIViewController, ShowsAlert {
     
     @IBOutlet weak var exitButton: UIButton!
-    @IBOutlet weak var unlockButton: UIButton!
     @IBOutlet weak var timeLabel: UILabel!
     
     var tapped = 0
     var updateTimeLabel = Timer()
-    
     var imageView = UIImageView()
+    let segue = "dogSegue"
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         updateTimeLabel = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
-        exitButton.layer.cornerRadius = 15
-        unlockButton.isHidden = true
-        
+       
         let imageName = "card1"
         let image = UIImage(named: imageName)
         imageView = UIImageView(image: image!)
@@ -57,8 +54,6 @@ class PatPetViewController: UIViewController {
             print("Swipe Right")
             tapped += 1
             if tapped == 5{
-                unlockButton.isHidden = false
-                unlockButton.layer.cornerRadius = 15
                 imageView.isHidden = true
             }
         }
@@ -66,8 +61,6 @@ class PatPetViewController: UIViewController {
             print("Swipe Left")
             tapped += 1
             if tapped == 5{
-                unlockButton.isHidden = false
-                unlockButton.layer.cornerRadius = 15
                 imageView.isHidden = true
             }
         }
@@ -75,8 +68,6 @@ class PatPetViewController: UIViewController {
             print("Swipe Up")
             tapped += 1
             if tapped == 5{
-                unlockButton.isHidden = false
-                unlockButton.layer.cornerRadius = 15
                 imageView.isHidden = true
             }
         }
@@ -84,8 +75,7 @@ class PatPetViewController: UIViewController {
             print("Swipe Down")
             tapped += 1
             if tapped == 5{
-                unlockButton.isHidden = false
-                unlockButton.layer.cornerRadius = 15
+                showAlert(title: "Happy dog!", segue: segue)
                 imageView.isHidden = true
             }
         }
@@ -107,5 +97,8 @@ class PatPetViewController: UIViewController {
         }
     }
     
- 
+    @IBAction func exitButton(_ sender: Any) {
+        exitAlert()
+    }
+    
 }

@@ -1,37 +1,23 @@
-//
-//  VolumeViewController.swift
-//  EscapeRoom
-//
-//  Created by Matilda Dahlberg on 2019-02-11.
-//  Copyright © 2019 Matilda Dahlberg. All rights reserved.
-//
-
 import UIKit
 import MediaPlayer
 import AVFoundation
 
-class VolumeViewController: UIViewController {
+class VolumeViewController: UIViewController, ShowsAlert {
     
-    @IBOutlet weak var label: UILabel!
     @IBOutlet weak var imageView: UIView!
     @IBOutlet weak var exitButton: UIButton!
-    @IBOutlet weak var unlockButton: UIButton!
     @IBOutlet weak var timeLabel: UILabel!
     
     private var audioLevel : Float = 0.0
     var volume : Float = 0
     var updateTimeLabel = Timer()
+    let segue = "wallSegue"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         updateTimeLabel = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
-        unlockButton.isHidden = true
-        exitButton.layer.cornerRadius = 15
-        
         listenVolumeButton()
-        
         volume = AVAudioSession.sharedInstance().outputVolume
-        
         imageView.backgroundColor = UIColor.red
         imageView.frame = CGRect(x: 0, y: self.view.frame.maxY, width: self.view.frame.width, height: self.view.frame.height * CGFloat(volume))
         
@@ -41,9 +27,6 @@ class VolumeViewController: UIViewController {
             UIView.animate(withDuration: 1, animations: {
                 self.imageView.frame = CGRect(x: 0, y: currentY - 820, width: self.view.frame.width, height: self.view.frame.height * 100)
             }, completion: nil)
-            unlockButton.isHidden = false
-            unlockButton.layer.cornerRadius = 15
-            label.isHidden = true
         }
     }
     
@@ -71,7 +54,6 @@ class VolumeViewController: UIViewController {
             
             if audioSession.outputVolume > 0{
                 
-                label.text = "Make the screen turn red by increase the volume"
                 if audioSession.outputVolume > audioLevel {
                     audioLevel = audioSession.outputVolume
                     
@@ -84,9 +66,7 @@ class VolumeViewController: UIViewController {
                         UIView.animate(withDuration: 1, animations: {
                             self.imageView.frame = CGRect(x: 0, y: currentY - 600, width: self.view.frame.width, height: self.view.frame.height * 100)
                         }, completion: nil)
-                        unlockButton.isHidden = false
-                        unlockButton.layer.cornerRadius = 15
-                        label.isHidden = true
+                        showAlert(title: "You are free!", segue: segue)
                     }
                 }
             }
@@ -107,5 +87,9 @@ class VolumeViewController: UIViewController {
             Time.seconds = 0
             timeLabel.text = "\(Time.minute):0\(Time.seconds)"
         }
+    }
+    
+    @IBAction func exitButton(_ sender: Any) {
+        exitAlert()
     }
 }
