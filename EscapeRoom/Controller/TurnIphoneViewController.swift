@@ -11,6 +11,16 @@ class TurnIphoneViewController: UIViewController, ShowsAlert {
     
     @IBOutlet weak var keyHole: UIImageView!
     
+    @IBOutlet weak var arrowUp: UIImageView!
+    
+    @IBOutlet weak var iphoneLandscape: UIImageView!
+    
+    @IBOutlet weak var keyHoleLandscape: UIImageView!
+    
+    
+    @IBOutlet weak var handleDown: UIImageView!
+    
+    
     var descriptionLabel = UILabel()
     var right = false
     var updateTimeLabel = Timer()
