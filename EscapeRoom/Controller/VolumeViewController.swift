@@ -2,9 +2,8 @@ import UIKit
 import MediaPlayer
 import AVFoundation
 
-class VolumeViewController: UIViewController, ShowsAlert {
-    
 
+class VolumeViewController: UIViewController, ShowsAlert {
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var exitButton: UIButton!
@@ -20,16 +19,15 @@ class VolumeViewController: UIViewController, ShowsAlert {
         updateTimeLabel = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
         listenVolumeButton()
         volume = AVAudioSession.sharedInstance().outputVolume
-        imageView.backgroundColor = UIColor.red
-        imageView.frame = CGRect(x: 0, y: self.view.frame.maxY, width: self.view.frame.width, height: self.view.frame.height * CGFloat(volume))
+//        imageView.frame = CGRect(x: 0, y: self.view.frame.maxY, width: self.view.frame.width, height: self.view.frame.height)
         
-        let currentY = imageView.frame.origin.y
+    
         
-        if volume == 1.0{
-            UIView.animate(withDuration: 1, animations: {
-                self.imageView.frame = CGRect(x: 0, y: currentY - 820, width: self.view.frame.width, height: self.view.frame.height * 100)
-            }, completion: nil)
-        }
+//        if volume == 1.0{
+//            UIView.animate(withDuration: 1, animations: {
+//                self.imageView.frame = CGRect(x: 0, y: currentY + 820, width: self.view.frame.width, height: self.view.frame.height * 100)
+//            }, completion: nil)
+//        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -37,6 +35,7 @@ class VolumeViewController: UIViewController, ShowsAlert {
     }
     
     func listenVolumeButton(){
+        
         let audioSession = AVAudioSession.sharedInstance()
         do {
             try audioSession.setActive(true, options: [])
@@ -51,29 +50,57 @@ class VolumeViewController: UIViewController, ShowsAlert {
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if keyPath == "outputVolume"{
             let audioSession = AVAudioSession.sharedInstance()
-            
-            let currentY = imageView.frame.origin.y
-            
-            if audioSession.outputVolume > 0{
-                
-                if audioSession.outputVolume > audioLevel {
-                    audioLevel = audioSession.outputVolume
-                    
-                    UIView.animate(withDuration: 1, animations: {
-                        self.imageView.frame = CGRect(x: 0, y: currentY - 50, width: self.view.frame.width, height: self.view.frame.height)
-                        self.imageView.backgroundColor = UIColor.red
-                    }, completion: nil)
-                    
-                    if audioLevel == 1.0{
-                        UIView.animate(withDuration: 1, animations: {
-                            self.imageView.frame = CGRect(x: 0, y: currentY - 600, width: self.view.frame.width, height: self.view.frame.height * 100)
-                        }, completion: nil)
-                        showAlert(title: "You are free!", segue: segue)
-                    }
-                }
+            if audioSession.outputVolume > audioLevel {
+                print("UPP")
+                imageView.frame.origin.y += 50
             }
+           
+            audioLevel = audioSession.outputVolume
+            print(audioSession.outputVolume)
         }
     }
+    
+//    override func viewWillAppear(_ animated: Bool) {
+//        listenVolumeButton()
+//    }
+//
+//    func listenVolumeButton(){
+//        let audioSession = AVAudioSession.sharedInstance()
+//        do {
+//            try audioSession.setActive(true, options: [])
+//            audioSession.addObserver(self, forKeyPath: "outputVolume",
+//                                     options: NSKeyValueObservingOptions.new, context: nil)
+//            audioLevel = audioSession.outputVolume
+//        } catch {
+//            print("Error")
+//        }
+//    }
+//
+//    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+//        if keyPath == "outputVolume"{
+//            let audioSession = AVAudioSession.sharedInstance()
+//
+//            let currentY = imageView.frame.origin.y
+//
+//            if audioSession.outputVolume > 0{
+//
+//                if audioSession.outputVolume > audioLevel {
+//                    audioLevel = audioSession.outputVolume
+//
+//                    UIView.animate(withDuration: 1, animations: {
+//                        self.imageView.frame = CGRect(x: 0, y: currentY + 50, width: self.view.frame.width, height: self.view.frame.height)
+//                    }, completion: nil)
+//
+//                    if audioLevel == 1.0{
+//                        UIView.animate(withDuration: 1, animations: {
+//                            self.imageView.frame = CGRect(x: 0, y: currentY + 600, width: self.view.frame.width, height: self.view.frame.height * 100)
+//                        }, completion: nil)
+//                        showAlert(title: "You are free!", segue: segue)
+//                    }
+//                }
+//            }
+//        }
+//    }
     
     @objc func updateTime() {
         
