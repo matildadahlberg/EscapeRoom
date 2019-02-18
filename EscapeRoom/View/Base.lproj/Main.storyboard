@@ -1608,11 +1608,11 @@
         <image name="envelope" width="496" height="512"/>
         <image name="freedom" width="681" height="512"/>
         <image name="i1" width="57" height="103"/>
-        <image name="memoryBack" width="512" height="512"/>
+        <image name="memoryBack" width="141.83999633789062" height="141.83999633789062"/>
         <image name="password" width="395" height="512"/>
         <image name="stearingwheel" width="516" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Vkd-sk-zQ0"/>
+        <segue reference="L2D-Yx-aLm"/>
     </inferredMetricsTieBreakers>
 </document>
