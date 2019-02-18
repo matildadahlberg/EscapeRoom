@@ -1,0 +1,1626 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="i80-A7-zcx">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="TitilliumWeb-Bold.ttf">
+            <string>TitilliumWeb-Bold</string>
+        </array>
+        <array key="TitilliumWeb-SemiBold.ttf">
+            <string>TitilliumWeb-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--StartView-->
+        <scene sceneID="XqA-dC-sVm">
+            <objects>
+                <viewController id="i80-A7-zcx" userLabel="StartView" customClass="FirstPageViewController" customModule="EscapeRoom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jIB-68-CBf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ML4-K2-ex6">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="Mou-T5-4wT">
+                                <rect key="frame" x="30.666666666666657" y="198" width="314" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="Tm2-ak-wMR"/>
+                                    <constraint firstAttribute="width" constant="314" id="oDT-RI-g3H"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pfv-qG-CHb">
+                                <rect key="frame" x="66.666666666666686" y="456" width="242" height="76"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="242" id="8pp-zQ-i23"/>
+                                    <constraint firstAttribute="height" constant="76" id="zLs-07-kXz"/>
+                                </constraints>
+                                <state key="normal" image="PlayButton">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="cZ2-Wh-bul" kind="show" id="GZf-VA-h4l"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Mou-T5-4wT" firstAttribute="top" secondItem="HG2-nT-Rle" secondAttribute="top" constant="154" id="781-hF-Cim"/>
+                            <constraint firstItem="pfv-qG-CHb" firstAttribute="centerX" secondItem="jIB-68-CBf" secondAttribute="centerX" id="Cti-k4-J36"/>
+                            <constraint firstItem="Mou-T5-4wT" firstAttribute="centerX" secondItem="jIB-68-CBf" secondAttribute="centerX" id="J1D-2V-Wpr"/>
+                            <constraint firstAttribute="bottom" secondItem="ML4-K2-ex6" secondAttribute="bottom" id="JDf-j9-Aa8"/>
+                            <constraint firstItem="ML4-K2-ex6" firstAttribute="leading" secondItem="HG2-nT-Rle" secondAttribute="leading" id="Kql-j7-Ycq"/>
+                            <constraint firstItem="ML4-K2-ex6" firstAttribute="trailing" secondItem="HG2-nT-Rle" secondAttribute="trailing" id="oS3-Db-mfM"/>
+                            <constraint firstItem="ML4-K2-ex6" firstAttribute="top" secondItem="jIB-68-CBf" secondAttribute="top" id="pSq-GG-Zpt"/>
+                            <constraint firstItem="pfv-qG-CHb" firstAttribute="top" secondItem="Mou-T5-4wT" secondAttribute="bottom" constant="8" id="wXX-Wk-kDV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="HG2-nT-Rle"/>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundView" destination="ML4-K2-ex6" id="YtM-IP-Sdh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B8P-to-Ch9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1610" y="-2082"/>
+        </scene>
+        <!--GameDescriptionView-->
+        <scene sceneID="eil-7G-4eC">
+            <objects>
+                <viewController id="cZ2-Wh-bul" userLabel="GameDescriptionView" customClass="StartViewController" customModule="EscapeRoom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CQ0-CO-ocG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1my-bo-rBy">
+                                <rect key="frame" x="269" y="44" width="86" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="OkeyButton">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="startGameButton:" destination="cZ2-Wh-bul" eventType="touchUpInside" id="ZOP-W3-8mO"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="boY-ir-K6K"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Wall" translatesAutoresizingMaskIntoConstraints="NO" id="c9c-Gz-SbO">
+                                <rect key="frame" x="0.0" y="416" width="375" height="396"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="JailBreakLabel" translatesAutoresizingMaskIntoConstraints="NO" id="Euc-ff-Jnd">
+                                <rect key="frame" x="0.0" y="246" width="375" height="138"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DESCRIPTION &amp; CONTROLS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S6a-vh-Em4">
+                                <rect key="frame" x="52" y="519" width="294" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-Bold" family="Titillium Web" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="- Escape the prison as soon as possible!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="va7-2z-wtt">
+                                <rect key="frame" x="52" y="568" width="323" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="- Use your phone and your enivronment to interact with the game" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gug-Hq-qAz">
+                                <rect key="frame" x="52" y="604" width="323" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="- Make sure to unlock the screen orientation on your phone" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6eG-Up-W3J">
+                                <rect key="frame" x="52" y="683" width="323" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Hat" translatesAutoresizingMaskIntoConstraints="NO" id="rJZ-XL-fvf">
+                                <rect key="frame" x="259" y="214" width="77" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.12941411137580872" green="0.12940755486488342" blue="0.12941199541091919" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="8aO-z6-jPB"/>
+                    </view>
+                    <connections>
+                        <outlet property="startGameButton" destination="1my-bo-rBy" id="t8m-V2-leO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ojt-L4-Jcv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2511" y="-2082"/>
+        </scene>
+        <!--Level1DescriptionView-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" userLabel="Level1DescriptionView" customClass="DescriptionViewController" customModule="EscapeRoom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0J8-cj-Stf">
+                                <rect key="frame" x="144.66666666666666" y="701" width="86" height="45"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="9qu-WU-HqD"/>
+                                    <constraint firstAttribute="width" constant="86" id="c4p-os-Ion"/>
+                                </constraints>
+                                <state key="normal" image="OkeyButton">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Xk0-pu-yh9" kind="show" id="9gL-nh-LR8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MjO-VW-fFn">
+                                <rect key="frame" x="20" y="44" width="57" height="40"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                <state key="normal" title="Give up">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="exitButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lE1-qf-X2V"/>
+                                    <segue destination="i80-A7-zcx" kind="show" identifier="exitSegue" id="tbw-NS-UX6"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Window" translatesAutoresizingMaskIntoConstraints="NO" id="Qmg-WX-iO3">
+                                <rect key="frame" x="10.666666666666657" y="108" width="353.66666666666674" height="406"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Qmg-WX-iO3" secondAttribute="height" multiplier="346:397" id="SWL-6g-RoD"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You are a prisoner locked in to a cell. To escape from the prison you first have to get out of you cell..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I81-Xj-sSb">
+                                <rect key="frame" x="43" y="550" width="306" height="82.333333333333371"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="82.329999999999998" id="4Wa-dK-fWV"/>
+                                    <constraint firstAttribute="width" constant="306" id="gQK-hp-fdR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                <color key="textColor" red="0.38161212210000001" green="0.61367279289999999" blue="0.5058706999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.12941176470588234" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Qmg-WX-iO3" secondAttribute="trailing" constant="8" id="9B6-ZU-2nt"/>
+                            <constraint firstItem="0J8-cj-Stf" firstAttribute="top" relation="lessThanOrEqual" secondItem="I81-Xj-sSb" secondAttribute="bottom" constant="79.666666666666629" id="IN3-XF-Z8c"/>
+                            <constraint firstItem="MjO-VW-fFn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="JKM-sn-lut"/>
+                            <constraint firstItem="Qmg-WX-iO3" firstAttribute="top" secondItem="MjO-VW-fFn" secondAttribute="bottom" constant="24" id="JpD-9j-4Ee"/>
+                            <constraint firstItem="MjO-VW-fFn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Sc4-eR-DrN"/>
+                            <constraint firstAttribute="trailing" secondItem="I81-Xj-sSb" secondAttribute="trailing" constant="26" id="V4e-Dp-R0e"/>
+                            <constraint firstItem="Qmg-WX-iO3" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="brT-0A-qsi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0J8-cj-Stf" secondAttribute="bottom" constant="32" id="i6a-C5-6xG"/>
+                            <constraint firstItem="0J8-cj-Stf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="svo-NZ-qIh"/>
+                            <constraint firstItem="I81-Xj-sSb" firstAttribute="top" secondItem="Qmg-WX-iO3" secondAttribute="bottom" constant="36" id="tR3-Dy-jVJ"/>
+                            <constraint firstItem="Qmg-WX-iO3" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.5" id="viI-fW-OYC"/>
+                            <constraint firstItem="I81-Xj-sSb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="43" id="wJI-II-Bgf"/>
+                            <constraint firstItem="Qmg-WX-iO3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wMW-Xf-uD0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-47" y="-1362"/>
+        </scene>
+        <!--Level5View-->
+        <scene sceneID="UKI-94-ClE">
+            <objects>
+                <viewController id="IKw-Pt-RkT" userLabel="Level5View" customClass="ShakeViewController" customModule="EscapeRoom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nhh-Kc-hCo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HNh-yh-GqN">
+                                <rect key="frame" x="16" y="44" width="57" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                <state key="normal" title="Give up">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="exitButton:" destination="IKw-Pt-RkT" eventType="touchUpInside" id="c2P-Yd-yBp"/>
+                                    <segue destination="i80-A7-zcx" kind="show" identifier="exitSegue" id="hy6-qf-kMh"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bsQ-0W-i2y">
+                                <rect key="frame" x="285" y="44" width="74" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Handle" translatesAutoresizingMaskIntoConstraints="NO" id="qxw-qH-ns6">
+                                <rect key="frame" x="97" y="289" width="180" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HandleBall" translatesAutoresizingMaskIntoConstraints="NO" id="Jta-EA-JcF">
+                                <rect key="frame" x="97" y="351" width="41" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Break the door!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aW2-5S-EZM">
+                                <rect key="frame" x="128" y="547" width="119" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.33651268482208252" green="0.27159181237220764" blue="0.21959835290908813" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="C7f-uh-Diw"/>
+                    </view>
+                    <connections>
+                        <outlet property="exitButton" destination="HNh-yh-GqN" id="vOx-uH-f6v"/>
+                        <outlet property="timeLabel" destination="bsQ-0W-i2y" id="6ed-QG-Riz"/>
+                        <segue destination="lLZ-Zb-iCq" kind="show" identifier="shakeSegue" id="Xfu-dr-7VS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hd8-j6-Cmm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4177" y="802"/>
+        </scene>
+        <!--Level1View-->
+        <scene sceneID="a6Z-fZ-iVy">
+            <objects>
+                <viewController id="Xk0-pu-yh9" userLabel="Level1View" customClass="TapLockViewController" customModule="EscapeRoom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yoj-dn-oru">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LnI-Id-faW">
+                                <rect key="frame" x="20" y="44" width="57" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="33J-fD-bTU"/>
+                                    <constraint firstAttribute="width" constant="57" id="uaF-fy-6zh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                <state key="normal" title="Give up">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="exitButton:" destination="Xk0-pu-yh9" eventType="touchUpInside" id="Ecs-Hc-B16"/>
+                                    <segue destination="i80-A7-zcx" kind="show" identifier="exitSegue" id="rNS-sp-i7h"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jsO-Wo-sbF" customClass="MBCircularProgressBarView">
+                                <rect key="frame" x="105.66666666666669" y="610" width="164" height="130"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iHe-eB-NlC">
+                                        <rect key="frame" x="37" y="20" width="90" height="90"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <state key="normal" title="TAP!">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tapButton:" destination="Xk0-pu-yh9" eventType="touchUpInside" id="21c-jI-aag"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="164" id="jE5-3F-IH5"/>
+                                    <constraint firstAttribute="height" constant="130" id="x7l-xs-38f"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="showValueString" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                        <real key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="progressColor">
+                                        <color key="value" red="0.91840797662734985" green="0.25370055437088013" blue="0.14501187205314636" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progressLineWidth">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="valueFontSize">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progressRotationAngle">
+                                        <real key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progressAngle">
+                                        <real key="value" value="100"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="emptyLineColor">
+                                        <color key="value" red="0.91840797662734985" green="0.25370055437088013" blue="0.14501187205314636" alpha="0.093447403169014079" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="emptyLineStrokeColor">
+                                        <color key="value" red="0.91840797659999995" green="0.2537005544" blue="0.14501187209999999" alpha="0.089321082746478875" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="progressStrokeColor">
+                                        <color key="value" red="0.91840797659999995" green="0.2537005544" blue="0.14501187209999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="emptyLineWidth">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unlock the cell!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TCA-Ho-dps">
+                                <rect key="frame" x="129" y="516" width="117" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="HDL-kC-HrV"/>
+                                    <constraint firstAttribute="width" constant="117" id="ui3-Vt-iLQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j70-RN-EeL">
+                                <rect key="frame" x="281" y="44" width="74" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="b3f-HK-svh"/>
+                                    <constraint firstAttribute="width" constant="74" id="zdN-Ai-0ps"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mUX-pZ-G2v">
+                                <rect key="frame" x="0.0" y="150" width="375" height="314"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Lock1" translatesAutoresizingMaskIntoConstraints="NO" id="wvG-er-YpS">
+                                        <rect key="frame" x="66" y="52" width="243" height="210"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Key1" translatesAutoresizingMaskIntoConstraints="NO" id="ok8-1t-QaL">
+                                        <rect key="frame" x="175" y="115" width="137" height="173"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Key2" translatesAutoresizingMaskIntoConstraints="NO" id="q83-Hh-Tax">
+                                        <rect key="frame" x="175" y="83" width="156" height="186"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="0rf-M0-bYJ"/>
+                                    <constraint firstAttribute="height" constant="314" id="qV9-VS-Z4M"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.12941411137580872" green="0.12940755486488342" blue="0.12941199541091919" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="TCA-Ho-dps" firstAttribute="top" relation="lessThanOrEqual" secondItem="mUX-pZ-G2v" secondAttribute="bottom" constant="52" id="0UW-32-y2h"/>
+                            <constraint firstItem="LnI-Id-faW" firstAttribute="top" secondItem="fRy-rc-9G3" secondAttribute="top" id="3gY-Z9-8yB"/>
+                            <constraint firstItem="mUX-pZ-G2v" firstAttribute="top" secondItem="LnI-Id-faW" secondAttribute="bottom" constant="66" id="5fU-i5-tSx"/>
+                            <constraint firstItem="LnI-Id-faW" firstAttribute="leading" secondItem="fRy-rc-9G3" secondAttribute="leading" constant="20" id="JTH-Lo-Aea"/>
+                            <constraint firstItem="fRy-rc-9G3" firstAttribute="bottom" secondItem="jsO-Wo-sbF" secondAttribute="bottom" constant="38" id="L1H-wF-6Nx"/>
+                            <constraint firstItem="TCA-Ho-dps" firstAttribute="centerX" secondItem="yoj-dn-oru" secondAttribute="centerX" id="Mai-ub-82Q"/>
+                            <constraint firstItem="jsO-Wo-sbF" firstAttribute="top" secondItem="TCA-Ho-dps" secondAttribute="bottom" constant="66" id="ND3-Kb-3ew"/>
+                            <constraint firstItem="fRy-rc-9G3" firstAttribute="trailing" secondItem="j70-RN-EeL" secondAttribute="trailing" constant="20" id="Zc8-oP-Dbk"/>
+                            <constraint firstItem="mUX-pZ-G2v" firstAttribute="leading" secondItem="fRy-rc-9G3" secondAttribute="leading" id="a9n-Sh-WR0"/>
+                            <constraint firstItem="j70-RN-EeL" firstAttribute="top" secondItem="fRy-rc-9G3" secondAttribute="top" id="dk3-41-YKp"/>
+                            <constraint firstItem="mUX-pZ-G2v" firstAttribute="trailing" secondItem="fRy-rc-9G3" secondAttribute="trailing" id="n0I-YS-dck"/>
+                            <constraint firstItem="jsO-Wo-sbF" firstAttribute="centerX" secondItem="yoj-dn-oru" secondAttribute="centerX" id="oGW-4U-b0s"/>
+                            <constraint firstItem="mUX-pZ-G2v" firstAttribute="centerX" secondItem="yoj-dn-oru" secondAttribute="centerX" id="qdR-a5-rVJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fRy-rc-9G3"/>
+                    </view>
+                    <connections>
+                        <outlet property="exitButton" destination="LnI-Id-faW" id="1Dd-rb-X1Y"/>
+                        <outlet property="key1" destination="ok8-1t-QaL" id="pdv-iS-SqY"/>
+                        <outlet property="key2" destination="q83-Hh-Tax" id="n5x-Fm-FLW"/>
+                        <outlet property="lockImage" destination="wvG-er-YpS" id="UQQ-jN-zqJ"/>
+                        <outlet property="progressView" destination="jsO-Wo-sbF" id="iXW-IP-r6I"/>
+                        <outlet property="tapButton" destination="iHe-eB-NlC" id="WHY-wH-W8a"/>
+                        <outlet property="timeLabel" destination="j70-RN-EeL" id="AmV-ex-3CC"/>
+                        <segue destination="BpT-yq-l4C" kind="show" identifier="lockSegue" id="g0t-s1-5wA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0hG-Ms-kPS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="888.79999999999995" y="-1363.3004926108374"/>
+        </scene>
+        <!--Level3View-->
+        <scene sceneID="Sl0-X9-XG6">
+            <objects>
+                <viewController id="ZP0-nd-5YO" userLabel="Level3View" customClass="CompassViewController" customModule="EscapeRoom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PZh-Xe-2Aa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Grq-qV-39x">
+                                <rect key="frame" x="16" y="44" width="57" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                <state key="normal" title="Give up">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="exitButton:" destination="ZP0-nd-5YO" eventType="touchUpInside" id="clJ-CT-re9"/>
+                                    <segue destination="i80-A7-zcx" kind="show" identifier="exitSegue" id="43g-Ch-t72"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UrT-QC-gZE">
+                                <rect key="frame" x="285" y="44" width="74" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7k9-6v-uP0">
+                                <rect key="frame" x="285" y="40" width="74" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="stearingwheel" translatesAutoresizingMaskIntoConstraints="NO" id="rvW-qv-Ac5">
+                                <rect key="frame" x="84" y="177" width="206" height="205"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Open the safe!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rHA-Nh-din">
+                                <rect key="frame" x="131" y="516" width="112" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.36863282322883606" green="0.36861780285835266" blue="0.36862799525260925" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="hzD-co-tLQ"/>
+                    </view>
+                    <connections>
+                        <outlet property="exitButton" destination="Grq-qV-39x" id="jkd-Qv-z6q"/>
+                        <outlet property="timeLabel" destination="7k9-6v-uP0" id="QXp-q8-8jL"/>
+                        <segue destination="sUW-JL-lg6" kind="show" identifier="compassSegue" id="l71-HL-IVX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rub-UK-DxS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5271" y="-1363"/>
+        </scene>
+        <!--Level4View-->
+        <scene sceneID="PsS-0N-N1O">
+            <objects>
+                <viewController id="v1b-NQ-cD3" userLabel="Level4View" customClass="CameraViewController" customModule="EscapeRoom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="z0s-ry-ffn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LpV-YK-ItO">
+                                <rect key="frame" x="285" y="44" width="74" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VYK-M3-dkg">
+                                <rect key="frame" x="281" y="44" width="74" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="74" id="MpX-m4-lAZ"/>
+                                    <constraint firstAttribute="height" constant="40" id="NPR-ed-rct"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JG6-9q-NRE">
+                                <rect key="frame" x="20" y="44" width="57" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="57" id="DcU-Gq-neu"/>
+                                    <constraint firstAttribute="height" constant="40" id="mS5-rK-iwc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                <state key="normal" title="Give up">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="exitButton:" destination="v1b-NQ-cD3" eventType="touchUpInside" id="nft-4l-9CN"/>
+                                    <segue destination="i80-A7-zcx" kind="show" identifier="exitSegue" id="L2D-Yx-aLm"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DNT-9r-ewU">
+                                <rect key="frame" x="0.0" y="692" width="375" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Find an envelope" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uWw-nb-XQn">
+                                        <rect key="frame" x="152" y="16" width="130" height="28"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Camera" translatesAutoresizingMaskIntoConstraints="NO" id="nux-Pl-XNe">
+                                        <rect key="frame" x="90" y="17" width="35" height="27"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="ae5-6J-APK"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1294141114" green="0.1294075549" blue="0.12941199540000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="JG6-9q-NRE" firstAttribute="leading" secondItem="wps-wL-Y9j" secondAttribute="leading" constant="20" id="I0R-X2-h96"/>
+                            <constraint firstItem="wps-wL-Y9j" firstAttribute="trailing" secondItem="VYK-M3-dkg" secondAttribute="trailing" constant="20" id="Rf1-Ax-FCA"/>
+                            <constraint firstItem="JG6-9q-NRE" firstAttribute="top" secondItem="wps-wL-Y9j" secondAttribute="top" id="VED-RF-6GM"/>
+                            <constraint firstItem="VYK-M3-dkg" firstAttribute="top" secondItem="wps-wL-Y9j" secondAttribute="top" id="neX-MH-SWW"/>
+                            <constraint firstItem="DNT-9r-ewU" firstAttribute="trailing" secondItem="wps-wL-Y9j" secondAttribute="trailing" id="pQm-Ip-2dy"/>
+                            <constraint firstItem="wps-wL-Y9j" firstAttribute="bottom" secondItem="DNT-9r-ewU" secondAttribute="bottom" constant="26" id="vws-9P-YiW"/>
+                            <constraint firstItem="DNT-9r-ewU" firstAttribute="leading" secondItem="wps-wL-Y9j" secondAttribute="leading" id="xA1-Fq-OAF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wps-wL-Y9j"/>
+                    </view>
+                    <connections>
+                        <outlet property="exitButton" destination="JG6-9q-NRE" id="OlW-VO-zBw"/>
+                        <outlet property="timeLabel" destination="VYK-M3-dkg" id="9G7-Tq-EMn"/>
+                        <segue destination="19C-RP-R9c" kind="show" identifier="cameraSegue" id="kkt-PM-d3m"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XnY-ZY-TCE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="888.79999999999995" y="82.758620689655174"/>
+        </scene>
+        <!--Level2View-->
+        <scene sceneID="2g9-oH-NPv">
+            <objects>
+                <viewController id="goo-YQ-xsU" userLabel="Level2View" customClass="TurnIphoneViewController" customModule="EscapeRoom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="I4q-ZC-OLi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="i1" translatesAutoresizingMaskIntoConstraints="NO" id="zoO-rZ-R8b">
+                                <rect key="frame" x="159" y="662" width="57" height="103"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Arrow" translatesAutoresizingMaskIntoConstraints="NO" id="kJV-2B-lhg">
+                                <rect key="frame" x="209" y="636" width="31" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Handle" translatesAutoresizingMaskIntoConstraints="NO" id="xMs-8V-AdK">
+                                <rect key="frame" x="97" y="289" width="180" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HandleBall" translatesAutoresizingMaskIntoConstraints="NO" id="Ee2-Ip-ecH">
+                                <rect key="frame" x="97" y="351" width="41" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D1M-5W-1AH">
+                                <rect key="frame" x="281" y="44" width="74" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Open the door!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JVd-Wj-ATc">
+                                <rect key="frame" x="130" y="526" width="114" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0vH-de-r2w">
+                                <rect key="frame" x="20" y="44" width="57" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                <state key="normal" title="Give up">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="exitButton:" destination="goo-YQ-xsU" eventType="touchUpInside" id="h7M-tX-Ebf"/>
+                                    <segue destination="i80-A7-zcx" kind="show" identifier="exitSegue" id="eJQ-BY-0yS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.33651268482208252" green="0.27159181237220764" blue="0.21959835290908813" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="REz-qu-oDG"/>
+                    </view>
+                    <connections>
+                        <outlet property="arrow" destination="kJV-2B-lhg" id="wKc-8n-Ao9"/>
+                        <outlet property="handle" destination="xMs-8V-AdK" id="5ra-Xw-wwf"/>
+                        <outlet property="iphoneVertical" destination="zoO-rZ-R8b" id="jaf-iR-ThQ"/>
+                        <outlet property="keyHole" destination="Ee2-Ip-ecH" id="bm5-HD-dVR"/>
+                        <outlet property="timeLabel" destination="D1M-5W-1AH" id="Mtr-x6-v5l"/>
+                        <segue destination="gd6-0r-zAf" kind="show" identifier="doorSegue" id="ni0-gw-UkZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yvd-43-cCN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="889" y="-633"/>
+        </scene>
+        <!--Level6View-->
+        <scene sceneID="oxS-VY-DcM">
+            <objects>
+                <viewController id="mlU-Yq-odZ" userLabel="Level6View" customClass="PatPetViewController" customModule="EscapeRoom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="G0F-6D-3hM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eCO-4d-Eif">
+                                <rect key="frame" x="16" y="44" width="57" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                <state key="normal" title="Give up">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="exitButton:" destination="mlU-Yq-odZ" eventType="touchUpInside" id="Puy-XB-4LG"/>
+                                    <segue destination="i80-A7-zcx" kind="show" identifier="exitSegue" id="I5o-tX-etZ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rV1-6B-fAp">
+                                <rect key="frame" x="285" y="44" width="74" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Stroke the dog!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="19m-3u-whi">
+                                <rect key="frame" x="129" y="668" width="117" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Dog" translatesAutoresizingMaskIntoConstraints="NO" id="4qO-EM-GOD">
+                                <rect key="frame" x="82" y="109" width="277" height="461"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1294141114" green="0.1294075549" blue="0.12941199540000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="V51-pa-hnU"/>
+                    </view>
+                    <connections>
+                        <outlet property="exitButton" destination="eCO-4d-Eif" id="8CZ-ox-nmX"/>
+                        <outlet property="timeLabel" destination="rV1-6B-fAp" id="4Fp-5i-Agv"/>
+                        <segue destination="HJC-Do-SO7" kind="show" identifier="dogSegue" id="10L-Ee-K2u"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VTb-Fe-Q5e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4177" y="83"/>
+        </scene>
+        <!--Level7View-->
+        <scene sceneID="7an-09-z7K">
+            <objects>
+                <viewController id="K4n-a9-bNM" userLabel="Level7View" customClass="BlowCandleViewController" customModule="EscapeRoom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Td-ZL-Fob">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CandleLight" translatesAutoresizingMaskIntoConstraints="NO" id="mH5-QY-zEl">
+                                <rect key="frame" x="0.0" y="23" width="375" height="481"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xA9-vk-EGX">
+                                <rect key="frame" x="16" y="44" width="57" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                <state key="normal" title="Give up">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="exitButton:" destination="K4n-a9-bNM" eventType="touchUpInside" id="41l-CW-rwC"/>
+                                    <segue destination="i80-A7-zcx" kind="show" identifier="exitSegue" id="khr-3B-VxN"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gl1-sb-pTo">
+                                <rect key="frame" x="285" y="44" width="74" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Blow the candle!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tiQ-1T-f4s">
+                                <rect key="frame" x="123" y="594" width="128" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CandleUnlight" translatesAutoresizingMaskIntoConstraints="NO" id="Ser-Dg-67m">
+                                <rect key="frame" x="99" y="76" width="176" height="428"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1294141114" green="0.1294075549" blue="0.12941199540000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="MVc-A9-Rms"/>
+                    </view>
+                    <connections>
+                        <outlet property="exitButton" destination="xA9-vk-EGX" id="fuw-1Q-Pfa"/>
+                        <outlet property="image" destination="mH5-QY-zEl" id="wca-4Z-o5f"/>
+                        <outlet property="imageUnlight" destination="Ser-Dg-67m" id="mf7-9o-shb"/>
+                        <outlet property="timeLabel" destination="gl1-sb-pTo" id="KM5-CN-q2G"/>
+                        <segue destination="1tU-z3-e1t" kind="show" identifier="candleSegue" id="g6L-Ya-nza"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aRG-go-3Hn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4176.8000000000002" y="-633.25123152709364"/>
+        </scene>
+        <!--Level8View-->
+        <scene sceneID="c7x-lm-vdv">
+            <objects>
+                <viewController id="wdj-xm-v3R" userLabel="Level8View" customClass="QuizViewController" customModule="EscapeRoom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="A5f-0x-U2F">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jMN-p3-NJY">
+                                <rect key="frame" x="16" y="44" width="57" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                <state key="normal" title="Give up">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="exitButton:" destination="wdj-xm-v3R" eventType="touchUpInside" id="hgN-hJ-Kod"/>
+                                    <segue destination="i80-A7-zcx" kind="show" identifier="exitSegue" id="gKs-ch-HWH"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jnK-6h-g05">
+                                <rect key="frame" x="285" y="44" width="74" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vilket år lanserade Mark Zuckerberg facebook?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y63-J8-6wE">
+                                <rect key="frame" x="56" y="182" width="263" height="189"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                <color key="textColor" red="0.43615931270000002" green="0.63323086500000003" blue="0.52940034869999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AJe-Tm-gmt">
+                                <rect key="frame" x="56" y="440" width="263" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.43615931270000002" green="0.63323086500000003" blue="0.52940034869999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                <state key="normal" title="A">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="answerButton:" destination="wdj-xm-v3R" eventType="touchUpInside" id="3Z7-B2-GiV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S8v-nk-qPE">
+                                <rect key="frame" x="56" y="511" width="263" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.43615931270000002" green="0.63323086500000003" blue="0.52940034869999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                <state key="normal" title="B">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="answerButton:" destination="wdj-xm-v3R" eventType="touchUpInside" id="yaU-so-0o9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="quI-GZ-bRg">
+                                <rect key="frame" x="56" y="584" width="263" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.43615931270000002" green="0.63323086500000003" blue="0.52940034869999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                <state key="normal" title="C">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="answerButton:" destination="wdj-xm-v3R" eventType="touchUpInside" id="4KF-86-R9L"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gjr-b2-qcS">
+                                <rect key="frame" x="56" y="658" width="263" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.43615931270000002" green="0.63323086500000003" blue="0.52940034869999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                <state key="normal" title="D">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="answerButton:" destination="wdj-xm-v3R" eventType="touchUpInside" id="4Sn-Au-W7a"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1294141114" green="0.1294075549" blue="0.12941199540000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="Ymh-gc-RIV"/>
+                    </view>
+                    <connections>
+                        <outlet property="answerA" destination="AJe-Tm-gmt" id="kU1-9j-KuP"/>
+                        <outlet property="answerB" destination="S8v-nk-qPE" id="UjY-7k-uNF"/>
+                        <outlet property="answerC" destination="quI-GZ-bRg" id="fVb-e9-EDq"/>
+                        <outlet property="answerD" destination="Gjr-b2-qcS" id="iDs-Qj-IBE"/>
+                        <outlet property="exitButton" destination="jMN-p3-NJY" id="xO1-Gk-Q5q"/>
+                        <outlet property="questionLabel" destination="y63-J8-6wE" id="I46-Pm-3W1"/>
+                        <outlet property="timeLabel" destination="jnK-6h-g05" id="edb-8F-2Uv"/>
+                        <segue destination="ycR-Ic-I3q" kind="show" identifier="quizSegue" id="IcE-To-py0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q8Z-WH-HsT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="888.79999999999995" y="1525.8620689655172"/>
+        </scene>
+        <!--Level9View-->
+        <scene sceneID="Tdg-k2-PqU">
+            <objects>
+                <viewController id="oi7-zr-G5B" userLabel="Level9View" customClass="MemoryViewController" customModule="EscapeRoom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NcL-PI-Ohb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZMx-b4-clh">
+                                <rect key="frame" x="0.0" y="144" width="375" height="525"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1294141114" green="0.1294075549" blue="0.12941199540000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="SF8-p1-qpk">
+                                    <size key="itemSize" width="180" height="165"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CardCell" id="y5D-rw-59x" customClass="CardCollectionViewCell" customModule="EscapeRoom" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="180" height="165"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="180" height="165"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AJR-RX-TkC">
+                                                    <rect key="frame" x="0.0" y="0.0" width="180" height="165"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="memoryBack" translatesAutoresizingMaskIntoConstraints="NO" id="Zhh-Ph-v92">
+                                                    <rect key="frame" x="0.0" y="0.0" width="180" height="165"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="Zhh-Ph-v92" secondAttribute="bottom" id="4ui-3k-mdB"/>
+                                            <constraint firstAttribute="trailing" secondItem="AJR-RX-TkC" secondAttribute="trailing" id="9Yn-nu-JWM"/>
+                                            <constraint firstAttribute="trailing" secondItem="Zhh-Ph-v92" secondAttribute="trailing" id="AWC-JH-Arl"/>
+                                            <constraint firstItem="Zhh-Ph-v92" firstAttribute="top" secondItem="y5D-rw-59x" secondAttribute="top" id="Iig-2W-Lej"/>
+                                            <constraint firstItem="AJR-RX-TkC" firstAttribute="leading" secondItem="y5D-rw-59x" secondAttribute="leading" id="ddt-Zr-xW8"/>
+                                            <constraint firstAttribute="bottom" secondItem="AJR-RX-TkC" secondAttribute="bottom" id="hGc-Gp-EMh"/>
+                                            <constraint firstItem="Zhh-Ph-v92" firstAttribute="leading" secondItem="y5D-rw-59x" secondAttribute="leading" id="wIt-dc-8tT"/>
+                                            <constraint firstItem="AJR-RX-TkC" firstAttribute="top" secondItem="y5D-rw-59x" secondAttribute="top" id="zqQ-3u-N2k"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="backImageView" destination="Zhh-Ph-v92" id="WHM-gG-XZo"/>
+                                            <outlet property="frontImageView" destination="AJR-RX-TkC" id="1LI-qe-JcP"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQm-ZO-aaQ">
+                                <rect key="frame" x="285" y="44" width="74" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rl4-Gy-5C3">
+                                <rect key="frame" x="16" y="44" width="57" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                <state key="normal" title="Give up">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="exitButton:" destination="oi7-zr-G5B" eventType="touchUpInside" id="GUd-w7-sLZ"/>
+                                    <segue destination="i80-A7-zcx" kind="show" identifier="exitSegue" id="7Sa-Ea-4mU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1294141114" green="0.1294075549" blue="0.12941199540000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="Ty0-rs-zHx"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="ZMx-b4-clh" id="Vf4-Dj-dfU"/>
+                        <outlet property="exitButton" destination="rl4-Gy-5C3" id="LH0-0S-4oF"/>
+                        <outlet property="timeLabel" destination="RQm-ZO-aaQ" id="iYU-qa-zSP"/>
+                        <segue destination="f6O-RQ-yBQ" kind="show" identifier="memorySegue" id="q04-gF-Enj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V5k-Bz-Izg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="889" y="802"/>
+        </scene>
+        <!--Level10View-->
+        <scene sceneID="3LR-5h-58K">
+            <objects>
+                <viewController id="tdD-e8-bLm" userLabel="Level10View" customClass="VolumeViewController" customModule="EscapeRoom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xys-gY-jwK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3F6-hV-kb9">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="50.666666666666664"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2oF-Dc-dTe">
+                                <rect key="frame" x="16" y="44" width="57" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                <state key="normal" title="Give up">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="exitButton:" destination="tdD-e8-bLm" eventType="touchUpInside" id="aYr-X7-XYZ"/>
+                                    <segue destination="i80-A7-zcx" kind="show" identifier="exitSegue" id="liG-OH-YXK"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="goC-H8-sqv">
+                                <rect key="frame" x="285" y="44" width="74" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1294141114" green="0.1294075549" blue="0.12941199540000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="VfM-Vh-Lwm"/>
+                    </view>
+                    <connections>
+                        <outlet property="exitButton" destination="2oF-Dc-dTe" id="7r8-JM-Pya"/>
+                        <outlet property="imageView" destination="3F6-hV-kb9" id="oOu-rW-qo7"/>
+                        <outlet property="timeLabel" destination="goC-H8-sqv" id="9p8-Hi-NRA"/>
+                        <segue destination="i80-A7-zcx" kind="show" identifier="wallSegue" id="KDw-Cx-Owp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qmd-Lr-QgH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4177" y="1526"/>
+        </scene>
+        <!--Level2DescriptionView-->
+        <scene sceneID="9PV-ym-jKF">
+            <objects>
+                <viewController id="BpT-yq-l4C" userLabel="Level2DescriptionView" customClass="DescriptionViewController" customModule="EscapeRoom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nge-MF-jvZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IGf-Jd-crW">
+                                <rect key="frame" x="144" y="701" width="87" height="45"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="EzK-vQ-cnP"/>
+                                    <constraint firstAttribute="width" constant="87" id="XQl-DM-4u7"/>
+                                </constraints>
+                                <state key="normal" image="OkeyButton">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="goo-YQ-xsU" kind="show" id="gCu-u0-gUQ"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SneakyMan" translatesAutoresizingMaskIntoConstraints="NO" id="Ro1-KY-l4b">
+                                <rect key="frame" x="0.0" y="242.33333333333337" width="375" height="243.66666666666663"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="L23-zh-buH"/>
+                                    <constraint firstAttribute="height" constant="243.66999999999999" id="Ubm-Lp-CJ7"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Once out of your cell, you sneak a long a hallway until you reach the guards office..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d47-iL-L5z">
+                                <rect key="frame" x="43" y="539" width="290" height="107"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="290" id="WgW-UJ-Hha"/>
+                                    <constraint firstAttribute="height" constant="107" id="tGp-tg-10p"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                <color key="textColor" red="0.38161212210000001" green="0.61367279289999999" blue="0.5058706999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4fn-wA-J7v">
+                                <rect key="frame" x="20" y="44" width="57" height="40"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                <state key="normal" title="Give up">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="exitButton:" destination="BpT-yq-l4C" eventType="touchUpInside" id="sl8-C7-Tcv"/>
+                                    <segue destination="i80-A7-zcx" kind="show" identifier="exitSegue" id="gOq-Sn-Bs4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.12941176470588234" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="IGf-Jd-crW" firstAttribute="top" secondItem="d47-iL-L5z" secondAttribute="bottom" constant="55" id="0U7-fB-kVJ"/>
+                            <constraint firstItem="Ro1-KY-l4b" firstAttribute="trailing" secondItem="ajV-LS-n0K" secondAttribute="trailing" id="8Zq-WT-g3M"/>
+                            <constraint firstItem="Ro1-KY-l4b" firstAttribute="leading" secondItem="ajV-LS-n0K" secondAttribute="leading" id="CYJ-s5-gFF"/>
+                            <constraint firstItem="4fn-wA-J7v" firstAttribute="leading" secondItem="ajV-LS-n0K" secondAttribute="leading" constant="20" id="EKQ-Bx-yjK"/>
+                            <constraint firstItem="Ro1-KY-l4b" firstAttribute="trailing" secondItem="ajV-LS-n0K" secondAttribute="trailing" id="QHe-X1-xlb"/>
+                            <constraint firstItem="Ro1-KY-l4b" firstAttribute="leading" secondItem="ajV-LS-n0K" secondAttribute="leading" id="XsZ-pT-3fo"/>
+                            <constraint firstItem="IGf-Jd-crW" firstAttribute="centerX" secondItem="Nge-MF-jvZ" secondAttribute="centerX" id="bKZ-yI-iPK"/>
+                            <constraint firstItem="ajV-LS-n0K" firstAttribute="bottom" secondItem="IGf-Jd-crW" secondAttribute="bottom" constant="32" id="bin-YY-zRt"/>
+                            <constraint firstItem="4fn-wA-J7v" firstAttribute="top" secondItem="ajV-LS-n0K" secondAttribute="top" id="iKc-CU-cxQ"/>
+                            <constraint firstItem="d47-iL-L5z" firstAttribute="leading" secondItem="ajV-LS-n0K" secondAttribute="leading" constant="43" id="lbY-u9-o5O"/>
+                            <constraint firstItem="d47-iL-L5z" firstAttribute="top" secondItem="Ro1-KY-l4b" secondAttribute="bottom" constant="53" id="rEp-Ll-aVs"/>
+                            <constraint firstItem="ajV-LS-n0K" firstAttribute="trailing" secondItem="d47-iL-L5z" secondAttribute="trailing" constant="42" id="xOr-EW-rGN"/>
+                            <constraint firstItem="Ro1-KY-l4b" firstAttribute="width" secondItem="Nge-MF-jvZ" secondAttribute="width" id="yVU-fL-jlu"/>
+                            <constraint firstItem="Ro1-KY-l4b" firstAttribute="top" relation="lessThanOrEqual" secondItem="4fn-wA-J7v" secondAttribute="bottom" constant="158.33000000000001" id="yru-wH-Q2A"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ajV-LS-n0K"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pQx-sI-MnA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-47" y="-633"/>
+        </scene>
+        <!--Level3DescriptionView-->
+        <scene sceneID="pqg-wi-hcR">
+            <objects>
+                <viewController id="gd6-0r-zAf" userLabel="Level3DescriptionView" customClass="DescriptionViewController" customModule="EscapeRoom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FT9-sI-Gdh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sE3-dI-k00">
+                                <rect key="frame" x="144.66666666666666" y="701" width="86" height="45"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Qpg-wK-1N1"/>
+                                    <constraint firstAttribute="width" constant="86" id="gBT-gx-Bkr"/>
+                                </constraints>
+                                <state key="normal" image="OkeyButton">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="v1b-NQ-cD3" kind="show" id="yeO-k0-R0f"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DoorOpen" translatesAutoresizingMaskIntoConstraints="NO" id="hyF-Wc-c9w">
+                                <rect key="frame" x="0.0" y="215" width="375" height="271"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hyF-Wc-c9w" secondAttribute="height" multiplier="375:271" id="PUP-nS-uUr"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inside the guards office you look for clues of how you can escape the prison..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P4m-wO-Nok">
+                                <rect key="frame" x="43" y="539" width="290" height="107"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="107" id="X7v-cI-MQy"/>
+                                    <constraint firstAttribute="width" constant="290" id="dRm-mj-tXc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                <color key="textColor" red="0.38161212210000001" green="0.61367279289999999" blue="0.5058706999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pJc-hi-WXO">
+                                <rect key="frame" x="20" y="44" width="57" height="40"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                <state key="normal" title="Give up">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="exitButton:" destination="gd6-0r-zAf" eventType="touchUpInside" id="QgV-mO-a4m"/>
+                                    <segue destination="i80-A7-zcx" kind="show" identifier="exitSegue" id="Vkd-sk-zQ0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.12941176470588234" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="GDg-8v-XAb" firstAttribute="bottom" secondItem="sE3-dI-k00" secondAttribute="bottom" constant="32" id="Lzh-5O-jbr"/>
+                            <constraint firstItem="sE3-dI-k00" firstAttribute="top" secondItem="P4m-wO-Nok" secondAttribute="bottom" constant="55" id="MIr-Ig-oaI"/>
+                            <constraint firstItem="pJc-hi-WXO" firstAttribute="leading" secondItem="GDg-8v-XAb" secondAttribute="leading" constant="20" id="Mft-mH-vZt"/>
+                            <constraint firstItem="sE3-dI-k00" firstAttribute="centerX" secondItem="FT9-sI-Gdh" secondAttribute="centerX" id="REP-40-5iX"/>
+                            <constraint firstItem="hyF-Wc-c9w" firstAttribute="leading" secondItem="GDg-8v-XAb" secondAttribute="leading" id="ThG-Xk-x7g"/>
+                            <constraint firstItem="P4m-wO-Nok" firstAttribute="leading" secondItem="GDg-8v-XAb" secondAttribute="leading" constant="43" id="cZB-8T-Z7s"/>
+                            <constraint firstItem="pJc-hi-WXO" firstAttribute="top" secondItem="GDg-8v-XAb" secondAttribute="top" id="fBH-jY-agQ"/>
+                            <constraint firstItem="GDg-8v-XAb" firstAttribute="trailing" secondItem="P4m-wO-Nok" secondAttribute="trailing" constant="42" id="hY4-Wv-5Jb"/>
+                            <constraint firstItem="P4m-wO-Nok" firstAttribute="top" secondItem="hyF-Wc-c9w" secondAttribute="bottom" constant="53" id="ikr-Qm-WWx"/>
+                            <constraint firstItem="hyF-Wc-c9w" firstAttribute="trailing" secondItem="GDg-8v-XAb" secondAttribute="trailing" id="xbL-Sc-CqM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GDg-8v-XAb"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e6A-Ms-Y3A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-47" y="84"/>
+        </scene>
+        <!--Level4DescriptionView-->
+        <scene sceneID="0OP-2B-fl7">
+            <objects>
+                <viewController id="19C-RP-R9c" userLabel="Level4DescriptionView" customClass="DescriptionViewController" customModule="EscapeRoom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VdB-qc-URG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L72-QT-bJa">
+                                <rect key="frame" x="285" y="44" width="74" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EQP-Mo-QgY">
+                                <rect key="frame" x="144" y="687" width="86" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="OkeyButton">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="oi7-zr-G5B" kind="show" id="k56-p0-VJh"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="envelope" translatesAutoresizingMaskIntoConstraints="NO" id="edN-r2-BsU">
+                                <rect key="frame" x="81" y="215" width="212" height="219"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You pick up the envelop and open it, inside you find what appear to look like a game..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UQH-x2-KLB">
+                                <rect key="frame" x="43" y="539" width="290" height="107"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                <color key="textColor" red="0.38161212210000001" green="0.61367279289999999" blue="0.5058706999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sMC-uZ-fm2">
+                                <rect key="frame" x="16" y="44" width="57" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                <state key="normal" title="Give up">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="exitButton:" destination="19C-RP-R9c" eventType="touchUpInside" id="Prv-Dt-q0Q"/>
+                                    <segue destination="i80-A7-zcx" kind="show" identifier="exitSegue" id="L4j-Vr-6Wn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.12941176470588234" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="K5l-IX-wH7"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c3g-of-Llv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-47" y="802"/>
+        </scene>
+        <!--Level5DescriptionView-->
+        <scene sceneID="22U-0c-ur8">
+            <objects>
+                <viewController id="f6O-RQ-yBQ" userLabel="Level5DescriptionView" customClass="DescriptionViewController" customModule="EscapeRoom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qIF-yy-rEA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ww8-8L-nY4">
+                                <rect key="frame" x="144" y="687" width="86" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="OkeyButton">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="wdj-xm-v3R" kind="show" id="XV6-De-1hF"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="In one of the corners of the room you see a computer. The screen is still on! You investigate the computer closer..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y5D-8l-dB5">
+                                <rect key="frame" x="43" y="539" width="298" height="107"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                <color key="textColor" red="0.38161212210000001" green="0.61367279289999999" blue="0.5058706999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="computer" translatesAutoresizingMaskIntoConstraints="NO" id="CkJ-Ia-es4">
+                                <rect key="frame" x="35" y="215" width="305" height="256"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lfc-aH-TEw">
+                                <rect key="frame" x="16" y="44" width="57" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                <state key="normal" title="Give up">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="exitButton:" destination="f6O-RQ-yBQ" eventType="touchUpInside" id="119-VU-3Nt"/>
+                                    <segue destination="i80-A7-zcx" kind="show" identifier="exitSegue" id="GxM-eH-Dyf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.12941176470588234" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="EN2-z0-MFt"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hd7-8l-oQm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-47" y="1526"/>
+        </scene>
+        <!--Level6DescriptionView-->
+        <scene sceneID="J5f-6E-ZTv">
+            <objects>
+                <viewController id="ycR-Ic-I3q" userLabel="Level6DescriptionView" customClass="DescriptionViewController" customModule="EscapeRoom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="U4h-vd-Whr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="agP-DX-BTf">
+                                <rect key="frame" x="144" y="687" width="86" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="OkeyButton">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="M5B-Oj-qFc" kind="show" id="MHW-04-eJf"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The only thing left in the room is a safe. You wonder if you perhaps have the correct code to open it..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gpv-fv-3em">
+                                <rect key="frame" x="43" y="539" width="290" height="107"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                <color key="textColor" red="0.38161212210000001" green="0.61367279289999999" blue="0.5058706999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SXv-PO-Tul">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="435"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="password" translatesAutoresizingMaskIntoConstraints="NO" id="Nhd-tm-WIY">
+                                        <rect key="frame" x="216" y="147" width="108" height="140"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="stearingwheel" translatesAutoresizingMaskIntoConstraints="NO" id="Oaw-9z-hIv">
+                                        <rect key="frame" x="37" y="164" width="108" height="107"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dk8-Cj-rcl">
+                                        <rect key="frame" x="16" y="44" width="57" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                        <state key="normal" title="Give up">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="exitButton:" destination="ycR-Ic-I3q" eventType="touchUpInside" id="ctY-dd-MZp"/>
+                                            <segue destination="i80-A7-zcx" kind="show" identifier="exitSegue" id="qkT-jB-ukx"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.36863282322883606" green="0.36861780285835266" blue="0.36862799525260925" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.12941176470588234" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="0Pm-JB-MLD"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jpb-97-CSl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3105" y="-1363"/>
+        </scene>
+        <!--Password View Controller-->
+        <scene sceneID="8Tk-3f-BiM">
+            <objects>
+                <viewController id="M5B-Oj-qFc" customClass="PasswordViewController" customModule="EscapeRoom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cOM-TP-cTt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mOU-vf-zGI">
+                                <rect key="frame" x="17" y="45" width="57" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                <state key="normal" title="Give up">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="exitButton:" destination="M5B-Oj-qFc" eventType="touchUpInside" id="TZF-hB-b2g"/>
+                                    <segue destination="i80-A7-zcx" kind="show" identifier="exitSegue" id="Mm9-Rq-Y6a"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="password" translatesAutoresizingMaskIntoConstraints="NO" id="2P9-9N-OBk">
+                                <rect key="frame" x="32" y="110" width="310" height="402"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zkt-19-60e">
+                                <rect key="frame" x="285" y="44" width="74" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter the code!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qKy-9c-dsK">
+                                <rect key="frame" x="129" y="603" width="117" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.36863282322883606" green="0.36861780285835266" blue="0.36862799525260925" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="nQu-gj-Wbi"/>
+                    </view>
+                    <connections>
+                        <outlet property="timeLabel" destination="Zkt-19-60e" id="yyP-PN-lFX"/>
+                        <segue destination="ZP0-nd-5YO" kind="show" identifier="passwordSegue" id="fDy-T5-SHn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9lm-Hj-0po" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4178" y="-1363"/>
+        </scene>
+        <!--Level7DescriptionView-->
+        <scene sceneID="Fnh-uG-ya7">
+            <objects>
+                <viewController id="sUW-JL-lg6" userLabel="Level7DescriptionView" customClass="DescriptionViewController" customModule="EscapeRoom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LAb-FP-P9B">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7dT-3a-QnW">
+                                <rect key="frame" x="16" y="44" width="57" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                <state key="normal" title="Give up">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="exitButton:" destination="sUW-JL-lg6" eventType="touchUpInside" id="nTl-8R-AQs"/>
+                                    <segue destination="i80-A7-zcx" kind="show" identifier="exitSegue" id="lpp-OR-SOt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dkJ-ch-BvW">
+                                <rect key="frame" x="144" y="687" width="86" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="OkeyButton">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="K4n-a9-bNM" kind="show" id="4dE-Ac-e15"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LiS-tj-VYT">
+                                <rect key="frame" x="43" y="539" width="290" height="140"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Inside the safe you found a blueprint of the prison! But all of the sudden, noises from the hallway interrupts the celebration of your findings...</string>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                <color key="textColor" red="0.38161212210000001" green="0.61367279289999999" blue="0.5058706999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Map" translatesAutoresizingMaskIntoConstraints="NO" id="uQJ-ea-EVW">
+                                <rect key="frame" x="19" y="164" width="337" height="283"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.12941176470588234" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="Sgl-qr-jbD"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eWj-gW-GZq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3105" y="-633"/>
+        </scene>
+        <!--Level8DescriptionView-->
+        <scene sceneID="fV7-ia-5xL">
+            <objects>
+                <viewController id="1tU-z3-e1t" userLabel="Level8DescriptionView" customClass="DescriptionViewController" customModule="EscapeRoom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zWx-PD-bBg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lld-qq-Gvy">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="512"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7ki-gN-Fck">
+                                        <rect key="frame" x="0.0" y="467" width="375" height="45"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.4165152907371521" green="0.60570812225341797" blue="0.50587141513824463" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </view>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dogInDoor" translatesAutoresizingMaskIntoConstraints="NO" id="nFZ-7g-mcb">
+                                        <rect key="frame" x="113" y="229" width="148" height="240"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.43615931272506714" green="0.63323086500167847" blue="0.52940034866333008" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hrS-gz-h2y">
+                                <rect key="frame" x="16" y="44" width="57" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                <state key="normal" title="Give up">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="exitButton:" destination="1tU-z3-e1t" eventType="touchUpInside" id="Tuf-fC-qBM"/>
+                                    <segue destination="i80-A7-zcx" kind="show" identifier="exitSegue" id="J5c-iu-Opa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZs-Qw-h26">
+                                <rect key="frame" x="144" y="687" width="86" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="OkeyButton">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="mlU-Yq-odZ" kind="show" id="Sta-xj-xk8"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You turn around towards the door and notice that a guard dog is blocking your way out..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="44R-Rb-tJv">
+                                <rect key="frame" x="43" y="539" width="290" height="107"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                <color key="textColor" red="0.38161212210000001" green="0.61367279289999999" blue="0.5058706999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.12941176470588234" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="Ijc-cr-R5a"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r4u-vI-xgJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3105" y="83"/>
+        </scene>
+        <!--Level9DescriptionView-->
+        <scene sceneID="ST4-tk-QqO">
+            <objects>
+                <viewController id="HJC-Do-SO7" userLabel="Level9DescriptionView" customClass="DescriptionViewController" customModule="EscapeRoom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xLY-3y-FUP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QQT-9O-iHa">
+                                <rect key="frame" x="16" y="44" width="57" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                <state key="normal" title="Give up">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="exitButton:" destination="HJC-Do-SO7" eventType="touchUpInside" id="fh7-fD-rEv"/>
+                                    <segue destination="i80-A7-zcx" kind="show" identifier="exitSegue" id="JqK-c2-XJF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hmn-3Y-iv8">
+                                <rect key="frame" x="144" y="687" width="86" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="OkeyButton">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="IKw-Pt-RkT" kind="show" id="dGC-Hv-CZN"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The dog is now your friend and will not alert the guards! Together you make way towards the exit shown in the blueprint..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kfX-de-4AI">
+                                <rect key="frame" x="42" y="525" width="290" height="126"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                <color key="textColor" red="0.38161212210000001" green="0.61367279289999999" blue="0.5058706999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="EXIT" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b1O-BL-0wI">
+                                <rect key="frame" x="65" y="236" width="244" height="104"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.62920266389846802" green="0.16598129272460938" blue="0.13329800963401794" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-Bold" family="Titillium Web" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.12941176470588234" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="8LW-zC-IO7"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9WJ-zc-TaM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3105" y="802"/>
+        </scene>
+        <!--Level10DescriptionView-->
+        <scene sceneID="FJf-ix-aJT">
+            <objects>
+                <viewController id="lLZ-Zb-iCq" userLabel="Level10DescriptionView" customClass="DescriptionViewController" customModule="EscapeRoom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bNr-4m-6gJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fKJ-TP-qHT">
+                                <rect key="frame" x="16" y="44" width="57" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                <state key="normal" title="Give up">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="exitButton:" destination="lLZ-Zb-iCq" eventType="touchUpInside" id="1Vf-2d-pWJ"/>
+                                    <segue destination="i80-A7-zcx" kind="show" identifier="exitSegue" id="zXQ-RC-GW6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ySa-tM-NrJ">
+                                <rect key="frame" x="144" y="687" width="86" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="OkeyButton">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="tdD-e8-bLm" kind="show" id="umx-Lg-2ov"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="freedom" translatesAutoresizingMaskIntoConstraints="NO" id="w8W-fI-90v">
+                                <rect key="frame" x="0.0" y="215" width="375" height="283"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You're out! The only obstacle now is the prison wall..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sCH-FU-fuN">
+                                <rect key="frame" x="43" y="539" width="290" height="107"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                <color key="textColor" red="0.38161212210000001" green="0.61367279289999999" blue="0.5058706999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.12941176470588234" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="BxW-l3-WVf"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uUR-Go-yyI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3105" y="1526"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Arrow" width="369" height="512"/>
+        <image name="Camera" width="664" height="512"/>
+        <image name="CandleLight" width="376" height="512"/>
+        <image name="CandleUnlight" width="188" height="512"/>
+        <image name="Dog" width="312" height="512"/>
+        <image name="DoorOpen" width="683" height="512"/>
+        <image name="Handle" width="2239" height="512"/>
+        <image name="HandleBall" width="538" height="512"/>
+        <image name="Hat" width="724" height="512"/>
+        <image name="JailBreakLabel" width="1381" height="512"/>
+        <image name="Key1" width="411" height="512"/>
+        <image name="Key2" width="467" height="512"/>
+        <image name="Lock1" width="603" height="512"/>
+        <image name="Logo" width="861" height="345"/>
+        <image name="Map" width="607" height="512"/>
+        <image name="OkeyButton" width="978" height="512"/>
+        <image name="PlayButton" width="1524" height="512"/>
+        <image name="SneakyMan" width="696" height="512"/>
+        <image name="Wall" width="544" height="512"/>
+        <image name="Window" width="346" height="397"/>
+        <image name="computer" width="612" height="512"/>
+        <image name="dogInDoor" width="314" height="512"/>
+        <image name="envelope" width="496" height="512"/>
+        <image name="freedom" width="681" height="512"/>
+        <image name="i1" width="57" height="103"/>
+        <image name="memoryBack" width="512" height="512"/>
+        <image name="password" width="395" height="512"/>
+        <image name="stearingwheel" width="516" height="512"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+<<<<<<< HEAD
+        <segue reference="Vkd-sk-zQ0"/>
+=======
+<<<<<<< HEAD
+        <segue reference="L2D-Yx-aLm"/>
+=======
+        <segue reference="Vkd-sk-zQ0"/>
+>>>>>>> matildas
+>>>>>>> 59364e1a6e3c4690409b1516f6f41fa47df168dc
+    </inferredMetricsTieBreakers>
+</document>
