@@ -18,12 +18,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DARESAY LABS PRESENT" translatesAutoresizingMaskIntoConstraints="NO" id="mWf-Sq-Oew">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DARESAY LABS PRESENT" translatesAutoresizingMaskIntoConstraints="NO" id="mWf-Sq-Oew">
                                 <rect key="frame" x="41" y="555" width="174" height="200"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="V7q-1u-jcw"/>
+                                    <constraint firstAttribute="width" constant="174" id="pZo-yb-tXq"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mWf-Sq-Oew" secondAttribute="bottom" constant="23" id="Jbo-Kz-NDU"/>
+                            <constraint firstItem="mWf-Sq-Oew" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="41" id="x0h-Kt-oTc"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>

@@ -26,21 +26,6 @@ class PatPetViewController: UIViewController, ShowsAlert {
 
         imageView.isUserInteractionEnabled = true
         
-        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(imageSwiped))
-        swipeLeft.direction = .left
-        swipeLeft.numberOfTouchesRequired = 1
-        imageView.addGestureRecognizer(swipeLeft)
-        
-        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(imageSwiped))
-        swipeRight.direction = .right
-        swipeRight.numberOfTouchesRequired = 1
-        imageView.addGestureRecognizer(swipeRight)
-        
-        let swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(imageSwiped))
-        swipeUp.direction = .up
-        swipeUp.numberOfTouchesRequired = 1
-        imageView.addGestureRecognizer(swipeUp)
-        
         let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(imageSwiped))
         swipeDown.direction = .down
         swipeDown.numberOfTouchesRequired = 1
