@@ -11,6 +11,7 @@ class TurnIphoneViewController: UIViewController, ShowsAlert {
     @IBOutlet weak var keyHole: UIImageView!
     
     
+    @IBOutlet weak var openDoorLabel: UILabel!
     
     
     @IBOutlet weak var arrowUp: UIImageView!
@@ -52,14 +53,13 @@ class TurnIphoneViewController: UIViewController, ShowsAlert {
         
         UIView.animate(withDuration: 3.0, delay: 0, options: [.repeat, .autoreverse],
                        animations: { [unowned self] in
-                        self.iphoneLandscape.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi/2) - 90)
+                        self.iphoneLandscape.transform = CGAffineTransform(rotationAngle: CGFloat(-Double.pi))
                         
-                        self.arrowUp.transform = CGAffineTransform(translationX: 28, y: 35)
+                        self.arrowUp.transform = CGAffineTransform(translationX: 0, y: 40)
                         
         }) { [unowned self] (finished: Bool) in
             self.iphoneLandscape.transform = CGAffineTransform.identity
             self.arrow.transform = CGAffineTransform.identity
-            
         }
     }
     
@@ -76,6 +76,7 @@ class TurnIphoneViewController: UIViewController, ShowsAlert {
             keyHole.isHidden = true
             arrow.isHidden = true
             iphoneVertical.isHidden = true
+            openDoorLabel.isHidden = true
             
             
             handleDown.isHidden = false
