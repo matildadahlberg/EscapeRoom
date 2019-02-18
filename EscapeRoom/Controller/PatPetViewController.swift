@@ -15,7 +15,7 @@ class PatPetViewController: UIViewController, ShowsAlert {
         super.viewDidLoad()
         updateTimeLabel = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
        
-        let imageName = "Dog"
+        let imageName = "card1"
         let image = UIImage(named: imageName)
         imageView = UIImageView(image: image!)
         
@@ -35,8 +35,28 @@ class PatPetViewController: UIViewController, ShowsAlert {
     
     
     @objc func imageSwiped(gesture: UISwipeGestureRecognizer) -> Void {
-
-        if gesture.direction == UISwipeGestureRecognizer.Direction.down {
+        if gesture.direction == UISwipeGestureRecognizer.Direction.right {
+            print("Swipe Right")
+            tapped += 1
+            if tapped == 5{
+                imageView.isHidden = true
+            }
+        }
+        else if gesture.direction == UISwipeGestureRecognizer.Direction.left {
+            print("Swipe Left")
+            tapped += 1
+            if tapped == 5{
+                imageView.isHidden = true
+            }
+        }
+        else if gesture.direction == UISwipeGestureRecognizer.Direction.up {
+            print("Swipe Up")
+            tapped += 1
+            if tapped == 5{
+                imageView.isHidden = true
+            }
+        }
+        else if gesture.direction == UISwipeGestureRecognizer.Direction.down {
             print("Swipe Down")
             tapped += 1
             if tapped == 5{
