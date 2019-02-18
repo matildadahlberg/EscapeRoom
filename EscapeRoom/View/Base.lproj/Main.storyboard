@@ -1613,6 +1613,10 @@
         <image name="stearingwheel" width="516" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
+<<<<<<< HEAD
         <segue reference="L2D-Yx-aLm"/>
+=======
+        <segue reference="Vkd-sk-zQ0"/>
+>>>>>>> matildas
     </inferredMetricsTieBreakers>
 </document>
