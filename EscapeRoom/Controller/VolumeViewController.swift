@@ -4,7 +4,9 @@ import AVFoundation
 
 class VolumeViewController: UIViewController, ShowsAlert {
     
-    @IBOutlet weak var imageView: UIView!
+
+    
+    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var exitButton: UIButton!
     @IBOutlet weak var timeLabel: UILabel!
     

@@ -1102,11 +1102,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3F6-hV-kb9">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="50.666666666666664"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2oF-Dc-dTe">
                                 <rect key="frame" x="16" y="44" width="57" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1127,20 +1122,24 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mur" translatesAutoresizingMaskIntoConstraints="NO" id="7dF-N7-IIT">
+                                <rect key="frame" x="-21" y="294" width="411" height="1546"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.1294141114" green="0.1294075549" blue="0.12941199540000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.71104341745376587" green="0.8189355731010437" blue="0.84706544876098633" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="VfM-Vh-Lwm"/>
                     </view>
                     <connections>
                         <outlet property="exitButton" destination="2oF-Dc-dTe" id="7r8-JM-Pya"/>
-                        <outlet property="imageView" destination="3F6-hV-kb9" id="oOu-rW-qo7"/>
+                        <outlet property="imageView" destination="7dF-N7-IIT" id="ehy-zB-zHP"/>
                         <outlet property="timeLabel" destination="goC-H8-sqv" id="9p8-Hi-NRA"/>
                         <segue destination="i80-A7-zcx" kind="show" identifier="wallSegue" id="KDw-Cx-Owp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qmd-Lr-QgH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4177" y="1526"/>
+            <point key="canvasLocation" x="4176.8000000000002" y="1525.8620689655172"/>
         </scene>
         <!--Level2DescriptionView-->
         <scene sceneID="9PV-ym-jKF">
@@ -1838,6 +1837,7 @@
         <image name="Lock1" width="603" height="512"/>
         <image name="Logo" width="861" height="345"/>
         <image name="Map" width="607" height="512"/>
+        <image name="Mur" width="512" height="2032"/>
         <image name="OkeyButton" width="978" height="512"/>
         <image name="PlayButton" width="1524" height="512"/>
         <image name="SneakyMan" width="696" height="512"/>
@@ -1853,6 +1853,6 @@
         <image name="stearingwheel" width="516" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Mm9-Rq-Y6a"/>
+        <segue reference="liG-OH-YXK"/>
     </inferredMetricsTieBreakers>
 </document>
