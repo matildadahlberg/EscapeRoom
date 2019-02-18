@@ -7,6 +7,7 @@ class CompassViewController: UIViewController, CLLocationManagerDelegate, ShowsA
     @IBOutlet weak var exitButton: UIButton!
     @IBOutlet weak var timeLabel: UILabel!
     
+    @IBOutlet weak var compass: UIImageView!
     var locationManager : CLLocationManager!
     var turns = 0
     var quarter = false
@@ -22,6 +23,16 @@ class CompassViewController: UIViewController, CLLocationManagerDelegate, ShowsA
         locationManager = CLLocationManager()
         locationManager.delegate = self
         locationManager.startUpdatingHeading()
+        
+        
+        UIView.animate(withDuration: 10.0, delay: 0, options: [.repeat],
+                       animations: { [unowned self] in
+                        self.compass.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi * 2.0))
+                        
+                        
+        }) { [unowned self] (finished: Bool) in
+            self.compass.transform = CGAffineTransform.identity
+        }
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {

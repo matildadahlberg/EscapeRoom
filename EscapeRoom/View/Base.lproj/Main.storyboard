@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="M5B-Oj-qFc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZP0-nd-5YO">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -511,6 +511,7 @@
                         <viewLayoutGuide key="safeArea" id="hzD-co-tLQ"/>
                     </view>
                     <connections>
+                        <outlet property="compass" destination="rvW-qv-Ac5" id="ws4-LQ-K7V"/>
                         <outlet property="exitButton" destination="Grq-qV-39x" id="jkd-Qv-z6q"/>
                         <outlet property="timeLabel" destination="7k9-6v-uP0" id="QXp-q8-8jL"/>
                         <segue destination="sUW-JL-lg6" kind="show" identifier="compassSegue" id="l71-HL-IVX"/>
@@ -703,42 +704,40 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fh3-LG-vlE" userLabel="ViewPhoneArrowLandscape">
                                 <rect key="frame" x="190" y="655" width="185" height="157"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="i1" translatesAutoresizingMaskIntoConstraints="NO" id="yRt-dn-CIe">
-                                        <rect key="frame" x="64" y="27" width="57" height="103"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="i1" translatesAutoresizingMaskIntoConstraints="NO" id="yRt-dn-CIe">
+                                        <rect key="frame" x="8" y="39" width="57" height="103"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="103" id="Ayu-Ei-GEu"/>
-                                            <constraint firstAttribute="width" constant="57" id="WrI-7R-Ckn"/>
+                                            <constraint firstAttribute="width" constant="57" id="FDy-m6-AKA"/>
+                                            <constraint firstAttribute="height" constant="103" id="IYP-MG-pjG"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="ArrowUp" translatesAutoresizingMaskIntoConstraints="NO" id="YyG-lM-xUE">
-                                        <rect key="frame" x="122" y="106" width="31" height="43"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ArrowUp" translatesAutoresizingMaskIntoConstraints="NO" id="YyG-lM-xUE">
+                                        <rect key="frame" x="111" y="57" width="31" height="43"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="31" id="oea-Vl-Odw"/>
-                                            <constraint firstAttribute="height" constant="43" id="tfe-CC-P7W"/>
+                                            <constraint firstAttribute="width" constant="31" id="QiY-sO-TDp"/>
+                                            <constraint firstAttribute="height" constant="43" id="SIq-j8-drn"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="YyG-lM-xUE" secondAttribute="trailing" constant="43" id="B8n-1j-pyN"/>
+                                    <constraint firstAttribute="bottom" secondItem="YyG-lM-xUE" secondAttribute="bottom" constant="57" id="Hg6-s3-GU0"/>
+                                    <constraint firstItem="yRt-dn-CIe" firstAttribute="leading" secondItem="Fh3-LG-vlE" secondAttribute="leading" constant="8" id="acp-ON-TQ2"/>
                                     <constraint firstAttribute="width" constant="185" id="bw2-DT-tj4"/>
                                     <constraint firstAttribute="height" constant="157" id="e4c-AR-zId"/>
+                                    <constraint firstAttribute="bottom" secondItem="yRt-dn-CIe" secondAttribute="bottom" constant="15" id="h8Z-uR-IBh"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="acT-hn-emV" userLabel="ViewHandleDown">
                                 <rect key="frame" x="47" y="318" width="281" height="176"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="HandleBall" translatesAutoresizingMaskIntoConstraints="NO" id="zbz-Yf-dte">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HandleBall" translatesAutoresizingMaskIntoConstraints="NO" id="zbz-Yf-dte">
                                         <rect key="frame" x="50" y="107" width="41" height="39"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="39" id="93l-NQ-Tc0"/>
-                                            <constraint firstAttribute="width" constant="41" id="cta-Tg-oYU"/>
-                                        </constraints>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="HandleDown" translatesAutoresizingMaskIntoConstraints="NO" id="pxu-01-Mxm">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HandleDown" translatesAutoresizingMaskIntoConstraints="NO" id="pxu-01-Mxm">
                                         <rect key="frame" x="40" y="25" width="180" height="96"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="180" id="3r0-vd-sGd"/>
-                                            <constraint firstAttribute="height" constant="96" id="d2l-l3-1LX"/>
-                                        </constraints>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
@@ -779,13 +778,14 @@
                     </view>
                     <connections>
                         <outlet property="arrow" destination="kJV-2B-lhg" id="wKc-8n-Ao9"/>
-                        <outlet property="arrowUp" destination="yRt-dn-CIe" id="vbP-F0-r9n"/>
+                        <outlet property="arrowUp" destination="YyG-lM-xUE" id="HhP-1z-ClY"/>
                         <outlet property="handle" destination="xMs-8V-AdK" id="5ra-Xw-wwf"/>
                         <outlet property="handleDown" destination="pxu-01-Mxm" id="ezo-qs-5g1"/>
                         <outlet property="iphoneLandscape" destination="yRt-dn-CIe" id="PpM-FE-wpi"/>
                         <outlet property="iphoneVertical" destination="zoO-rZ-R8b" id="jaf-iR-ThQ"/>
                         <outlet property="keyHole" destination="Ee2-Ip-ecH" id="bm5-HD-dVR"/>
                         <outlet property="keyHoleLandscape" destination="zbz-Yf-dte" id="fHv-2H-Wwz"/>
+                        <outlet property="openDoorLabel" destination="JVd-Wj-ATc" id="qFk-aK-fmp"/>
                         <outlet property="timeLabel" destination="D1M-5W-1AH" id="Mtr-x6-v5l"/>
                         <segue destination="gd6-0r-zAf" kind="show" identifier="doorSegue" id="ni0-gw-UkZ"/>
                     </connections>
@@ -1853,6 +1853,6 @@
         <image name="stearingwheel" width="516" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="liG-OH-YXK"/>
+        <segue reference="43g-Ch-t72"/>
     </inferredMetricsTieBreakers>
 </document>
