@@ -8,16 +8,14 @@ class TurnIphoneViewController: UIViewController, ShowsAlert {
     @IBOutlet weak var timeLabel: UILabel!
     
     @IBOutlet weak var handle: UIImageView!
-    
     @IBOutlet weak var keyHole: UIImageView!
     
+    
+    
+    
     @IBOutlet weak var arrowUp: UIImageView!
-    
     @IBOutlet weak var iphoneLandscape: UIImageView!
-    
     @IBOutlet weak var keyHoleLandscape: UIImageView!
-    
-    
     @IBOutlet weak var handleDown: UIImageView!
     
     
@@ -29,8 +27,11 @@ class TurnIphoneViewController: UIViewController, ShowsAlert {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
+        handleDown.isHidden = true
+        keyHoleLandscape.isHidden = true
+        arrowUp.isHidden = true
+        iphoneLandscape.isHidden = true
         
         updateTimeLabel = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
         
@@ -45,6 +46,21 @@ class TurnIphoneViewController: UIViewController, ShowsAlert {
             self.arrow.transform = CGAffineTransform.identity
             
         }
+        
+       
+        iphoneLandscape.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi/2))
+        
+        UIView.animate(withDuration: 3.0, delay: 0, options: [.repeat, .autoreverse],
+                       animations: { [unowned self] in
+                        self.iphoneLandscape.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi/2) - 90)
+                        
+                        self.arrowUp.transform = CGAffineTransform(translationX: 28, y: 35)
+                        
+        }) { [unowned self] (finished: Bool) in
+            self.iphoneLandscape.transform = CGAffineTransform.identity
+            self.arrow.transform = CGAffineTransform.identity
+            
+        }
     }
     
     
@@ -56,22 +72,29 @@ class TurnIphoneViewController: UIViewController, ShowsAlert {
         
         if UIDevice.current.orientation == .landscapeRight {
             
-            keyHole.frame = CGRect(x: 330, y: 180, width: 41, height: 39)
-            handle.image = UIImage(named: "HandleDown")
-            handle.frame = CGRect(x: 330, y: 110, width: 170, height: 80)
-            iphoneVertical.frame = CGRect(x: 600, y: 270, width: 65, height: 110)
-            arrow.frame = CGRect(x: 700, y: 340, width: 31, height: 43)
-            timeLabel.frame = CGRect(x: 700, y: 30, width: 80, height: 27)
+            handle.isHidden = true
+            keyHole.isHidden = true
+            arrow.isHidden = true
+            iphoneVertical.isHidden = true
+            
+            
+            handleDown.isHidden = false
+            keyHoleLandscape.isHidden = false
+            arrowUp.isHidden = false
+            iphoneLandscape.isHidden = false
+            iphoneLandscape.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi/2))
             
             right = true
         }
         if UIDevice.current.orientation == .portrait {
             
             if right == true {
-                keyHole.frame = CGRect(x: self.view.frame.width/2 - 60, y: self.view.frame.width/2 + 150, width: 41, height: 39)
-                handle.image = UIImage(named: "Handle")
-                handle.frame = CGRect(x: self.view.frame.width/2 - 60, y: self.view.frame.width/2 + 90, width: 180, height: 35)
-                timeLabel.frame = CGRect(x: 290, y: 50, width: 80, height: 27)
+             
+                handleDown.isHidden = true
+                keyHoleLandscape.isHidden = true
+                arrowUp.isHidden = true
+                iphoneLandscape.isHidden = true
+                
                 showAlert(title: "You opened the door", segue: segue)
             }
         }
