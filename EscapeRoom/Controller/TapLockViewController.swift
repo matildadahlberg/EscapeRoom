@@ -10,6 +10,8 @@ class TapLockViewController: UIViewController, ShowsAlert {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var tapButton: UIButton!
     @IBOutlet weak var progressView: MBCircularProgressBarView!
+    @IBOutlet weak var key1: UIImageView!
+    @IBOutlet weak var key2: UIImageView!
     
     var tapped = 0
     let segue = "lockSegue"
@@ -19,11 +21,11 @@ class TapLockViewController: UIViewController, ShowsAlert {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        key2.isHidden = true
         tapButton.layer.cornerRadius = 0.5 * tapButton.bounds.size.width
         progressView.value = 0
         progressView.maxValue = 20
         updateTimeLabel = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
-        lockImage.image = UIImage(named: "Lock1")
     }
     
     
@@ -35,11 +37,13 @@ class TapLockViewController: UIViewController, ShowsAlert {
         }
         
         if tapped % 2 == 0 {
-            lockImage.image = UIImage(named: "Lock1")
+            key1.isHidden = true
+            key2.isHidden = false
         }
         
         if tapped % 2 != 0 {
-             lockImage.image = UIImage(named: "Lock2")
+            key1.isHidden = false
+            key2.isHidden = true
         }
         
         if tapped == 20 {
