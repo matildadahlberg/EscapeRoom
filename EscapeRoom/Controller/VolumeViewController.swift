@@ -8,6 +8,10 @@ class VolumeViewController: UIViewController, ShowsAlert {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var exitButton: UIButton!
     @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var volumeRed: UIImageView!
+    @IBOutlet weak var volumeGrey: UIImageView!
+    
+    
     
     private var audioLevel : Float = 0.0
     var volume : Float = 0

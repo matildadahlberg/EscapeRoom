@@ -295,6 +295,14 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="i1" translatesAutoresizingMaskIntoConstraints="NO" id="bQR-hc-4M4">
+                                <rect key="frame" x="159" y="675" width="57" height="103"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="arrowThick" translatesAutoresizingMaskIntoConstraints="NO" id="8YR-SI-NJa">
+                                <rect key="frame" x="204" y="654" width="43" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.33651268482208252" green="0.27159181237220764" blue="0.21959835290908813" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="C7f-uh-Diw"/>
@@ -307,7 +315,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hd8-j6-Cmm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4177" y="802"/>
+            <point key="canvasLocation" x="4176.8000000000002" y="801.72413793103453"/>
         </scene>
         <!--Level1View-->
         <scene sceneID="a6Z-fZ-iVy">
@@ -506,20 +514,35 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="i1" translatesAutoresizingMaskIntoConstraints="NO" id="PHU-2q-hfo">
+                                <rect key="frame" x="159" y="637" width="57" height="103"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Arrow" translatesAutoresizingMaskIntoConstraints="NO" id="V4j-e9-dIK">
+                                <rect key="frame" x="212" y="613" width="31" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="arrowLeftUp" translatesAutoresizingMaskIntoConstraints="NO" id="cAz-U8-rZa">
+                                <rect key="frame" x="131" y="720" width="38" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.36863282322883606" green="0.36861780285835266" blue="0.36862799525260925" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="hzD-co-tLQ"/>
                     </view>
                     <connections>
+                        <outlet property="arrowDown" destination="V4j-e9-dIK" id="Cse-Nu-QYf"/>
+                        <outlet property="arrowUp" destination="cAz-U8-rZa" id="bCn-Am-haQ"/>
                         <outlet property="compass" destination="rvW-qv-Ac5" id="ws4-LQ-K7V"/>
                         <outlet property="exitButton" destination="Grq-qV-39x" id="jkd-Qv-z6q"/>
+                        <outlet property="iphoneImage" destination="PHU-2q-hfo" id="0d3-lr-OVg"/>
                         <outlet property="timeLabel" destination="7k9-6v-uP0" id="QXp-q8-8jL"/>
                         <segue destination="sUW-JL-lg6" kind="show" identifier="compassSegue" id="l71-HL-IVX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rub-UK-DxS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5271" y="-1363"/>
+            <point key="canvasLocation" x="5269.6000000000004" y="-1363.3004926108374"/>
         </scene>
         <!--Level4View-->
         <scene sceneID="PsS-0N-N1O">
@@ -1126,6 +1149,14 @@
                                 <rect key="frame" x="-21" y="294" width="411" height="1546"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="volume" translatesAutoresizingMaskIntoConstraints="NO" id="HFc-aM-0ve">
+                                <rect key="frame" x="134" y="675" width="80" height="103"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="volumeRed" translatesAutoresizingMaskIntoConstraints="NO" id="G1h-C4-inW">
+                                <rect key="frame" x="129" y="671" width="85" height="107"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.71104341745376587" green="0.8189355731010437" blue="0.84706544876098633" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="VfM-Vh-Lwm"/>
@@ -1134,6 +1165,8 @@
                         <outlet property="exitButton" destination="2oF-Dc-dTe" id="7r8-JM-Pya"/>
                         <outlet property="imageView" destination="7dF-N7-IIT" id="ehy-zB-zHP"/>
                         <outlet property="timeLabel" destination="goC-H8-sqv" id="9p8-Hi-NRA"/>
+                        <outlet property="volumeGrey" destination="HFc-aM-0ve" id="qfM-1C-vNP"/>
+                        <outlet property="volumeRed" destination="G1h-C4-inW" id="gZv-0T-m8B"/>
                         <segue destination="i80-A7-zcx" kind="show" identifier="wallSegue" id="KDw-Cx-Owp"/>
                     </connections>
                 </viewController>
@@ -1843,6 +1876,8 @@
         <image name="SneakyMan" width="696" height="512"/>
         <image name="Wall" width="544" height="512"/>
         <image name="Window" width="346" height="397"/>
+        <image name="arrowLeftUp" width="433" height="512"/>
+        <image name="arrowThick" width="1178" height="512"/>
         <image name="computer" width="612" height="512"/>
         <image name="dogInDoor" width="314" height="512"/>
         <image name="envelope" width="496" height="512"/>
@@ -1851,6 +1886,8 @@
         <image name="memoryBack" width="141.83999633789062" height="141.83999633789062"/>
         <image name="password" width="395" height="512"/>
         <image name="stearingwheel" width="516" height="512"/>
+        <image name="volume" width="398" height="512"/>
+        <image name="volumeRed" width="402" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="43g-Ch-t72"/>
