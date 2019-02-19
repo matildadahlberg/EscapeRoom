@@ -6,6 +6,9 @@ class ShakeViewController: UIViewController, ShowsAlert {
     
     @IBOutlet weak var exitButton: UIButton!
     @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var iphoneImage: UIImageView!
+    @IBOutlet weak var arrow: UIImageView!
+    
     
     var descriptionLabel = UILabel()
     var countLabel = UILabel()
