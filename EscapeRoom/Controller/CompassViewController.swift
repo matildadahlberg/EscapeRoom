@@ -6,8 +6,13 @@ class CompassViewController: UIViewController, CLLocationManagerDelegate, ShowsA
     
     @IBOutlet weak var exitButton: UIButton!
     @IBOutlet weak var timeLabel: UILabel!
-    
     @IBOutlet weak var compass: UIImageView!
+    
+    
+    @IBOutlet weak var iphoneImage: UIImageView!
+    @IBOutlet weak var arrowDown: UIImageView!
+    @IBOutlet weak var arrowUp: UIImageView!
+    
     var locationManager : CLLocationManager!
     var turns = 0
     var quarter = false
