@@ -52,7 +52,7 @@ class VolumeViewController: UIViewController, ShowsAlert {
         let currentY = imageView.frame.origin.y
         if volume == 1.0{
             UIView.animate(withDuration: 6, animations: {
-                self.imageView.frame = CGRect(x: 0, y: currentY + 820, width: self.view.frame.width, height: self.view.frame.height * 100)
+                self.imageView.frame = CGRect(x: 0, y: currentY + 820, width: self.view.frame.width, height: self.view.frame.height)
             }, completion: nil)
             self.showAlert(title: "You are free!", segue: self.segue)
         }
@@ -85,7 +85,7 @@ class VolumeViewController: UIViewController, ShowsAlert {
             let currentY = imageView.frame.origin.y
             if audioLevel == 1.0{
                 UIView.animate(withDuration: 5, animations: {
-                    self.imageView.frame = CGRect(x: 0, y: currentY + 600, width: self.view.frame.width, height: self.view.frame.height * 100)
+                    self.imageView.frame = CGRect(x: 0, y: currentY + 600, width: self.view.frame.width, height: self.view.frame.height)
                 }, completion: nil)
                 showAlert(title: "You are free!", segue: segue)
             }
