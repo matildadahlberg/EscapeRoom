@@ -7,8 +7,10 @@ class PasswordViewController: UIViewController, ShowsAlert {
     var updateTimeLabel = Timer()
     let segue = "passwordSegue"
     
+    @IBOutlet weak var passwordImage: UIImageView!
     @IBOutlet weak var passwordLabel: UILabel!
     
+    var animation = CABasicAnimation(keyPath: "position")
     var currentInput = ""
     let correctPassword = "2004"
     
@@ -27,6 +29,12 @@ class PasswordViewController: UIViewController, ShowsAlert {
         
         if passwordLabel.text?.count == 4 && passwordLabel.text != correctPassword {
             AudioServicesPlayAlertSound(1519)
+            animation.duration = 0.1
+            animation.repeatDuration = 1
+            animation.autoreverses = true
+            animation.fromValue = NSValue(cgPoint: CGPoint(x: passwordImage.center.x - 10, y: passwordImage.center.y))
+            animation.toValue = NSValue(cgPoint: CGPoint(x: passwordImage.center.x + 10, y: passwordImage.center.y))
+            passwordImage.layer.add(animation, forKey: "position")
             passwordLabel.text = ""
         }
         if passwordLabel.text == correctPassword {
