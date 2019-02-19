@@ -18,7 +18,7 @@ class CardModel {
         
         
         //random generate pair of cards
-        for _ in 1...6{
+        for _ in 1...3{
             
            let randomNumber = arc4random_uniform(3) + 1
             

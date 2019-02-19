@@ -28,7 +28,10 @@ class CompassViewController: UIViewController, CLLocationManagerDelegate, ShowsA
         locationManager = CLLocationManager()
         locationManager.delegate = self
         locationManager.startUpdatingHeading()
-        
+    
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         UIView.animate(withDuration: 3.0, delay: 0, options: [.repeat],
                        animations: { [unowned self] in
                         self.iphoneImage.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi))
