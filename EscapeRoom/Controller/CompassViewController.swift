@@ -29,14 +29,17 @@ class CompassViewController: UIViewController, CLLocationManagerDelegate, ShowsA
         locationManager.delegate = self
         locationManager.startUpdatingHeading()
         
-        
-        UIView.animate(withDuration: 10.0, delay: 0, options: [.repeat],
+        UIView.animate(withDuration: 3.0, delay: 0, options: [.repeat],
                        animations: { [unowned self] in
-                        self.compass.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi * 2.0))
+                        self.iphoneImage.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi))
                         
+                        self.arrowDown.transform = CGAffineTransform(translationX: 28, y: 35)
+                        self.arrowUp.transform = CGAffineTransform(translationX: -28, y: -40)
                         
         }) { [unowned self] (finished: Bool) in
-            self.compass.transform = CGAffineTransform.identity
+            self.iphoneImage.transform = CGAffineTransform.identity
+            self.arrowDown.transform = CGAffineTransform.identity
+            self.arrowUp.transform = CGAffineTransform.identity
         }
     }
     
@@ -56,6 +59,13 @@ class CompassViewController: UIViewController, CLLocationManagerDelegate, ShowsA
             quarter = false
             half = false
             almostFull = false
+            UIView.animate(withDuration: 1.0, delay: 0, options: [],
+                           animations: { [unowned self] in
+                            self.compass.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi))
+
+            }) { [unowned self] (finished: Bool) in
+                self.compass.transform = CGAffineTransform.identity
+            }
             
             if turns == 2 {
                 showAlert(title: "Opened!", segue: segue)
