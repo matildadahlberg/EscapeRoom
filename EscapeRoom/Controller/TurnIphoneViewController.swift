@@ -38,6 +38,8 @@ class TurnIphoneViewController: UIViewController, ShowsAlert {
         
     }
     
+    @objc func canRotate() -> Void {}
+    
     override func viewDidAppear(_ animated: Bool) {
         UIView.animate(withDuration: 3.0, delay: 0, options: [.repeat, .autoreverse],
                        animations: { [unowned self] in
@@ -48,6 +50,15 @@ class TurnIphoneViewController: UIViewController, ShowsAlert {
         }) { [unowned self] (finished: Bool) in
             self.iphoneVertical.transform = CGAffineTransform.identity
             self.arrow.transform = CGAffineTransform.identity
+            
+        }
+        
+        func viewWillDisappear(_ animated: Bool) {
+            super.viewWillDisappear(animated)
+            
+            if (self.isMovingFromParent) {
+                UIDevice.current.setValue(Int(UIInterfaceOrientation.portrait.rawValue), forKey: "orientation")
+            }
             
         }
         
