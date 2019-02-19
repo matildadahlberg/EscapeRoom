@@ -15,7 +15,7 @@ class PatPetViewController: UIViewController, ShowsAlert {
         super.viewDidLoad()
         updateTimeLabel = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
        
-        let imageName = "card1"
+        let imageName = "Dog"
         let image = UIImage(named: imageName)
         imageView = UIImageView(image: image!)
         

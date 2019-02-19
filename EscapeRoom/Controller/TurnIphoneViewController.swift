@@ -36,6 +36,9 @@ class TurnIphoneViewController: UIViewController, ShowsAlert {
         
         updateTimeLabel = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         UIView.animate(withDuration: 3.0, delay: 0, options: [.repeat, .autoreverse],
                        animations: { [unowned self] in
                         self.iphoneVertical.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi/2))
@@ -48,7 +51,7 @@ class TurnIphoneViewController: UIViewController, ShowsAlert {
             
         }
         
-       
+        
         iphoneLandscape.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi/2))
         
         UIView.animate(withDuration: 3.0, delay: 0, options: [.repeat, .autoreverse],
@@ -61,6 +64,7 @@ class TurnIphoneViewController: UIViewController, ShowsAlert {
             self.iphoneLandscape.transform = CGAffineTransform.identity
             self.arrow.transform = CGAffineTransform.identity
         }
+
     }
     
     

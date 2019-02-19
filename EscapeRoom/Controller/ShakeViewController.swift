@@ -20,15 +20,17 @@ class ShakeViewController: UIViewController, ShowsAlert {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateTimeLabel = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
-
+       
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         animation.duration = 0.1
         animation.repeatDuration = 5
         animation.autoreverses = true
         animation.fromValue = NSValue(cgPoint: CGPoint(x: iphoneImage.center.x - 10, y: iphoneImage.center.y))
         animation.toValue = NSValue(cgPoint: CGPoint(x: iphoneImage.center.x + 10, y: iphoneImage.center.y))
-
+        
         iphoneImage.layer.add(animation, forKey: "position")
-       
     }
     
     override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {

@@ -23,13 +23,13 @@ class VolumeViewController: UIViewController, ShowsAlert {
         listenVolumeButton()
         volume = AVAudioSession.sharedInstance().outputVolume
         
-        let currentY = imageView.frame.origin.y
-        if volume == 1.0{
-            UIView.animate(withDuration: 1, animations: {
-                self.imageView.frame = CGRect(x: 0, y: currentY + 820, width: self.view.frame.width, height: self.view.frame.height * 100)
-            }, completion: nil)
-            self.showAlert(title: "You are free!", segue: self.segue)
-        }
+//        let currentY = imageView.frame.origin.y
+//        if volume == 1.0{
+//            UIView.animate(withDuration: 1, animations: {
+//                self.imageView.frame = CGRect(x: 0, y: currentY + 820, width: self.view.frame.width, height: self.view.frame.height * 100)
+//            }, completion: nil)
+//            self.showAlert(title: "You are free!", segue: self.segue)
+//        }
         
         volumeRed.isHidden = true
         
@@ -46,6 +46,16 @@ class VolumeViewController: UIViewController, ShowsAlert {
     
     override func viewWillAppear(_ animated: Bool) {
         listenVolumeButton()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        let currentY = imageView.frame.origin.y
+        if volume == 1.0{
+            UIView.animate(withDuration: 6, animations: {
+                self.imageView.frame = CGRect(x: 0, y: currentY + 820, width: self.view.frame.width, height: self.view.frame.height * 100)
+            }, completion: nil)
+            self.showAlert(title: "You are free!", segue: self.segue)
+        }
     }
     
     func listenVolumeButton(){
@@ -74,7 +84,7 @@ class VolumeViewController: UIViewController, ShowsAlert {
             
             let currentY = imageView.frame.origin.y
             if audioLevel == 1.0{
-                UIView.animate(withDuration: 1, animations: {
+                UIView.animate(withDuration: 5, animations: {
                     self.imageView.frame = CGRect(x: 0, y: currentY + 600, width: self.view.frame.width, height: self.view.frame.height * 100)
                 }, completion: nil)
                 showAlert(title: "You are free!", segue: segue)
