@@ -12,6 +12,7 @@ class PasswordViewController: UIViewController, ShowsAlert {
     @IBOutlet weak var passwordLabel: UILabel!
     
     var animation = CABasicAnimation(keyPath: "position")
+    var wrongCode = 0
     var currentInput = ""
     let correctPassword = "2004"
     
@@ -37,6 +38,14 @@ class PasswordViewController: UIViewController, ShowsAlert {
             animation.toValue = NSValue(cgPoint: CGPoint(x: passwordImage.center.x + 10, y: passwordImage.center.y))
             passwordImage.layer.add(animation, forKey: "position")
             passwordLabel.text = ""
+            wrongCode += 1
+            
+            if wrongCode == 3 {
+                EnterCodeLabel.text = "Hint 1: It's a year"
+            }
+            if wrongCode == 5 {
+                EnterCodeLabel.text = "Hint 2: The year was mentioned in the quiz"
+            }
         }
         if passwordLabel.text == correctPassword {
             showAlert(title: "Correct!", segue: segue)
