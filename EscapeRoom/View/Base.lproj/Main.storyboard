@@ -1254,12 +1254,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQm-ZO-aaQ">
+                                <rect key="frame" x="281" y="44" width="74" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Ovv-Nd-ASH"/>
+                                    <constraint firstAttribute="width" constant="74" id="Whi-T5-iYs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rl4-Gy-5C3">
+                                <rect key="frame" x="20" y="44" width="57" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="kzd-47-NCQ"/>
+                                    <constraint firstAttribute="width" constant="57" id="nDv-o9-14D"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                <state key="normal" title="Give up">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="exitButton:" destination="oi7-zr-G5B" eventType="touchUpInside" id="GUd-w7-sLZ"/>
+                                    <segue destination="i80-A7-zcx" kind="show" identifier="exitSegue" id="7Sa-Ea-4mU"/>
+                                </connections>
+                            </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZMx-b4-clh">
-                                <rect key="frame" x="0.0" y="131" width="375" height="550"/>
+                                <rect key="frame" x="0.0" y="156" width="375" height="500"/>
                                 <color key="backgroundColor" red="0.1294141114" green="0.1294075549" blue="0.12941199540000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="550" id="0tN-aq-wh6"/>
-                                    <constraint firstAttribute="width" constant="375" id="k9Q-mf-uNQ"/>
+                                    <constraint firstAttribute="width" constant="375" id="KGL-IY-ZnK"/>
+                                    <constraint firstAttribute="height" constant="500" id="eOG-Co-iZs"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="SF8-p1-qpk">
                                     <size key="itemSize" width="180" height="165"/>
@@ -1292,41 +1318,15 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQm-ZO-aaQ">
-                                <rect key="frame" x="281" y="44" width="74" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="Ovv-Nd-ASH"/>
-                                    <constraint firstAttribute="width" constant="74" id="Whi-T5-iYs"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rl4-Gy-5C3">
-                                <rect key="frame" x="20" y="44" width="57" height="40"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="kzd-47-NCQ"/>
-                                    <constraint firstAttribute="width" constant="57" id="nDv-o9-14D"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
-                                <state key="normal" title="Give up">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="exitButton:" destination="oi7-zr-G5B" eventType="touchUpInside" id="GUd-w7-sLZ"/>
-                                    <segue destination="i80-A7-zcx" kind="show" identifier="exitSegue" id="7Sa-Ea-4mU"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.1294141114" green="0.1294075549" blue="0.12941199540000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="rl4-Gy-5C3" firstAttribute="top" secondItem="Ty0-rs-zHx" secondAttribute="top" id="6gS-gN-I1L"/>
                             <constraint firstItem="RQm-ZO-aaQ" firstAttribute="top" secondItem="Ty0-rs-zHx" secondAttribute="top" id="Kcx-eB-UgY"/>
-                            <constraint firstItem="ZMx-b4-clh" firstAttribute="centerY" secondItem="NcL-PI-Ohb" secondAttribute="centerY" id="Mrk-Ww-ec2"/>
-                            <constraint firstItem="ZMx-b4-clh" firstAttribute="centerX" secondItem="NcL-PI-Ohb" secondAttribute="centerX" id="Ylg-5W-fo8"/>
+                            <constraint firstItem="ZMx-b4-clh" firstAttribute="centerY" secondItem="NcL-PI-Ohb" secondAttribute="centerY" id="Uug-Uc-UZa"/>
                             <constraint firstItem="rl4-Gy-5C3" firstAttribute="leading" secondItem="Ty0-rs-zHx" secondAttribute="leading" constant="20" id="exQ-Lp-hde"/>
                             <constraint firstItem="Ty0-rs-zHx" firstAttribute="trailing" secondItem="RQm-ZO-aaQ" secondAttribute="trailing" constant="20" id="ph6-c1-eLG"/>
+                            <constraint firstItem="ZMx-b4-clh" firstAttribute="centerX" secondItem="NcL-PI-Ohb" secondAttribute="centerX" id="uqC-aF-UeZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ty0-rs-zHx"/>
                     </view>
@@ -1518,6 +1518,7 @@
                         <outlet property="volumeGrey" destination="HFc-aM-0ve" id="qfM-1C-vNP"/>
                         <outlet property="youEscapedLabel" destination="Xal-lg-KPK" id="ZIH-7j-pqY"/>
                         <outlet property="yourTimeLabel" destination="RH8-uv-w0u" id="SkN-xN-GQv"/>
+                        <outlet property="yourTotalTimeLabel" destination="L7v-EN-TnN" id="z9f-sH-btk"/>
                         <segue destination="i80-A7-zcx" kind="show" identifier="wallSegue" id="KDw-Cx-Owp"/>
                     </connections>
                 </viewController>
@@ -2035,6 +2036,9 @@
                                         <state key="normal">
                                             <color key="titleColor" red="0.91840797659999995" green="0.2537005544" blue="0.14501187209999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
+                                        <connections>
+                                            <action selector="numberButton:" destination="M5B-Oj-qFc" eventType="touchUpInside" id="S56-7p-SI9"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ge4-DN-6Nb">
                                         <rect key="frame" x="56" y="101" width="46" height="50"/>
@@ -2073,7 +2077,7 @@
                                     <constraint firstAttribute="height" constant="402" id="fu4-aE-YXd"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hint 2: The year was mentioned in the quiz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qKy-9c-dsK">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter the code" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qKy-9c-dsK">
                                 <rect key="frame" x="0.0" y="679.66666666666663" width="375" height="27.333333333333371"/>
                                 <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2474,7 +2478,8 @@
         <image name="volume2" width="402" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="GZf-VA-h4l"/>
+        <segue reference="fDy-T5-SHn"/>
+        <segue reference="vv8-y6-xJG"/>
         <segue reference="Mm9-Rq-Y6a"/>
     </inferredMetricsTieBreakers>
 </document>

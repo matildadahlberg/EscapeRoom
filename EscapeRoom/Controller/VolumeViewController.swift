@@ -15,8 +15,8 @@ class VolumeViewController: UIViewController, ShowsAlert {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var exitButton: UIButton!
     @IBOutlet weak var timeLabel: UILabel!
-    @IBOutlet weak var volumeRed: UIImageView!
     @IBOutlet weak var volumeGrey: UIImageView!
+    @IBOutlet weak var yourTotalTimeLabel: UILabel!
     
     private var audioLevel : Float = 0.0
     var volume : Float = 0
@@ -61,7 +61,6 @@ class VolumeViewController: UIViewController, ShowsAlert {
             UIView.animate(withDuration: 6, animations: {
                 self.imageView.frame = CGRect(x: 0, y: currentY + 820, width: self.view.frame.width, height: self.view.frame.height)
             }, completion: nil)
-//            self.showAlert(title: "You are free!", segue: self.segue)
             congratsLabel.isHidden = false
             yourTimeLabel.isHidden = false
             scoreBg.isHidden = false
@@ -70,6 +69,14 @@ class VolumeViewController: UIViewController, ShowsAlert {
             playAgainOutlet.isHidden = false
             homeOutlet.isHidden = false
             volumeGrey.isHidden = true
+            updateTimeLabel.invalidate()
+            if Time.seconds < 10 {
+                yourTotalTimeLabel.text = "\(Time.minute):0\(Time.seconds)"
+            } else {
+                yourTotalTimeLabel.text = "\(Time.minute):\(Time.seconds)"
+            }
+            timeLabel.isHidden = true
+            exitButton.isHidden = true
         }
     }
     
@@ -102,7 +109,6 @@ class VolumeViewController: UIViewController, ShowsAlert {
                 UIView.animate(withDuration: 5, animations: {
                     self.imageView.frame = CGRect(x: 0, y: currentY + 600, width: self.view.frame.width, height: self.view.frame.height)
                 }, completion: nil)
-//                showAlert(title: "You are free!", segue: segue)
                 congratsLabel.isHidden = false
                 yourTimeLabel.isHidden = false
                 scoreBg.isHidden = false
@@ -111,6 +117,14 @@ class VolumeViewController: UIViewController, ShowsAlert {
                 playAgainOutlet.isHidden = false
                 homeOutlet.isHidden = false
                 volumeGrey.isHidden = true
+                updateTimeLabel.invalidate()
+                if Time.seconds < 10 {
+                    yourTotalTimeLabel.text = "\(Time.minute):0\(Time.seconds)"
+                } else {
+                     yourTotalTimeLabel.text = "\(Time.minute):\(Time.seconds)"
+                }
+                timeLabel.isHidden = true
+                exitButton.isHidden = true
             }
         }
     }
