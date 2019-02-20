@@ -18,7 +18,7 @@ class CardModel {
         
         
         //random generate pair of cards
-        for _ in 1...3{
+        for _ in 1...6{
             
            let randomNumber = arc4random_uniform(3) + 1
             
@@ -31,7 +31,7 @@ class CardModel {
             
             let cardTwo = Card()
             cardTwo.imageName = "card\(randomNumber)"
-            
+
             generatedCardsArray.append(cardTwo)
             
         }

@@ -8,7 +8,6 @@ class TurnIphoneViewController: UIViewController, ShowsAlert {
     @IBOutlet weak var timeLabel: UILabel!
     
     @IBOutlet weak var handle: UIImageView!
-    @IBOutlet weak var keyHole: UIImageView!
     
     
     @IBOutlet weak var openDoorLabel: UILabel!
@@ -16,7 +15,6 @@ class TurnIphoneViewController: UIViewController, ShowsAlert {
     
     @IBOutlet weak var arrowUp: UIImageView!
     @IBOutlet weak var iphoneLandscape: UIImageView!
-    @IBOutlet weak var keyHoleLandscape: UIImageView!
     @IBOutlet weak var handleDown: UIImageView!
     
     
@@ -30,7 +28,6 @@ class TurnIphoneViewController: UIViewController, ShowsAlert {
         super.viewDidLoad()
         
         handleDown.isHidden = true
-        keyHoleLandscape.isHidden = true
         arrowUp.isHidden = true
         iphoneLandscape.isHidden = true
         
@@ -88,14 +85,12 @@ class TurnIphoneViewController: UIViewController, ShowsAlert {
         if UIDevice.current.orientation == .landscapeRight {
             
             handle.isHidden = true
-            keyHole.isHidden = true
             arrow.isHidden = true
             iphoneVertical.isHidden = true
             openDoorLabel.isHidden = true
             
             
             handleDown.isHidden = false
-            keyHoleLandscape.isHidden = false
             arrowUp.isHidden = false
             iphoneLandscape.isHidden = false
             iphoneLandscape.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi/2))
@@ -107,7 +102,6 @@ class TurnIphoneViewController: UIViewController, ShowsAlert {
             if right == true {
              
                 handleDown.isHidden = true
-                keyHoleLandscape.isHidden = true
                 arrowUp.isHidden = true
                 iphoneLandscape.isHidden = true
                 
