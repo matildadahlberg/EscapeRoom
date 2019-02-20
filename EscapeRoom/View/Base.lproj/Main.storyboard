@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="i80-A7-zcx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tdD-e8-bLm">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -12,6 +12,9 @@
     <customFonts key="customFonts">
         <array key="TitilliumWeb-Bold.ttf">
             <string>TitilliumWeb-Bold</string>
+        </array>
+        <array key="TitilliumWeb-Regular.ttf">
+            <string>TitilliumWeb-Regular</string>
         </array>
         <array key="TitilliumWeb-SemiBold.ttf">
             <string>TitilliumWeb-SemiBold</string>
@@ -1369,6 +1372,10 @@
                                     <segue destination="i80-A7-zcx" kind="show" identifier="exitSegue" id="liG-OH-YXK"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mur" translatesAutoresizingMaskIntoConstraints="NO" id="7dF-N7-IIT">
+                                <rect key="frame" x="-23" y="92" width="455" height="1445"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="goC-H8-sqv">
                                 <rect key="frame" x="281" y="44" width="74" height="40"/>
                                 <constraints>
@@ -1379,14 +1386,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mur" translatesAutoresizingMaskIntoConstraints="NO" id="7dF-N7-IIT">
-                                <rect key="frame" x="-18" y="92" width="411" height="1412"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="450" id="2i4-ji-nrp"/>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="1546" id="HUx-AV-zg9"/>
-                                    <constraint firstAttribute="width" secondItem="7dF-N7-IIT" secondAttribute="height" multiplier="225:773" id="WH6-Ho-COR"/>
-                                </constraints>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="volume2" translatesAutoresizingMaskIntoConstraints="NO" id="HFc-aM-0ve">
                                 <rect key="frame" x="147.66666666666666" y="645" width="80" height="103"/>
                                 <constraints>
@@ -1394,54 +1393,96 @@
                                     <constraint firstAttribute="height" constant="103" id="i77-t7-bxB"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CONGRATULATIONS!" translatesAutoresizingMaskIntoConstraints="NO" id="hV8-7D-0f0">
-                                <rect key="frame" x="61" y="198" width="248" height="20"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lLU-d5-Hok" userLabel="HeaderView">
+                                <rect key="frame" x="0.0" y="143" width="375" height="168.66666666666663"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="YouEscaped!" translatesAutoresizingMaskIntoConstraints="NO" id="Xal-lg-KPK">
-                                <rect key="frame" x="38" y="265" width="298" height="86"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CONGRATULATIONS!" translatesAutoresizingMaskIntoConstraints="NO" id="hV8-7D-0f0">
+                                        <rect key="frame" x="63.666666666666657" y="17.666666666666657" width="247.99999999999997" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="YouEscaped!" translatesAutoresizingMaskIntoConstraints="NO" id="Xal-lg-KPK">
+                                        <rect key="frame" x="38" y="56" width="298" height="86"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Aaw-oz-yVY" userLabel="ButtonsView">
+                                <rect key="frame" x="0.0" y="509" width="375" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ScoreImage" translatesAutoresizingMaskIntoConstraints="NO" id="Ldh-6M-Idx">
-                                <rect key="frame" x="28" y="359" width="319" height="172"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7oW-nt-ycN" userLabel="playAgainButton">
+                                        <rect key="frame" x="119" y="26" width="224" height="76"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button" image="PlayAgaingButton"/>
+                                        <connections>
+                                            <segue destination="cZ2-Wh-bul" kind="show" id="vv8-y6-xJG"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RK5-kY-eLq" userLabel="HomeButton">
+                                        <rect key="frame" x="28" y="26" width="85" height="76"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="HomeButton"/>
+                                        <connections>
+                                            <segue destination="i80-A7-zcx" kind="show" id="haq-xo-shn"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XI4-Y1-xAn" userLabel="ScoreBoardView">
+                                <rect key="frame" x="0.0" y="315.66666666666669" width="375" height="181"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7oW-nt-ycN">
-                                <rect key="frame" x="241" y="561" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RK5-kY-eLq">
-                                <rect key="frame" x="105" y="560" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                            </button>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ScoreImage" translatesAutoresizingMaskIntoConstraints="NO" id="Ldh-6M-Idx">
+                                        <rect key="frame" x="28" y="4" width="319" height="172"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="05:13" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L7v-EN-TnN">
+                                        <rect key="frame" x="121" y="92" width="133" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="TitilliumWeb-Regular" family="Titillium Web" pointSize="36"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your time was:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RH8-uv-w0u">
+                                        <rect key="frame" x="71" y="39" width="232" height="45"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="32"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.71104341745376587" green="0.8189355731010437" blue="0.84706544876098633" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="2oF-Dc-dTe" firstAttribute="top" secondItem="VfM-Vh-Lwm" secondAttribute="top" id="0Z9-2z-dQU"/>
-                            <constraint firstItem="7dF-N7-IIT" firstAttribute="leading" secondItem="xys-gY-jwK" secondAttribute="leading" constant="-18" id="2Hd-p4-klv"/>
                             <constraint firstItem="VfM-Vh-Lwm" firstAttribute="bottom" secondItem="HFc-aM-0ve" secondAttribute="bottom" constant="30" id="JGM-Zk-FqR"/>
                             <constraint firstItem="goC-H8-sqv" firstAttribute="top" secondItem="VfM-Vh-Lwm" secondAttribute="top" id="L8u-JU-h77"/>
-                            <constraint firstAttribute="trailing" secondItem="7dF-N7-IIT" secondAttribute="trailing" constant="-18" id="Ww7-dV-DV7"/>
                             <constraint firstItem="HFc-aM-0ve" firstAttribute="centerX" secondItem="xys-gY-jwK" secondAttribute="centerX" id="ZI7-bR-GgC"/>
                             <constraint firstItem="2oF-Dc-dTe" firstAttribute="leading" secondItem="VfM-Vh-Lwm" secondAttribute="leading" constant="20" id="bZp-Qy-ZH6"/>
-                            <constraint firstItem="7dF-N7-IIT" firstAttribute="top" secondItem="2oF-Dc-dTe" secondAttribute="bottom" constant="8" id="l8u-sL-gnz"/>
                             <constraint firstItem="VfM-Vh-Lwm" firstAttribute="trailing" secondItem="goC-H8-sqv" secondAttribute="trailing" constant="20" id="ofM-wB-7vR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VfM-Vh-Lwm"/>
                     </view>
                     <connections>
+                        <outlet property="congratsLabel" destination="hV8-7D-0f0" id="t6r-eh-Llg"/>
                         <outlet property="exitButton" destination="2oF-Dc-dTe" id="7r8-JM-Pya"/>
+                        <outlet property="homeOutlet" destination="RK5-kY-eLq" id="XbT-Ik-kRz"/>
                         <outlet property="imageView" destination="7dF-N7-IIT" id="ehy-zB-zHP"/>
+                        <outlet property="playAgainOutlet" destination="7oW-nt-ycN" id="1rZ-0l-3YS"/>
+                        <outlet property="scoreBg" destination="Ldh-6M-Idx" id="wpS-bb-g2Q"/>
+                        <outlet property="scoreTimeLabel" destination="L7v-EN-TnN" id="rNU-cP-BYl"/>
                         <outlet property="timeLabel" destination="goC-H8-sqv" id="9p8-Hi-NRA"/>
                         <outlet property="volumeGrey" destination="HFc-aM-0ve" id="qfM-1C-vNP"/>
+                        <outlet property="youEscapedLabel" destination="Xal-lg-KPK" id="ZIH-7j-pqY"/>
+                        <outlet property="yourTimeLabel" destination="RH8-uv-w0u" id="SkN-xN-GQv"/>
                         <segue destination="i80-A7-zcx" kind="show" identifier="wallSegue" id="KDw-Cx-Owp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qmd-Lr-QgH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4175.1999999999998" y="1525.1231527093596"/>
+            <point key="canvasLocation" x="4173.6000000000004" y="1524.384236453202"/>
         </scene>
         <!--Level2DescriptionView-->
         <scene sceneID="9PV-ym-jKF">
@@ -2337,6 +2378,7 @@
         <image name="HandleAndKeyDown" width="740" height="512"/>
         <image name="HandleAndKeyUP" width="883" height="512"/>
         <image name="Hat" width="724" height="512"/>
+        <image name="HomeButton" width="567" height="512"/>
         <image name="JailBreakLabel" width="1381" height="512"/>
         <image name="Key1" width="411" height="512"/>
         <image name="Key2" width="467" height="512"/>
@@ -2345,6 +2387,7 @@
         <image name="Map" width="607" height="512"/>
         <image name="Mur" width="512" height="2038"/>
         <image name="OkeyButton" width="978" height="512"/>
+        <image name="PlayAgaingButton" width="1414" height="512"/>
         <image name="PlayButton" width="1524" height="512"/>
         <image name="ScoreImage" width="950" height="512"/>
         <image name="SneakyMan" width="696" height="512"/>
@@ -2364,6 +2407,7 @@
         <image name="volume2" width="402" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="I5o-tX-etZ"/>
+        <segue reference="vv8-y6-xJG"/>
+        <segue reference="KDw-Cx-Owp"/>
     </inferredMetricsTieBreakers>
 </document>

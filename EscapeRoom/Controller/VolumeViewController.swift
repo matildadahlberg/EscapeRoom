@@ -4,7 +4,14 @@ import AVFoundation
 
 
 class VolumeViewController: UIViewController, ShowsAlert {
+    @IBOutlet weak var congratsLabel: UIImageView!
     
+    @IBOutlet weak var homeOutlet: UIButton!
+    @IBOutlet weak var playAgainOutlet: UIButton!
+    @IBOutlet weak var yourTimeLabel: UILabel!
+    @IBOutlet weak var scoreBg: UIImageView!
+    @IBOutlet weak var youEscapedLabel: UIImageView!
+    @IBOutlet weak var scoreTimeLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var exitButton: UIButton!
     @IBOutlet weak var timeLabel: UILabel!
@@ -31,6 +38,15 @@ class VolumeViewController: UIViewController, ShowsAlert {
         volumeGrey.animationImages = images
         volumeGrey.animationDuration = 3.0
         volumeGrey.startAnimating()
+        
+        
+        congratsLabel.isHidden = true
+        yourTimeLabel.isHidden = true
+        scoreBg.isHidden = true
+        youEscapedLabel.isHidden = true
+        scoreTimeLabel.isHidden = true
+        playAgainOutlet.isHidden = true
+        homeOutlet.isHidden = true
     }
     
         
@@ -45,7 +61,15 @@ class VolumeViewController: UIViewController, ShowsAlert {
             UIView.animate(withDuration: 6, animations: {
                 self.imageView.frame = CGRect(x: 0, y: currentY + 820, width: self.view.frame.width, height: self.view.frame.height)
             }, completion: nil)
-            self.showAlert(title: "You are free!", segue: self.segue)
+//            self.showAlert(title: "You are free!", segue: self.segue)
+            congratsLabel.isHidden = false
+            yourTimeLabel.isHidden = false
+            scoreBg.isHidden = false
+            youEscapedLabel.isHidden = false
+            scoreTimeLabel.isHidden = false
+            playAgainOutlet.isHidden = false
+            homeOutlet.isHidden = false
+            volumeGrey.isHidden = true
         }
     }
     
@@ -78,10 +102,19 @@ class VolumeViewController: UIViewController, ShowsAlert {
                 UIView.animate(withDuration: 5, animations: {
                     self.imageView.frame = CGRect(x: 0, y: currentY + 600, width: self.view.frame.width, height: self.view.frame.height)
                 }, completion: nil)
-                showAlert(title: "You are free!", segue: segue)
+//                showAlert(title: "You are free!", segue: segue)
+                congratsLabel.isHidden = false
+                yourTimeLabel.isHidden = false
+                scoreBg.isHidden = false
+                youEscapedLabel.isHidden = false
+                scoreTimeLabel.isHidden = false
+                playAgainOutlet.isHidden = false
+                homeOutlet.isHidden = false
+                volumeGrey.isHidden = true
             }
         }
     }
+    
     
     @objc func updateTime() {
         
