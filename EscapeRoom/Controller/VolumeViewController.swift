@@ -22,16 +22,7 @@ class VolumeViewController: UIViewController, ShowsAlert {
         
         listenVolumeButton()
         volume = AVAudioSession.sharedInstance().outputVolume
-        
-//        let currentY = imageView.frame.origin.y
-//        if volume == 1.0{
-//            UIView.animate(withDuration: 1, animations: {
-//                self.imageView.frame = CGRect(x: 0, y: currentY + 820, width: self.view.frame.width, height: self.view.frame.height * 100)
-//            }, completion: nil)
-//            self.showAlert(title: "You are free!", segue: self.segue)
-//        }
-        
-        volumeRed.isHidden = true
+
         
         var images: [UIImage] = []
         for i in 1...2 {

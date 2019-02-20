@@ -3,6 +3,7 @@ import AudioToolbox
 
 class PasswordViewController: UIViewController, ShowsAlert {
     
+    @IBOutlet weak var EnterCodeLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     var updateTimeLabel = Timer()
     let segue = "passwordSegue"

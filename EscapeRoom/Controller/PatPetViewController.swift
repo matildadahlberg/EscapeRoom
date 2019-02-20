@@ -2,6 +2,7 @@ import UIKit
 
 class PatPetViewController: UIViewController, ShowsAlert {
     
+    @IBOutlet weak var strokeLabel: UILabel!
     @IBOutlet weak var exitButton: UIButton!
     @IBOutlet weak var timeLabel: UILabel!
     
