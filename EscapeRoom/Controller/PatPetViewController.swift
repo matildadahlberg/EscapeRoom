@@ -1,4 +1,5 @@
 import UIKit
+import AudioToolbox
 
 class PatPetViewController: UIViewController, ShowsAlert {
     
@@ -39,7 +40,11 @@ class PatPetViewController: UIViewController, ShowsAlert {
         if gesture.direction == UISwipeGestureRecognizer.Direction.down {
             print("Swipe Down")
             tapped += 1
+         
+            AudioServicesPlayAlertSound(1519)
             if tapped == 5{
+                imageView.alpha = 0.1
+                AudioServicesPlayAlertSound(1519)
                 showAlert(title: "Happy dog!", segue: segue)
                 imageView.isHidden = true
             }
