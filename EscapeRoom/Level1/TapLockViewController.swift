@@ -13,10 +13,10 @@ class TapLockViewController: UIViewController, ShowsAlert {
     @IBOutlet weak var key1: UIImageView!
     @IBOutlet weak var key2: UIImageView!
     
-    var tapped = 0
-    let segue = "lockSegue"
     var gameTimer = GameTime()
     var updateTimeLabel = Timer()
+    
+    var viewModel = TapLockViewModel()
     
     
     override func viewDidLoad() {
@@ -26,29 +26,24 @@ class TapLockViewController: UIViewController, ShowsAlert {
         progressView.value = 0
         progressView.maxValue = 20
         updateTimeLabel = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
+        
+        
+        viewModel.onImageChanged = { [weak self] imageName in
+            switch imageName {
+            case .key1:
+                self?.key2.isHidden = true
+                self?.key1.isHidden = false
+            case .key2:
+                self?.key2.isHidden = false
+                self?.key1.isHidden = true
+            }
+        }
     }
     
     
     @IBAction func tapButton(_ sender: Any) {
-        tapped += 1
-        AudioServicesPlayAlertSound(1519)
-        UIView.animate(withDuration: 0) {
-            self.progressView.value = CGFloat(self.tapped)
-        }
-        
-        if tapped % 2 == 0 {
-            key1.isHidden = true
-            key2.isHidden = false
-        }
-        
-        if tapped % 2 != 0 {
-            key1.isHidden = false
-            key2.isHidden = true
-        }
-        
-        if tapped == 20 {
-            showAlert(title: "You unlocked the lock", segue: segue)
-        }
+        viewModel.buttonPressed()
+      
     }
     
     @objc func updateTime() {

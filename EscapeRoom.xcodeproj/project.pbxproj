@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		315647FD2960D8DAE8049941 /* Pods_EscapeRoomUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 440D923F1524CFCAEB11380A /* Pods_EscapeRoomUITests.framework */; };
+		7B0F01E922534CB000BDA1FA /* TapLockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F01E822534CB000BDA1FA /* TapLockViewModel.swift */; };
+		7B0F01EB22534DD000BDA1FA /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F01EA22534DD000BDA1FA /* ImageModel.swift */; };
 		7B2D43392209AD2E0078120A /* CompassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2D43382209AD2E0078120A /* CompassViewController.swift */; };
 		7B2D433B220B13000078120A /* BlowCandleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2D433A220B13000078120A /* BlowCandleViewController.swift */; };
 		7B2D433D220C5D3D0078120A /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2D433C220C5D3D0078120A /* QuizViewController.swift */; };
@@ -77,6 +79,8 @@
 		440D923F1524CFCAEB11380A /* Pods_EscapeRoomUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EscapeRoomUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AE2A91300D103D8FD9F5CCF /* Pods_EscapeRoomTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EscapeRoomTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		692E4A3584DF9E3DBF3EDC67 /* Pods-EscapeRoomTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EscapeRoomTests.release.xcconfig"; path = "Target Support Files/Pods-EscapeRoomTests/Pods-EscapeRoomTests.release.xcconfig"; sourceTree = "<group>"; };
+		7B0F01E822534CB000BDA1FA /* TapLockViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapLockViewModel.swift; sourceTree = "<group>"; };
+		7B0F01EA22534DD000BDA1FA /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
 		7B2D43382209AD2E0078120A /* CompassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompassViewController.swift; sourceTree = "<group>"; };
 		7B2D433A220B13000078120A /* BlowCandleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlowCandleViewController.swift; sourceTree = "<group>"; };
 		7B2D433C220C5D3D0078120A /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
@@ -182,6 +186,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7B0F01E722534C9300BDA1FA /* Level1 */ = {
+			isa = PBXGroup;
+			children = (
+				EB56E348220457920010B442 /* TapLockViewController.swift */,
+				7B0F01E822534CB000BDA1FA /* TapLockViewModel.swift */,
+				7B0F01EA22534DD000BDA1FA /* ImageModel.swift */,
+			);
+			path = Level1;
+			sourceTree = "<group>";
+		};
 		7B2D43352209AC990078120A /* Sources */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,7 +233,6 @@
 				7B7F03062215B6AE008D4EA3 /* FirstPageViewController.swift */,
 				EB56E31A220456740010B442 /* StartViewController.swift */,
 				7BD812E42214231F002BEAA5 /* DescriptionViewController.swift */,
-				EB56E348220457920010B442 /* TapLockViewController.swift */,
 				EB344187220AE1A900EB1993 /* TurnIphoneViewController.swift */,
 				EBFFC51C2208412300879045 /* CameraViewController.swift */,
 				EBA864F9220DB429007890F9 /* MemoryViewController.swift */,
@@ -275,6 +288,7 @@
 		EB56E317220456740010B442 /* EscapeRoom */ = {
 			isa = PBXGroup;
 			children = (
+				7B0F01E722534C9300BDA1FA /* Level1 */,
 				7BDF7718221304E500840F8F /* Model */,
 				7B2D43372209ACC90078120A /* Controller */,
 				7B2D43362209ACC00078120A /* View */,
@@ -547,6 +561,7 @@
 				7BD812E322140977002BEAA5 /* GameTime.swift in Sources */,
 				EB56E347220457730010B442 /* ShakeViewController.swift in Sources */,
 				EBFFC51D2208412300879045 /* CameraViewController.swift in Sources */,
+				7B0F01E922534CB000BDA1FA /* TapLockViewModel.swift in Sources */,
 				EB56E31B220456740010B442 /* StartViewController.swift in Sources */,
 				EB33A6232212CD76009CDF30 /* CardModel.swift in Sources */,
 				7B2D433B220B13000078120A /* BlowCandleViewController.swift in Sources */,
@@ -555,6 +570,7 @@
 				7BE730D92216B7E6009DC86E /* AlertModel.swift in Sources */,
 				EB33A6252212CE46009CDF30 /* Card.swift in Sources */,
 				EB33A6272212D2AA009CDF30 /* CardCollectionViewCell.swift in Sources */,
+				7B0F01EB22534DD000BDA1FA /* ImageModel.swift in Sources */,
 				EB56E349220457920010B442 /* TapLockViewController.swift in Sources */,
 				EBFFC5212208899000879045 /* Resnet50.mlmodel in Sources */,
 				7B2D433D220C5D3D0078120A /* QuizViewController.swift in Sources */,
